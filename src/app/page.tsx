@@ -1,65 +1,107 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import HeroSection from "@/components/HeroSection";
+import TrustBar from "@/components/TrustBar";
+import ServicesGrid from "@/components/ServicesGrid";
+import AboutSnapshot from "@/components/AboutSnapshot";
+import FeaturedProjects from "@/components/FeaturedProjects";
+import Testimonials from "@/components/Testimonials";
+import ServiceAreaSection from "@/components/ServiceAreaSection";
+import CTABanner from "@/components/CTABanner";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Ulloa Construction | Anaheim, CA Contractor",
+  description:
+    "Ulloa Construction — 20+ years serving Anaheim and all of Orange County, CA. Flooring, remodeling, kitchen renovations, roofing & more. Licensed & insured. Call (657) 400-2896.",
+  alternates: {
+    canonical: "https://ulloaonstruction.com",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://ulloaonstruction.com/#business",
+      name: "Ulloa Construction",
+      description:
+        "Licensed and insured general contractor serving Anaheim and Orange County, CA for 20+ years. Specializing in remodeling, flooring, kitchen renovations, bathrooms, new construction, roofing, and more.",
+      url: "https://ulloaonstruction.com",
+      telephone: "+1-657-400-2896",
+      priceRange: "$$",
+      image: "https://ulloaonstruction.com/api/image?type=hero",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Anaheim",
+        addressRegion: "CA",
+        postalCode: "92806",
+        addressCountry: "US",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 33.8353,
+        longitude: -117.9145,
+      },
+      areaServed: [
+        { "@type": "City", name: "Anaheim", containedInPlace: { "@type": "State", name: "California" } },
+        { "@type": "City", name: "Brea" },
+        { "@type": "City", name: "Buena Park" },
+        { "@type": "City", name: "Fullerton" },
+        { "@type": "City", name: "Garden Grove" },
+        { "@type": "City", name: "Huntington Beach" },
+        { "@type": "City", name: "Irvine" },
+        { "@type": "City", name: "Orange" },
+        { "@type": "City", name: "Santa Ana" },
+        { "@type": "City", name: "Yorba Linda" },
+        { "@type": "City", name: "San Juan Capistrano" },
+      ],
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          opens: "07:30",
+          closes: "17:30",
+        },
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Construction Services",
+        itemListElement: [
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Flooring Installation", areaServed: "Orange County, CA" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Home Remodeling", areaServed: "Orange County, CA" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Kitchen Renovation", areaServed: "Orange County, CA" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Bathroom Remodel", areaServed: "Orange County, CA" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "New Home Construction", areaServed: "Orange County, CA" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Room Additions", areaServed: "Orange County, CA" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Roofing", areaServed: "Orange County, CA" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Painting", areaServed: "Orange County, CA" } },
+        ],
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "5",
+        reviewCount: "87",
+        bestRating: "5",
+      },
+    },
+  ],
+};
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <HeroSection />
+      <TrustBar />
+      <ServicesGrid />
+      <AboutSnapshot />
+      <FeaturedProjects />
+      <Testimonials />
+      <ServiceAreaSection />
+      <CTABanner />
+    </>
   );
 }
