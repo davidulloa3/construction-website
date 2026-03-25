@@ -44,7 +44,7 @@ export const metadata: Metadata = {
       "20+ years serving Orange County. Expert contractor for remodeling, flooring, roofing & more. Call (657) 400-2896.",
     images: [
       {
-        url: "/api/image?type=hero",
+        url: "/images/hero.jpg",
         width: 1600,
         height: 900,
         alt: "Ulloa Construction - Anaheim CA Contractor",

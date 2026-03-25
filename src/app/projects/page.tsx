@@ -16,60 +16,60 @@ const projects = [
     location: "Anaheim Hills, CA",
     category: "Kitchen",
     year: "2024",
-    imageType: "kitchen",
+    image: "/images/gallery-2.jpg",
     description:
       "Complete kitchen transformation with custom white shaker cabinetry, quartz waterfall island, and premium Wolf appliances. This Orange County home now has the kitchen of its owners' dreams.",
     highlights: ["Custom cabinetry", "Quartz countertops", "New electrical layout", "Tile backsplash"],
   },
   {
-    title: "Custom Home Build",
+    title: "Custom Living Room & Accent Wall",
     location: "Yorba Linda, CA",
-    category: "New Construction",
+    category: "Interior",
     year: "2024",
-    imageType: "frame",
+    image: "/images/gallery-10.jpg",
     description:
-      "3,200 sq ft custom home built from the ground up in Yorba Linda, Orange County. Fully seismic compliant, energy efficient, and designed for Southern California living.",
-    highlights: ["Seismic compliance", "Energy-efficient systems", "3,200 sq ft", "Custom floor plan"],
+      "Full living room transformation featuring a custom geometric diamond accent wall, new hardwood flooring, recessed lighting, and a built-in TV mount with concealed wiring.",
+    highlights: ["Custom accent wall", "Hardwood floors", "Recessed lighting", "TV mount install"],
   },
   {
     title: "Master Bathroom Spa Retreat",
     location: "Irvine, CA",
     category: "Bathroom",
     year: "2023",
-    imageType: "bathroom",
+    image: "/images/gallery-3.jpg",
     description:
       "A dated master bathroom transformed into a luxurious spa retreat with heated stone floors, frameless glass shower, freestanding soaking tub, and custom floating vanity.",
     highlights: ["Heated floors", "Frameless glass shower", "Soaking tub", "Custom vanity"],
   },
   {
-    title: "Commercial Office Renovation",
+    title: "Custom Built-In & LED Shelving",
     location: "Anaheim, CA",
-    category: "Commercial",
+    category: "Interior",
     year: "2023",
-    imageType: "commercial",
+    image: "/images/gallery-6.jpg",
     description:
-      "Full interior renovation of a 5,000 sq ft commercial office space in Anaheim. New flooring, lighting, partition walls, and complete drywall refresh for a modern workspace.",
-    highlights: ["5,000 sq ft", "New flooring", "Partition walls", "Complete drywall"],
+      "Custom floor-to-ceiling built-in shelving with integrated LED strip lighting in a modern entryway. Precision carpentry with a sleek, contemporary finish.",
+    highlights: ["Floor-to-ceiling built-ins", "LED lighting", "Custom carpentry", "Modern finish"],
   },
   {
-    title: "Second Story Addition",
+    title: "Double Vanity Bathroom Remodel",
     location: "Fullerton, CA",
-    category: "Addition",
+    category: "Bathroom",
     year: "2023",
-    imageType: "frame",
+    image: "/images/gallery-4.jpg",
     description:
-      "Added a full second story to an existing single-story home in Fullerton, OC — adding 1,400 sq ft including 3 bedrooms and 2 bathrooms while maintaining original architectural style.",
-    highlights: ["1,400 sq ft added", "3 bed / 2 bath", "Permit acquired", "Matched original style"],
+      "Complete bathroom remodel featuring a custom double vanity with vessel sinks, natural stone accent wall, walk-in shower with bench, and warm sconce lighting.",
+    highlights: ["Double vessel sinks", "Stone accent wall", "Walk-in shower", "Custom vanity"],
   },
   {
-    title: "Open Concept Remodel",
+    title: "Open Concept Kitchen Remodel",
     location: "Garden Grove, CA",
-    category: "Remodeling",
+    category: "Kitchen",
     year: "2022",
-    imageType: "crew",
+    image: "/images/gallery-8.jpg",
     description:
-      "Transformed a compartmentalized 1980s floor plan into a modern open-concept living space. Removed non-load-bearing walls, installed engineered hardwood floors, and refreshed the entire interior.",
-    highlights: ["Wall removal", "Engineered hardwood", "New lighting plan", "Paint throughout"],
+      "Transformed a compartmentalized 1980s floor plan into a modern open-concept kitchen and dining space. White shaker cabinets, chandelier lighting, and hardwood floors throughout.",
+    highlights: ["Open concept layout", "White shaker cabinets", "Chandelier lighting", "Hardwood floors"],
   },
 ];
 
@@ -127,7 +127,7 @@ export default function ProjectsPage() {
                   <div className="aspect-[16/10] overflow-hidden relative">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={`/api/image?type=${project.imageType}`}
+                      src={project.image}
                       alt={`${project.title} - Ulloa Construction project in ${project.location}`}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                       loading="lazy"

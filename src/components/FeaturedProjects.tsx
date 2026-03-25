@@ -5,23 +5,23 @@ const projects = [
     title: "Modern Kitchen Renovation",
     location: "Anaheim Hills, CA",
     category: "Kitchen",
-    imageType: "kitchen",
+    image: "/images/gallery-1.jpg",
     description:
       "Complete kitchen transformation with custom cabinetry, quartz countertops, and premium appliances.",
   },
   {
-    title: "New Home Construction",
+    title: "Home Theater & Remodel",
     location: "Yorba Linda, CA",
-    category: "New Construction",
-    imageType: "frame",
+    category: "Interior",
+    image: "/images/gallery-7.jpg",
     description:
-      "3,200 sq ft custom home built to California seismic codes with energy-efficient systems.",
+      "Custom home theater room with tiered seating, acoustic design, and full interior renovation.",
   },
   {
     title: "Luxury Bathroom Remodel",
     location: "Irvine, CA",
     category: "Bathroom",
-    imageType: "bathroom",
+    image: "/images/gallery-3.jpg",
     description:
       "Spa-inspired master bathroom with heated floors, frameless glass shower, and custom vanity.",
   },
@@ -75,7 +75,7 @@ export default function FeaturedProjects() {
                 <div className="aspect-[4/3] overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={`/api/image?type=${project.imageType}`}
+                    src={project.image}
                     alt={`${project.title} - Ulloa Construction project in ${project.location}`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"

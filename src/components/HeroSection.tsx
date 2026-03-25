@@ -6,10 +6,10 @@ export default function HeroSection() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       aria-label="Hero - Building Orange County's Future"
     >
-      {/* Background image via API route */}
+      {/* Background image */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/api/image?type=hero"
+        src="/images/hero.jpg"
         alt="Modern construction project in Anaheim, Orange County California at golden hour"
         className="absolute inset-0 w-full h-full object-cover"
         fetchPriority="high"

@@ -47,7 +47,7 @@ export default function AboutSnapshot() {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/api/image?type=crew"
+                src="/images/gallery-5.jpg"
                 alt="Professional Ulloa Construction crew working on home renovation in Anaheim, Orange County California"
                 className="w-full h-full object-cover"
                 loading="lazy"
