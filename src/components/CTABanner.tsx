@@ -3,18 +3,10 @@
 import { useState } from "react";
 
 const serviceTypes = [
-  "Flooring",
-  "Remodeling",
-  "Kitchen Renovation",
-  "Bathroom Upgrade",
-  "New Construction",
-  "Addition",
-  "Siding",
-  "Window Installation",
-  "Door Installation",
-  "Drywall",
-  "Roofing",
-  "Painting",
+  "Kitchen Remodel",
+  "Bathroom Remodel",
+  "Whole-Home / Interior",
+  "Room Addition / ADU",
   "Other",
 ];
 
@@ -61,24 +53,24 @@ export default function CTABanner() {
               id="cta-heading"
               className="text-4xl sm:text-5xl font-black text-white leading-tight mb-6"
             >
-              Ready to Build?
+              Ready to Start?
               <br />
               <span className="text-amber-400">Get Your Free</span>
               <br />
               Estimate Today.
             </h2>
             <p className="text-slate-400 text-lg leading-relaxed mb-8">
-              No pressure, no obligation. Just a free consultation with Orange
-              County's most trusted construction team. We'll visit your Anaheim
-              or OC property and give you a clear, detailed estimate.
+              No pressure, no obligation. Just an honest conversation about your
+              project and a clear, detailed estimate from a contractor you can
+              trust. CSLB Lic. #1144906.
             </p>
 
             {/* Contact details */}
             <div className="space-y-4">
               <a
-                href="tel:+16574002896"
+                href="tel:+17144871860"
                 className="flex items-center gap-4 group"
-                aria-label="Call us at (657) 400-2896"
+                aria-label="Call us at (714) 487-1860"
               >
                 <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-amber-500/20 transition-colors">
                   <svg
@@ -91,26 +83,32 @@ export default function CTABanner() {
                 </div>
                 <div>
                   <p className="text-white font-semibold group-hover:text-amber-400 transition-colors">
-                    (657) 400-2896
+                    (714) 487-1860
                   </p>
-                  <p className="text-slate-500 text-sm">Click to call</p>
+                  <p className="text-slate-500 text-sm">Call or text anytime</p>
                 </div>
               </a>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center flex-shrink-0">
+              <a
+                href="mailto:info@ulloa-construction.com"
+                className="flex items-center gap-4 group"
+                aria-label="Email us at info@ulloa-construction.com"
+              >
+                <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-amber-500/20 transition-colors">
                   <svg
                     viewBox="0 0 24 24"
                     className="w-5 h-5 fill-amber-400"
                     aria-hidden="true"
                   >
-                    <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" />
+                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                   </svg>
                 </div>
                 <div>
-                  <p className="text-white font-semibold">Mon–Sat: 7:30am–5:30pm</p>
-                  <p className="text-slate-500 text-sm">Sunday: Closed</p>
+                  <p className="text-white font-semibold group-hover:text-amber-400 transition-colors">
+                    info@ulloa-construction.com
+                  </p>
+                  <p className="text-slate-500 text-sm">Email anytime</p>
                 </div>
-              </div>
+              </a>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center flex-shrink-0">
                   <svg
@@ -122,8 +120,8 @@ export default function CTABanner() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-white font-semibold">Anaheim, CA 92806</p>
-                  <p className="text-slate-500 text-sm">Serving all of Orange County</p>
+                  <p className="text-white font-semibold">Tustin, CA</p>
+                  <p className="text-slate-500 text-sm">Serving Orange County & surrounding areas</p>
                 </div>
               </div>
             </div>
@@ -143,11 +141,11 @@ export default function CTABanner() {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">
-                  We'll Be in Touch!
+                  We&apos;ll Be in Touch!
                 </h3>
                 <p className="text-slate-400">
-                  Thanks for reaching out. Our Anaheim team will contact you
-                  within 24 hours.
+                  After you submit, we&apos;ll receive your details by email and follow up
+                  as soon as possible.
                 </p>
               </div>
             ) : (
@@ -200,11 +198,12 @@ export default function CTABanner() {
                     htmlFor="cta-email"
                     className="block text-sm font-medium text-slate-300 mb-1.5"
                   >
-                    Email Address
+                    Email Address *
                   </label>
                   <input
                     id="cta-email"
                     type="email"
+                    required
                     value={form.email}
                     onChange={(e) =>
                       setForm({ ...form, email: e.target.value })
@@ -218,7 +217,7 @@ export default function CTABanner() {
                     htmlFor="cta-service"
                     className="block text-sm font-medium text-slate-300 mb-1.5"
                   >
-                    Service Needed *
+                    Project Type *
                   </label>
                   <select
                     id="cta-service"
@@ -230,7 +229,7 @@ export default function CTABanner() {
                     className="w-full bg-slate-700 border border-slate-600 text-white rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors"
                   >
                     <option value="" disabled>
-                      Select a service...
+                      Select a project type...
                     </option>
                     {serviceTypes.map((s) => (
                       <option key={s} value={s}>
@@ -254,7 +253,7 @@ export default function CTABanner() {
                       setForm({ ...form, message: e.target.value })
                     }
                     className="w-full bg-slate-700 border border-slate-600 text-white placeholder-slate-400 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors resize-none"
-                    placeholder="Tell us about your project in Anaheim or Orange County..."
+                    placeholder="Tell us about your project..."
                   />
                 </div>
                 <button
@@ -265,7 +264,7 @@ export default function CTABanner() {
                   Get My Free Estimate
                 </button>
                 <p className="text-center text-slate-500 text-xs mt-3">
-                  We'll respond within 24 hours. No spam, ever.
+                  After you submit, we&apos;ll receive your details by email and follow up as soon as possible.
                 </p>
               </form>
             )}

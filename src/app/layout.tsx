@@ -17,11 +17,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://ulloaonstruction.com"),
   title: {
-    default: "Ulloa Construction | Anaheim, CA Contractor",
-    template: "%s | Ulloa Construction - Anaheim, CA Contractor",
+    default: "Ulloa Construction | Tustin & Orange County Remodeling Contractor",
+    template: "%s | Ulloa Construction - Orange County Remodeling",
   },
   description:
-    "Ulloa Construction — 20+ years serving Orange County, CA. Expert in flooring, remodeling, kitchen renovations, roofing, and more. Licensed & insured. Call (657) 400-2896.",
+    "Ulloa Construction — Professional remodeling contractor in Tustin & Orange County, CA. Kitchens, bathrooms, interior remodeling, and room additions. CSLB Lic. #1144906. Call (714) 487-1860.",
   keywords: [
     "construction",
     "contractor",
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://ulloaonstruction.com",
     siteName: "Ulloa Construction",
-    title: "Ulloa Construction | Anaheim, CA Contractor",
+    title: "Ulloa Construction | Tustin & Orange County Remodeling Contractor",
     description:
-      "20+ years serving Orange County. Expert contractor for remodeling, flooring, roofing & more. Call (657) 400-2896.",
+      "Professional remodeling contractor in Orange County. Kitchens, bathrooms, interiors & additions. CSLB Lic. #1144906. Call (714) 487-1860.",
     images: [
       {
         url: "/images/hero.jpg",
@@ -53,9 +53,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ulloa Construction | Anaheim, CA Contractor",
+    title: "Ulloa Construction | Tustin & Orange County Remodeling Contractor",
     description:
-      "20+ years serving Orange County. Expert contractor for remodeling, flooring, roofing & more.",
+      "Professional remodeling contractor in Orange County. Kitchens, bathrooms, interiors & additions. CSLB Lic. #1144906.",
   },
   robots: {
     index: true,

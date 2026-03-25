@@ -6,29 +6,11 @@ import { useState } from "react";
 // See: src/app/contact/layout.tsx
 
 const serviceTypes = [
-  "Flooring",
-  "Remodeling",
-  "Kitchen Renovation",
-  "Bathroom Upgrade",
-  "New Construction",
-  "Room Addition",
-  "Siding",
-  "Window Installation",
-  "Door Installation",
-  "Drywall",
-  "Roofing",
-  "Painting",
+  "Kitchen Remodel",
+  "Bathroom Remodel",
+  "Whole-Home / Interior",
+  "Room Addition / ADU",
   "Other",
-];
-
-const hours = [
-  { day: "Monday", time: "7:30am – 5:30pm" },
-  { day: "Tuesday", time: "7:30am – 5:30pm" },
-  { day: "Wednesday", time: "7:30am – 5:30pm" },
-  { day: "Thursday", time: "7:30am – 5:30pm" },
-  { day: "Friday", time: "7:30am – 5:30pm" },
-  { day: "Saturday", time: "7:30am – 5:30pm" },
-  { day: "Sunday", time: "Closed" },
 ];
 
 export default function ContactPage() {
@@ -53,14 +35,15 @@ export default function ContactPage() {
       <section className="bg-slate-900 py-20" aria-labelledby="contact-page-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-amber-400 font-semibold text-sm uppercase tracking-widest mb-4">
-            Let's Talk
+            Let&apos;s Talk
           </p>
-          <h1 id="contact-page-heading" className="text-5xl sm:text-6xl font-black text-white mb-6">
+          <h1 id="contact-page-heading" className="text-5xl sm:text-6xl font-black text-white mb-4">
             Contact Ulloa
             <span className="text-amber-400"> Construction</span>
           </h1>
+          <p className="text-amber-400 text-sm font-medium mb-4">CSLB Lic. #1144906 — Licensed & Insured</p>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-            Ready to start your Orange County construction project? Call us or fill out the form
+            Ready to start your remodeling project? Call us or fill out the form
             below for a free, no-obligation estimate.
           </p>
         </div>
@@ -79,9 +62,9 @@ export default function ContactPage() {
                 </h2>
                 <address className="not-italic space-y-5">
                   <a
-                    href="tel:+16574002896"
+                    href="tel:+17144871860"
                     className="flex items-start gap-4 group"
-                    aria-label="Call Ulloa Construction at (657) 400-2896"
+                    aria-label="Call Ulloa Construction at (714) 487-1860"
                   >
                     <div className="w-12 h-12 bg-amber-50 border border-amber-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-amber-500 group-hover:border-amber-500 transition-colors">
                       <svg viewBox="0 0 24 24" className="w-5 h-5 fill-amber-500 group-hover:fill-white transition-colors" aria-hidden="true">
@@ -90,9 +73,27 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-slate-900 group-hover:text-amber-600 transition-colors">
-                        (657) 400-2896
+                        (714) 487-1860
                       </p>
-                      <p className="text-slate-500 text-sm">Click to call</p>
+                      <p className="text-slate-500 text-sm">Call or text anytime</p>
+                    </div>
+                  </a>
+
+                  <a
+                    href="mailto:info@ulloa-construction.com"
+                    className="flex items-start gap-4 group"
+                    aria-label="Email Ulloa Construction at info@ulloa-construction.com"
+                  >
+                    <div className="w-12 h-12 bg-amber-50 border border-amber-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-amber-500 group-hover:border-amber-500 transition-colors">
+                      <svg viewBox="0 0 24 24" className="w-5 h-5 fill-amber-500 group-hover:fill-white transition-colors" aria-hidden="true">
+                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-slate-900 group-hover:text-amber-600 transition-colors">
+                        info@ulloa-construction.com
+                      </p>
+                      <p className="text-slate-500 text-sm">Email anytime</p>
                     </div>
                   </a>
 
@@ -103,45 +104,45 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <p className="font-semibold text-slate-900">Anaheim, CA 92806</p>
+                      <p className="font-semibold text-slate-900">Tustin, CA</p>
                       <p className="text-slate-500 text-sm">
-                        Serving all of Orange County, CA
-                        <br />
-                        From Brea to San Juan Capistrano
+                        Serving Orange County & surrounding areas
                       </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-amber-50 border border-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <svg viewBox="0 0 24 24" className="w-5 h-5 fill-amber-500" aria-hidden="true">
+                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-slate-900">CSLB Lic. #1144906</p>
+                      <p className="text-slate-500 text-sm">Licensed & fully insured</p>
                     </div>
                   </div>
                 </address>
               </div>
 
-              {/* Hours */}
-              <div>
-                <h3 className="font-bold text-slate-900 text-lg mb-4">Business Hours</h3>
-                <dl className="space-y-2">
-                  {hours.map(({ day, time }) => (
-                    <div
-                      key={day}
-                      className={`flex justify-between text-sm py-1.5 border-b border-slate-100 ${
-                        day === "Sunday" ? "text-slate-400" : "text-slate-700"
-                      }`}
-                    >
-                      <dt className="font-medium">{day}</dt>
-                      <dd className={day === "Sunday" ? "text-red-400" : "text-amber-600 font-medium"}>
-                        {time}
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
-              </div>
-
-              {/* Service area */}
+              {/* Yelp link */}
               <div className="bg-amber-50 border border-amber-100 rounded-2xl p-6">
-                <h3 className="font-bold text-slate-900 mb-2">Service Area</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">
-                  We serve all cities in Orange County, CA — including Anaheim, Brea, Buena Park,
-                  Fullerton, Garden Grove, Huntington Beach, Irvine, Orange, Santa Ana, Tustin,
-                  Yorba Linda, and San Juan Capistrano.
+                <h3 className="font-bold text-slate-900 mb-2">Read Our Reviews</h3>
+                <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                  See what Orange County homeowners say about working with us on Yelp.
                 </p>
+                <a
+                  href="https://www.yelp.com/biz/ulloa-construction-orange-county"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#d32323] hover:bg-[#b81c1c] text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors"
+                  aria-label="View Ulloa Construction reviews on Yelp"
+                >
+                  <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  View on Yelp
+                </a>
               </div>
             </div>
 
@@ -157,8 +158,7 @@ export default function ContactPage() {
                     </div>
                     <h2 className="text-3xl font-black text-slate-900 mb-3">Message Sent!</h2>
                     <p className="text-slate-500 text-lg">
-                      Thanks for reaching out to Ulloa Construction. Our Anaheim team will get back
-                      to you within 24 hours.
+                      After you submit, we&apos;ll receive your details by email and follow up as soon as possible.
                     </p>
                   </div>
                 ) : (
@@ -167,7 +167,7 @@ export default function ContactPage() {
                       Request a Free Estimate
                     </h2>
                     <p className="text-slate-500 text-sm mb-6">
-                      Tell us about your Orange County construction project and we'll be in touch promptly.
+                      After you submit, we&apos;ll receive your details by email and follow up as soon as possible.
                     </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
@@ -204,11 +204,12 @@ export default function ContactPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                       <div>
                         <label htmlFor="contact-email" className="block text-sm font-medium text-slate-700 mb-1.5">
-                          Email Address
+                          Email Address *
                         </label>
                         <input
                           id="contact-email"
                           type="email"
+                          required
                           value={form.email}
                           onChange={(e) => setForm({ ...form, email: e.target.value })}
                           className="w-full bg-white border border-slate-200 text-slate-900 placeholder-slate-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors"
@@ -217,7 +218,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <label htmlFor="contact-city" className="block text-sm font-medium text-slate-700 mb-1.5">
-                          City (Orange County)
+                          City
                         </label>
                         <input
                           id="contact-city"
@@ -225,14 +226,14 @@ export default function ContactPage() {
                           value={form.city}
                           onChange={(e) => setForm({ ...form, city: e.target.value })}
                           className="w-full bg-white border border-slate-200 text-slate-900 placeholder-slate-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors"
-                          placeholder="Anaheim, Irvine, Yorba Linda..."
+                          placeholder="Tustin, Irvine, Anaheim..."
                         />
                       </div>
                     </div>
 
                     <div className="mb-4">
                       <label htmlFor="contact-service" className="block text-sm font-medium text-slate-700 mb-1.5">
-                        Service Needed *
+                        Project Type *
                       </label>
                       <select
                         id="contact-service"
@@ -241,7 +242,7 @@ export default function ContactPage() {
                         onChange={(e) => setForm({ ...form, service: e.target.value })}
                         className="w-full bg-white border border-slate-200 text-slate-900 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors"
                       >
-                        <option value="" disabled>Select a service...</option>
+                        <option value="" disabled>Select a project type...</option>
                         {serviceTypes.map((s) => (
                           <option key={s} value={s}>{s}</option>
                         ))}
@@ -250,16 +251,15 @@ export default function ContactPage() {
 
                     <div className="mb-6">
                       <label htmlFor="contact-message" className="block text-sm font-medium text-slate-700 mb-1.5">
-                        Project Details *
+                        Project Details
                       </label>
                       <textarea
                         id="contact-message"
                         rows={4}
-                        required
                         value={form.message}
                         onChange={(e) => setForm({ ...form, message: e.target.value })}
                         className="w-full bg-white border border-slate-200 text-slate-900 placeholder-slate-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors resize-none"
-                        placeholder="Describe your project in Anaheim or Orange County — what are you looking to build or renovate?"
+                        placeholder="Tell us about your project — what are you looking to remodel or build?"
                       />
                     </div>
 
@@ -271,30 +271,13 @@ export default function ContactPage() {
                       Send My Request
                     </button>
                     <p className="text-center text-slate-400 text-xs mt-3">
-                      We respond within 24 hours. Based in Anaheim, serving all of Orange County.
+                      After you submit, we&apos;ll receive your details by email and follow up as soon as possible.
                     </p>
                   </form>
                 )}
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Google Maps embed */}
-      <section className="bg-slate-100" aria-label="Map of Anaheim, CA service area">
-        <h2 className="sr-only">Ulloa Construction Service Area — Anaheim, CA and Orange County</h2>
-        <div className="w-full h-96">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105799.08988600066!2d-118.04178847382812!3d33.83530689999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd7d12b3b5e6d%3A0x2b10e17e7ac2f2d6!2sAnaheim%2C%20CA!5e0!3m2!1sen!2sus!4v1710000000000"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Ulloa Construction service area — Anaheim and Orange County, California"
-          />
         </div>
       </section>
     </div>

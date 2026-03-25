@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Full-service construction in Anaheim & Orange County, CA — flooring, remodeling, kitchen renovations, bathrooms, new construction, roofing, painting, and more. Call (657) 400-2896.",
+    "Ulloa Construction specializes in kitchen remodeling, bathroom remodeling, interior remodeling, and room additions/ADUs throughout Orange County, CA. CSLB Lic. #1144906. Call (714) 487-1860.",
   alternates: {
     canonical: "https://ulloaonstruction.com/services",
   },
@@ -12,172 +12,64 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    title: "Flooring",
-    slug: "flooring",
-    description:
-      "From hardwood to luxury vinyl plank, we install all types of flooring in Anaheim and Orange County homes. Our team ensures precise measurements, proper underlayment, and flawless installation that stands up to SoCal living.",
-    details: [
-      "Hardwood & engineered wood",
-      "Luxury vinyl plank (LVP)",
-      "Tile & stone",
-      "Carpet installation",
-      "Subfloor repair & leveling",
-    ],
-    imageType: "commercial",
-  },
-  {
-    title: "Remodeling",
-    slug: "remodeling",
-    description:
-      "Complete home remodels that transform your Orange County property. Whether it's a full interior renovation or targeted upgrades, our Anaheim-based team handles every aspect with local expertise.",
-    details: [
-      "Full interior renovations",
-      "Open-concept conversions",
-      "Structural modifications",
-      "Permit acquisition",
-      "California building code compliance",
-    ],
-    imageType: "crew",
-  },
-  {
-    title: "Kitchen Renovations",
+    title: "Kitchen Remodeling",
     slug: "kitchen",
     description:
-      "Dream kitchens are our specialty. From custom cabinetry to quartz countertops, we create beautiful, functional kitchens for Anaheim and OC homeowners that blend Southern California style with practical design.",
+      "A kitchen remodel is one of the highest-impact projects you can do for your home — and it shows in how your family actually uses the space every day. We handle layout changes, custom or semi-custom cabinets, countertops, backsplashes, lighting, and flooring. Every decision is built around how you live.",
     details: [
-      "Custom cabinet design & installation",
+      "Layout changes & open-concept conversions",
+      "Custom and semi-custom cabinet design & installation",
       "Countertop installation (quartz, granite, marble)",
-      "Tile backsplash",
-      "Kitchen island construction",
-      "Appliance installation",
+      "Tile backsplash installation",
+      "Lighting design & electrical updates",
+      "Flooring throughout",
     ],
-    imageType: "kitchen",
+    image: "/images/gallery-1.jpg",
   },
   {
-    title: "Bathroom Upgrades",
+    title: "Bathroom Remodeling",
     slug: "bathroom",
     description:
-      "Spa-inspired bathroom renovations for Orange County homes. We handle everything from simple fixture upgrades to complete gut renovations with heated floors, frameless glass, and custom vanities.",
+      "Your bathroom should feel calm and clean — not cramped and outdated. We specialize in walk-in showers, custom tile work, vanities, waterproofing, and ventilation. Every detail is designed for durability and a spa-like feel that holds up over time.",
     details: [
-      "Complete gut renovations",
-      "Shower & tub installation",
-      "Custom vanity & mirror",
-      "Heated floor systems",
-      "Waterproofing & tile work",
+      "Walk-in shower design & construction",
+      "Custom tile installation (floor, walls, niches)",
+      "Vanity, mirror, and fixture selection & install",
+      "Waterproofing and moisture barriers",
+      "Ventilation & lighting upgrades",
+      "Freestanding tub installation",
     ],
-    imageType: "bathroom",
+    image: "/images/gallery-3.jpg",
   },
   {
-    title: "New Construction",
-    slug: "new-construction",
+    title: "Interior Remodeling",
+    slug: "interior",
     description:
-      "Custom homes built from the ground up in Anaheim and across Orange County. Our team has deep knowledge of California seismic codes and SoCal building requirements to ensure your new home is built right.",
+      "Sometimes it's not one room — it's the whole interior that needs to feel cohesive and updated. We handle flooring, doors, trim, paint, lighting, and wall changes that modernize your home while keeping a clean, organized work environment for your family.",
     details: [
-      "Custom home design consultation",
-      "Foundation & framing",
-      "Seismic compliance (California standards)",
-      "Energy-efficient systems",
-      "Full project management",
+      "Flooring installation (hardwood, LVP, tile, carpet)",
+      "Interior door replacement & trim work",
+      "Paint and wall texture",
+      "Lighting and electrical updates",
+      "Accent walls and custom built-ins",
+      "Open-concept wall removal",
     ],
-    imageType: "frame",
+    image: "/images/gallery-8.jpg",
   },
   {
-    title: "Additions",
+    title: "Room Additions & ADUs",
     slug: "additions",
     description:
-      "Expand your living space with seamlessly integrated room additions, ADUs, and second stories. We handle the permits, engineering, and construction to add value to your Orange County home.",
+      "Need more space but love your location? We handle the full process — permits, planning, and construction for room additions, garage conversions, and ADUs that blend seamlessly with your existing home. No juggling multiple contractors.",
     details: [
-      "Room additions",
-      "ADU (Accessory Dwelling Units)",
-      "Second story additions",
+      "Room additions (master suite, family room, office)",
+      "ADU (Accessory Dwelling Unit) construction",
       "Garage conversions",
-      "Sunrooms & patios",
+      "Permit acquisition & coordination",
+      "Foundation, framing, and finish work",
+      "Architectural planning support",
     ],
-    imageType: "frame",
-  },
-  {
-    title: "Siding",
-    slug: "siding",
-    description:
-      "Protect and beautify your Anaheim home with new siding installation. We work with all major siding materials and ensure proper installation that holds up to SoCal weather conditions.",
-    details: [
-      "Fiber cement (Hardie Board)",
-      "Vinyl siding",
-      "Wood siding",
-      "Stucco application",
-      "Siding repair & replacement",
-    ],
-    imageType: "commercial",
-  },
-  {
-    title: "Window Installation",
-    slug: "windows",
-    description:
-      "Energy-efficient window installation for Orange County homes. New windows improve comfort, reduce energy bills, and add curb appeal — essential upgrades for Southern California homeowners.",
-    details: [
-      "Dual-pane & triple-pane windows",
-      "Energy Star certified products",
-      "Bay & bow windows",
-      "Sliding & casement windows",
-      "Window repair & re-glazing",
-    ],
-    imageType: "commercial",
-  },
-  {
-    title: "Door Installation",
-    slug: "doors",
-    description:
-      "Interior and exterior door installation with precision fitting and quality hardware. From front entry doors to French doors, we enhance the beauty and security of your OC home.",
-    details: [
-      "Entry & front doors",
-      "French & sliding doors",
-      "Interior door replacement",
-      "Garage door installation",
-      "Door frame repair",
-    ],
-    imageType: "commercial",
-  },
-  {
-    title: "Drywall",
-    slug: "drywall",
-    description:
-      "Professional drywall installation, repair, and finishing for Anaheim and Orange County projects. We deliver smooth, flawless walls that paint beautifully — from new installations to hole repairs.",
-    details: [
-      "New drywall installation",
-      "Texture matching & repair",
-      "Water damage repair",
-      "Skim coat finishing",
-      "Soundproofing solutions",
-    ],
-    imageType: "crew",
-  },
-  {
-    title: "Roofing",
-    slug: "roofing",
-    description:
-      "Complete roofing solutions for Southern California homes. From storm repairs to full replacements, our Anaheim-based roofing team delivers durable, beautiful results for OC homeowners.",
-    details: [
-      "Asphalt shingle installation",
-      "Tile roofing (clay & concrete)",
-      "Flat roof systems",
-      "Roof repair & patching",
-      "Gutter installation",
-    ],
-    imageType: "commercial",
-  },
-  {
-    title: "Painting",
-    slug: "painting",
-    description:
-      "Interior and exterior painting with premium materials and meticulous prep. Our Anaheim painters deliver clean lines, smooth finishes, and color consultation for every Orange County project.",
-    details: [
-      "Interior painting",
-      "Exterior painting",
-      "Cabinet refinishing",
-      "Deck staining & sealing",
-      "Color consultation",
-    ],
-    imageType: "crew",
+    image: "/images/gallery-10.jpg",
   },
 ];
 
@@ -190,21 +82,21 @@ export default function ServicesPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-amber-400 font-semibold text-sm uppercase tracking-widest mb-4">What We Offer</p>
           <h1 id="services-page-heading" className="text-5xl sm:text-6xl font-black text-white mb-6">
-            Construction Services in
-            <span className="text-amber-400"> Anaheim & Orange County</span>
+            Remodeling Services in
+            <span className="text-amber-400"> Orange County, CA</span>
           </h1>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-            From flooring to full home builds, Ulloa Construction offers comprehensive construction
-            services throughout Orange County, CA. 20+ years of local expertise, seismic code knowledge,
-            and proven craftsmanship.
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-4">
+            We specialize in the projects that matter most — kitchens, bathrooms, interiors, and additions —
+            done with honest pricing, clear communication, and craftsmanship that lasts.
           </p>
+          <p className="text-sm text-amber-400 font-medium mb-8">CSLB Lic. #1144906 — Licensed & Insured</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+16574002896"
+              href="tel:+17144871860"
               className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-4 rounded-xl transition-colors"
-              aria-label="Call Ulloa Construction at (657) 400-2896"
+              aria-label="Call Ulloa Construction at (714) 487-1860"
             >
-              Call (657) 400-2896
+              Call (714) 487-1860
             </a>
             <Link
               href="/contact"
@@ -232,8 +124,8 @@ export default function ServicesPage() {
                   <div className="rounded-2xl overflow-hidden shadow-xl aspect-[16/10] bg-slate-100">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={`/api/image?type=${service.imageType}`}
-                      alt={`${service.title} service in Anaheim and Orange County, CA`}
+                      src={service.image}
+                      alt={`${service.title} by Ulloa Construction in Orange County, CA`}
                       className="w-full h-full object-cover"
                       loading="lazy"
                     />
@@ -247,7 +139,7 @@ export default function ServicesPage() {
                     className="text-3xl font-black text-slate-900 mb-4"
                   >
                     {service.title}{" "}
-                    <span className="text-amber-500">in Anaheim & Orange County</span>
+                    <span className="text-amber-500">in Orange County</span>
                   </h2>
                   <p className="text-slate-600 leading-relaxed mb-6">
                     {service.description}
@@ -286,19 +178,19 @@ export default function ServicesPage() {
       <section className="bg-slate-900 py-16" aria-label="Call to action">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-black text-white mb-4">
-            Ready to Start Your Orange County Project?
+            Ready to Start Your Project?
           </h2>
-          <p className="text-slate-400 mb-8">
-            Call our Anaheim, CA team today for a free, no-obligation estimate on any construction
-            service throughout Orange County.
+          <p className="text-slate-400 mb-2">
+            Call our team today for a free, no-obligation estimate.
           </p>
+          <p className="text-amber-400 text-sm font-medium mb-8">CSLB Lic. #1144906 — Licensed & Insured</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+16574002896"
+              href="tel:+17144871860"
               className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-4 rounded-xl transition-colors"
-              aria-label="Call (657) 400-2896"
+              aria-label="Call (714) 487-1860"
             >
-              (657) 400-2896
+              (714) 487-1860
             </a>
             <Link
               href="/contact"

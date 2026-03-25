@@ -189,11 +189,11 @@ export default function ProjectsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+16574002896"
+              href="tel:+17144871860"
               className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-4 rounded-xl transition-colors"
-              aria-label="Call (657) 400-2896"
+              aria-label="Call (714) 487-1860"
             >
-              (657) 400-2896
+              (714) 487-1860
             </a>
             <Link
               href="/contact"
