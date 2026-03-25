@@ -33,45 +33,46 @@ export default function HeroSection() {
               className="w-4 h-4 fill-current"
               aria-hidden="true"
             >
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
             </svg>
-            20+ Years Serving Orange County, CA
+            CSLB Lic. #1144906 — Licensed & Insured
           </p>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tight mb-6">
-            Building{" "}
-            <span className="text-amber-400">Orange County's</span>
+            Professional Tustin
             <br />
-            Future
+            <span className="text-amber-400">Remodeling Contractor</span>
+            <br />
+            You Can Trust.
           </h1>
 
           <p className="text-xl sm:text-2xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10">
-            Your trusted Anaheim contractor for remodeling, flooring, roofing,
-            and new construction. Deep roots in Southern California — we're your
-            neighbors.
+            Highly-praised local OC general contractor specializing in kitchens,
+            bathrooms, interior remodeling, and additions — with honest pricing
+            and clear communication from start to finish.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/contact"
+            <a
+              href="tel:+17144871860"
               className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-lg px-8 py-4 rounded-lg transition-all hover:scale-105 shadow-lg shadow-amber-500/25"
-              aria-label="Get a free construction quote from Ulloa Construction"
+              aria-label="Call Ulloa Construction at (714) 487-1860"
             >
-              Get a Free Quote
               <svg
                 viewBox="0 0 24 24"
                 className="w-5 h-5 fill-current"
                 aria-hidden="true"
               >
-                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
               </svg>
-            </Link>
+              (714) 487-1860
+            </a>
             <Link
-              href="/projects"
+              href="/contact"
               className="inline-flex items-center gap-2 border-2 border-white/70 hover:border-white text-white font-semibold text-lg px-8 py-4 rounded-lg transition-all hover:bg-white/10"
-              aria-label="View Ulloa Construction portfolio and completed projects"
+              aria-label="Get a free estimate from Ulloa Construction"
             >
-              View Our Work
+              Get a Free Estimate
             </Link>
           </div>
         </div>

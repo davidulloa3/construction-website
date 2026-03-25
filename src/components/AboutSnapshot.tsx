@@ -2,29 +2,39 @@ import Link from "next/link";
 
 const values = [
   {
-    title: "Local Expertise",
+    title: "CSLB Licensed #1144906 & Fully Insured",
     description:
-      "Deep knowledge of SoCal building codes, seismic requirements, and OC climate considerations.",
+      "You're protected from day one. Our California contractor's license and full insurance coverage give you peace of mind throughout your project.",
     icon: (
       <svg viewBox="0 0 24 24" className="w-5 h-5 fill-amber-500" aria-hidden="true">
-        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
       </svg>
     ),
   },
   {
-    title: "Quality Craftsmanship",
+    title: "Clean, Respectful Crews",
     description:
-      "Every project receives our full attention to detail from foundation to final finish.",
+      "We treat your home like it's our own — organized job sites, daily clean-up, and crews who show up on time and work with care.",
     icon: (
       <svg viewBox="0 0 24 24" className="w-5 h-5 fill-amber-500" aria-hidden="true">
-        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
       </svg>
     ),
   },
   {
-    title: "Transparent Communication",
+    title: "Clear, Transparent Pricing",
     description:
-      "No surprises — clear timelines, honest pricing, and regular project updates.",
+      "No surprise line items or buried costs. You get a detailed scope with clear allowances so you know exactly what you're investing in.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="w-5 h-5 fill-amber-500" aria-hidden="true">
+        <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Direct Owner Communication",
+    description:
+      "You'll work directly with the owner throughout your project — not a sales rep or middleman. Your calls and questions get real answers.",
     icon: (
       <svg viewBox="0 0 24 24" className="w-5 h-5 fill-amber-500" aria-hidden="true">
         <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" />
@@ -75,27 +85,26 @@ export default function AboutSnapshot() {
           {/* Right: Content */}
           <div>
             <p className="text-amber-500 font-semibold text-sm uppercase tracking-widest mb-3">
-              About Ulloa Construction
+              Why Choose Us
             </p>
             <h2
               id="about-heading"
               className="text-4xl sm:text-5xl font-black text-slate-900 leading-tight mb-6"
             >
-              Your Neighbors.
+              The Contractor You
               <br />
-              <span className="text-amber-500">Your Builders.</span>
+              <span className="text-amber-500">Actually Deserve.</span>
             </h2>
             <p className="text-slate-600 text-lg leading-relaxed mb-6">
-              Founded in Anaheim, CA, Ulloa Construction has been building and
-              renovating homes across Orange County for over two decades. We're
-              not a national chain — we're your community contractors who
-              understand the unique needs of Southern California homes.
+              Ulloa Construction is a locally-owned Orange County remodeling
+              company built on honest pricing, reliable communication, and
+              craftsmanship that stands up over time. CSLB Lic. #1144906.
             </p>
             <p className="text-slate-600 leading-relaxed mb-8">
-              From Brea to San Juan Capistrano, our team brings local expertise,
-              seismic code knowledge, and a genuine commitment to every project
-              we take on. When you work with us, you're working with people who
-              live and work right here in OC.
+              We specialize in kitchens, bathrooms, interior remodeling, and
+              additions — the work that matters most to how your family lives.
+              Every project gets the same attention to detail, whether it's a
+              single bathroom or a full interior renovation.
             </p>
 
             {/* Values */}

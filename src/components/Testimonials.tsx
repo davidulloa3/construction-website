@@ -4,39 +4,22 @@ import { useState } from "react";
 
 const testimonials = [
   {
-    name: "Maria G.",
-    location: "Anaheim Hills, CA",
+    name: "Susan H.",
     rating: 5,
-    text: "Ulloa Construction transformed our outdated kitchen into a stunning modern space. Their team was professional, on time, and the quality exceeded our expectations. As neighbors in Orange County, they truly understood our needs.",
-    project: "Kitchen Renovation",
-  },
-  {
-    name: "Robert T.",
-    location: "Yorba Linda, CA",
-    rating: 5,
-    text: "We hired Ulloa Construction to build our custom home and couldn't be happier. Their knowledge of SoCal building codes and seismic requirements gave us peace of mind. The craftsmanship is outstanding.",
-    project: "New Home Construction",
-  },
-  {
-    name: "Jennifer C.",
-    location: "Irvine, CA",
-    rating: 5,
-    text: "From start to finish, the Ulloa team was exceptional. Our bathroom remodel came out even better than we imagined. Communication was clear throughout the entire process. Highly recommend them for any OC contractor work.",
+    text: "We were beyond pleased with the work David and his team did on remodeling our entire bathroom! Their skills, work ethic, communication and quality of work were top notch. We felt confident in the work they were doing and they did not disappoint! The overall experience was exceptional! We would highly recommend ULLOA Construction and would not hesitate to use them again for future work to be done at our home.",
     project: "Bathroom Remodel",
   },
   {
-    name: "David M.",
-    location: "Fullerton, CA",
+    name: "Susan P.",
     rating: 5,
-    text: "We've worked with several Orange County contractors before, but Ulloa Construction is in a different league. They completed our room addition on schedule and on budget. Incredible attention to detail.",
-    project: "Room Addition",
+    text: "Ulloa Construction is always our 'go-to' for any household need. Their pricing is more than competitive with any other company and the quality of their work is beyond compare.",
+    project: "General Remodeling",
   },
   {
-    name: "Sarah L.",
-    location: "Garden Grove, CA",
+    name: "William T.",
     rating: 5,
-    text: "After our roof was damaged, Ulloa Construction responded quickly and had it fixed in just a few days. Professional, fair pricing, and the work looks perfect. They're our go-to contractor in Anaheim and OC.",
-    project: "Roofing",
+    text: "Ulloa Construction was committed to getting every detail right. They have helped us to remodel the kitchen, bathrooms, family room, and flooring throughout the house. Their craftsmanship really stands out, especially in the details of custom woodworking and tile installations that they completed for my home.",
+    project: "Whole-Home Remodel",
   },
 ];
 
@@ -76,15 +59,15 @@ export default function Testimonials() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-amber-400 font-semibold text-sm uppercase tracking-widest mb-3">
-            What Clients Say
+            Real Reviews from Real Clients
           </p>
           <h2
             id="testimonials-heading"
             className="text-4xl sm:text-5xl font-black text-white"
           >
-            Trusted by Orange County
+            What Orange County
             <br />
-            <span className="text-amber-400">Homeowners</span>
+            <span className="text-amber-400">Homeowners Say</span>
           </h2>
         </div>
 
@@ -105,16 +88,12 @@ export default function Testimonials() {
               <div className="flex-1">
                 <StarRating rating={testimonials[active].rating} />
                 <blockquote className="mt-4 text-slate-200 text-lg leading-relaxed">
-                  "{testimonials[active].text}"
+                  &ldquo;{testimonials[active].text}&rdquo;
                 </blockquote>
                 <div className="mt-6 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
                   <cite className="not-italic font-bold text-white">
                     {testimonials[active].name}
                   </cite>
-                  <span className="hidden sm:block text-slate-600">·</span>
-                  <span className="text-slate-400 text-sm">
-                    {testimonials[active].location}
-                  </span>
                   <span className="hidden sm:block text-slate-600">·</span>
                   <span className="inline-block bg-amber-500/20 text-amber-400 text-xs font-semibold px-2.5 py-1 rounded-full">
                     {testimonials[active].project}
@@ -180,6 +159,22 @@ export default function Testimonials() {
                 </svg>
               </button>
             </div>
+          </div>
+
+          {/* Yelp CTA */}
+          <div className="mt-10 text-center">
+            <a
+              href="https://www.yelp.com/biz/ulloa-construction-orange-county"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-[#d32323] hover:bg-[#b81c1c] text-white font-semibold px-6 py-3 rounded-xl transition-colors"
+              aria-label="View all Ulloa Construction reviews on Yelp"
+            >
+              <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current" aria-hidden="true">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              View All Reviews on Yelp
+            </a>
           </div>
         </div>
       </div>
