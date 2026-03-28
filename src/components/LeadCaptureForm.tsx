@@ -19,10 +19,10 @@ export default function LeadCaptureForm() {
           Thank you! We&apos;ll be in touch within 24 hours.
         </h3>
         <p className="text-[#a0a0a0] mb-6">
-          For urgent requests call us directly at (657) 400-2896
+          For urgent requests call us directly at (714) 487-1860
         </p>
         <a
-          href="tel:+16574002896"
+          href="tel:+17144871860"
           className="inline-flex items-center gap-2 bg-[#1565c0] hover:bg-[#1e88e5] text-white font-bold px-8 py-3 rounded-xl transition-colors"
         >
           <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current" aria-hidden="true">
@@ -62,7 +62,7 @@ export default function LeadCaptureForm() {
           type="tel"
           name="phone"
           required
-          placeholder="(657) 000-0000"
+          placeholder="(714) 000-0000"
           className="w-full h-12 px-4 bg-[#1a1a1a] border border-[#2a2a2a] focus:border-[#1565c0] rounded-xl text-[#f5f5f5] placeholder-[#606060] text-base outline-none transition-colors"
         />
         <ValidationError prefix="Phone" field="phone" errors={state.errors} className="mt-1 text-red-400 text-sm" />

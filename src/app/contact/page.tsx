@@ -67,9 +67,9 @@ export default function ContactPage() {
                 </h2>
                 <address className="not-italic space-y-5">
                   <a
-                    href="tel:+16574002896"
+                    href="tel:+17144871860"
                     className="flex items-start gap-4 group"
-                    aria-label="Call Ulloa Construction at (657) 400-2896"
+                    aria-label="Call Ulloa Construction at (714) 487-1860"
                   >
                     <div className="w-12 h-12 bg-amber-500/10 border border-amber-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-amber-500 group-hover:border-amber-500 transition-colors">
                       <svg viewBox="0 0 24 24" className="w-5 h-5 fill-amber-500 group-hover:fill-white transition-colors" aria-hidden="true">
@@ -78,7 +78,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-[#f5f5f5] group-hover:text-amber-400 transition-colors">
-                        (657) 400-2896
+                        (714) 487-1860
                       </p>
                       <p className="text-[#a0a0a0] text-sm">Call or text anytime</p>
                     </div>
@@ -111,7 +111,7 @@ export default function ContactPage() {
                     <div>
                       <p className="font-semibold text-[#f5f5f5]">Anaheim, CA</p>
                       <p className="text-[#a0a0a0] text-sm">
-                        Serving Orange County & surrounding areas
+                        Serving all 34 cities in Orange County
                       </p>
                     </div>
                   </div>

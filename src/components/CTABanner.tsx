@@ -35,9 +35,9 @@ export default function CTABanner() {
 
             <div className="space-y-4">
               <a
-                href="tel:+16574002896"
+                href="tel:+17144871860"
                 className="flex items-center gap-4 group"
-                aria-label="Call us at (657) 400-2896"
+                aria-label="Call us at (714) 487-1860"
               >
                 <div className="w-12 h-12 rounded-xl bg-white/20 border border-white/30 flex items-center justify-center flex-shrink-0 group-hover:bg-white/30 transition-colors">
                   <svg viewBox="0 0 24 24" className="w-5 h-5 fill-white" aria-hidden="true">
@@ -45,7 +45,7 @@ export default function CTABanner() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-white font-semibold">(657) 400-2896</p>
+                  <p className="text-white font-semibold">(714) 487-1860</p>
                   <p className="text-white/60 text-sm">Call or text anytime</p>
                 </div>
               </a>

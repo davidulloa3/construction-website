@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!location) return {};
   return {
     title: `General Contractor in ${location.name}, CA | Ulloa Construction`,
-    description: `Licensed general contractor serving ${location.name}, CA. Kitchen remodels, bathroom renovations, room additions, and more. CSLB #1144906. Call (657) 400-2896.`,
+    description: `Licensed general contractor serving ${location.name}, CA. Kitchen remodels, bathroom renovations, room additions, and all of Orange County. CSLB #1144906. Call (714) 487-1860.`,
     alternates: { canonical: `https://ulloaonstruction.com/locations/${city}` },
   };
 }
@@ -33,7 +33,7 @@ export default async function LocationPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Ulloa Construction",
-    telephone: "+1-657-400-2896",
+    telephone: "+1-714-487-1860",
     url: "https://ulloaonstruction.com",
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
@@ -102,10 +102,10 @@ export default async function LocationPage({ params }: Props) {
               Get a Free Estimate
             </Link>
             <a
-              href="tel:+16574002896"
+              href="tel:+17144871860"
               className="inline-flex items-center gap-2 border-2 border-[#f5f5f5]/70 hover:border-[#f5f5f5] text-[#f5f5f5] font-semibold text-lg px-8 py-4 rounded-lg transition-all hover:bg-[#1a1a1a]"
             >
-              (657) 400-2896
+              (714) 487-1860
             </a>
           </div>
         </div>
@@ -222,7 +222,7 @@ export default async function LocationPage({ params }: Props) {
             Serving {location.name} &amp; Surrounding OC Communities
           </h2>
           <p className="text-white/80 mb-8 text-lg">
-            Call (657) 400-2896 or fill out the form for a free, no-obligation estimate.
+            Call (714) 487-1860 or fill out the form for a free, no-obligation estimate.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -232,10 +232,10 @@ export default async function LocationPage({ params }: Props) {
               Get a Free Estimate
             </Link>
             <a
-              href="tel:+16574002896"
+              href="tel:+17144871860"
               className="inline-flex items-center justify-center gap-2 border-2 border-white/70 hover:border-white text-white font-semibold px-8 py-4 rounded-xl transition-colors"
             >
-              (657) 400-2896
+              (714) 487-1860
             </a>
           </div>
         </div>

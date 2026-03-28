@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Ulloa Construction specializes in kitchen remodeling, bathroom remodeling, interior remodeling, and room additions/ADUs throughout Orange County, CA. CSLB Lic. #1144906. Call (657) 400-2896.",
+    "Ulloa Construction specializes in kitchen remodeling, bathroom remodeling, interior remodeling, and room additions/ADUs throughout Orange County, CA. CSLB Lic. #1144906. Call (714) 487-1860.",
   alternates: {
     canonical: "https://ulloaonstruction.com/services",
   },
@@ -92,11 +92,11 @@ export default function ServicesPage() {
           <p className="text-sm text-amber-400 font-medium mb-8">CSLB Lic. #1144906 — Licensed & Insured</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+16574002896"
+              href="tel:+17144871860"
               className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-4 rounded-xl transition-colors"
-              aria-label="Call Ulloa Construction at (657) 400-2896"
+              aria-label="Call Ulloa Construction at (714) 487-1860"
             >
-              Call (657) 400-2896
+              Call (714) 487-1860
             </a>
             <Link
               href="/contact"
@@ -186,11 +186,11 @@ export default function ServicesPage() {
           <p className="text-amber-400 text-sm font-medium mb-8">CSLB Lic. #1144906 — Licensed & Insured</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+16574002896"
+              href="tel:+17144871860"
               className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-4 rounded-xl transition-colors"
-              aria-label="Call (657) 400-2896"
+              aria-label="Call (714) 487-1860"
             >
-              (657) 400-2896
+              (714) 487-1860
             </a>
             <Link
               href="/contact"

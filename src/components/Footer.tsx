@@ -9,6 +9,43 @@ const services = [
   "Room Additions & ADUs",
 ];
 
+const allCities: { name: string; slug?: string }[] = [
+  { name: "Aliso Viejo", slug: "aliso-viejo" },
+  { name: "Anaheim", slug: "anaheim" },
+  { name: "Brea" },
+  { name: "Buena Park" },
+  { name: "Costa Mesa" },
+  { name: "Cypress" },
+  { name: "Dana Point", slug: "dana-point" },
+  { name: "Fountain Valley" },
+  { name: "Fullerton", slug: "fullerton" },
+  { name: "Garden Grove" },
+  { name: "Huntington Beach", slug: "huntington-beach" },
+  { name: "Irvine", slug: "irvine" },
+  { name: "La Habra" },
+  { name: "La Palma" },
+  { name: "Laguna Beach" },
+  { name: "Laguna Hills" },
+  { name: "Laguna Niguel", slug: "laguna-niguel" },
+  { name: "Laguna Woods" },
+  { name: "Lake Forest" },
+  { name: "Los Alamitos" },
+  { name: "Mission Viejo", slug: "mission-viejo" },
+  { name: "Newport Beach" },
+  { name: "Orange", slug: "orange" },
+  { name: "Placentia" },
+  { name: "Rancho Santa Margarita" },
+  { name: "San Clemente", slug: "san-clemente" },
+  { name: "San Juan Capistrano", slug: "san-juan-capistrano" },
+  { name: "Santa Ana", slug: "santa-ana" },
+  { name: "Seal Beach" },
+  { name: "Stanton" },
+  { name: "Tustin" },
+  { name: "Villa Park" },
+  { name: "Westminster" },
+  { name: "Yorba Linda" },
+];
+
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
@@ -57,11 +94,11 @@ export default function Footer() {
                   <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
                 </svg>
                 <a
-                  href="tel:+16574002896"
+                  href="tel:+17144871860"
                   className="hover:text-amber-400 transition-colors"
-                  aria-label="Call us at (657) 400-2896"
+                  aria-label="Call us at (714) 487-1860"
                 >
-                  (657) 400-2896
+                  (714) 487-1860
                 </a>
               </p>
               <p className="flex items-center gap-2">
@@ -160,6 +197,31 @@ export default function Footer() {
               Read Our Yelp Reviews
             </a>
           </div>
+        </div>
+      </div>
+
+      {/* City grid */}
+      <div className="border-t border-[#2a2a2a] px-4 sm:px-6 lg:px-8 py-10">
+        <div className="max-w-7xl mx-auto">
+          <h3 className="text-[#f5f5f5] font-semibold text-sm uppercase tracking-wider mb-5">
+            Proudly Serving All of Orange County
+          </h3>
+          <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2" role="list">
+            {allCities.map((city) => (
+              <li key={city.name}>
+                {city.slug ? (
+                  <Link
+                    href={`/locations/${city.slug}`}
+                    className="text-xs text-[#a0a0a0] hover:text-amber-400 transition-colors"
+                  >
+                    {city.name}
+                  </Link>
+                ) : (
+                  <span className="text-xs text-[#606060]">{city.name}</span>
+                )}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 

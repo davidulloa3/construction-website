@@ -46,14 +46,14 @@ export default function HeroSection() {
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 w-full max-w-sm mx-auto sm:max-w-none">
             <a
-              href="tel:+16574002896"
+              href="tel:+17144871860"
               className="inline-flex items-center justify-center gap-2 bg-[#1565c0] hover:bg-[#1e88e5] text-white font-bold text-lg px-8 py-4 rounded-lg transition-all hover:scale-105 shadow-lg shadow-[#1565c0]/25"
-              aria-label="Call Ulloa Construction at (657) 400-2896"
+              aria-label="Call Ulloa Construction at (714) 487-1860"
             >
               <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current" aria-hidden="true">
                 <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
               </svg>
-              (657) 400-2896
+              (714) 487-1860
             </a>
             <Link
               href="/contact"

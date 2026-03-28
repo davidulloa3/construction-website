@@ -57,7 +57,7 @@ export default async function ServiceSlugPage({ params }: Props) {
     provider: {
       "@type": "LocalBusiness",
       name: "Ulloa Construction",
-      telephone: "+1-657-400-2896",
+      telephone: "+1-714-487-1860",
       hasCredential: {
         "@type": "EducationalOccupationalCredential",
         credentialCategory: "CSLB License",
@@ -87,7 +87,7 @@ export default async function ServiceSlugPage({ params }: Props) {
           </h1>
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 max-w-sm mx-auto sm:max-w-none">
             <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-[#1565c0] hover:bg-[#1e88e5] text-white font-bold text-lg px-8 py-4 rounded-lg transition-all hover:scale-105 shadow-lg shadow-[#1565c0]/25">Get a Free Estimate</Link>
-            <a href="tel:+16574002896" className="inline-flex items-center justify-center gap-2 border-2 border-[#f5f5f5]/70 hover:border-[#f5f5f5] text-[#f5f5f5] font-semibold text-lg px-8 py-4 rounded-lg transition-all hover:bg-[#1a1a1a]">(657) 400-2896</a>
+            <a href="tel:+17144871860" className="inline-flex items-center justify-center gap-2 border-2 border-[#f5f5f5]/70 hover:border-[#f5f5f5] text-[#f5f5f5] font-semibold text-lg px-8 py-4 rounded-lg transition-all hover:bg-[#1a1a1a]">(714) 487-1860</a>
           </div>
         </div>
       </section>
@@ -95,6 +95,9 @@ export default async function ServiceSlugPage({ params }: Props) {
       <section className="py-16 bg-[#0f0f0f]" aria-label="Service overview">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-[#a0a0a0] text-lg leading-relaxed">{service.intro}</p>
+          <p className="text-amber-500 font-semibold text-sm mt-6">
+            Serving all of Orange County — from Anaheim to San Clemente and everywhere in between.
+          </p>
         </div>
       </section>
 
@@ -156,10 +159,10 @@ export default async function ServiceSlugPage({ params }: Props) {
       <section className="py-16 bg-[#1565c0]" aria-label="Call to action">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl sm:text-4xl font-black text-white mb-4">Ready to Start Your {service.name}?</h2>
-          <p className="text-white/80 mb-8 text-lg">Call (657) 400-2896 or fill out the form for a free, no-obligation estimate.</p>
+          <p className="text-white/80 mb-8 text-lg">Call (714) 487-1860 or fill out the form for a free, no-obligation estimate.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-white hover:bg-[#f5f5f5] text-[#1565c0] font-bold px-8 py-4 rounded-xl transition-colors">Get a Free Estimate</Link>
-            <a href="tel:+16574002896" className="inline-flex items-center justify-center gap-2 border-2 border-white/70 hover:border-white text-white font-semibold px-8 py-4 rounded-xl transition-colors">(657) 400-2896</a>
+            <a href="tel:+17144871860" className="inline-flex items-center justify-center gap-2 border-2 border-white/70 hover:border-white text-white font-semibold px-8 py-4 rounded-xl transition-colors">(714) 487-1860</a>
           </div>
         </div>
       </section>

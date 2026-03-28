@@ -46,7 +46,7 @@ export const services: ServiceData[] = [
     ],
     relatedSlugs: ["bathroom-renovation", "interior-remodeling", "flooring"],
     metaDescription:
-      "Expert kitchen remodeling in Anaheim & Orange County, CA. Ulloa Construction — custom cabinets, quartz countertops, open-concept layouts. CSLB #1144906. Call (657) 400-2896.",
+      "Expert kitchen remodeling in Anaheim & Orange County, CA. Ulloa Construction — custom cabinets, quartz countertops, open-concept layouts. CSLB #1144906. Call (714) 487-1860.",
     schemaDescription:
       "Professional kitchen remodeling in Anaheim and Orange County, CA — including cabinet installation, countertop replacement, open-concept conversions, and full kitchen renovations.",
   },
@@ -70,7 +70,7 @@ export const services: ServiceData[] = [
     ],
     relatedSlugs: ["kitchen-remodeling", "flooring", "interior-remodeling"],
     metaDescription:
-      "Spa-quality bathroom renovation in Anaheim & Orange County, CA. Walk-in showers, custom tile, heated floors. Ulloa Construction — CSLB #1144906. Call (657) 400-2896.",
+      "Spa-quality bathroom renovation in Anaheim & Orange County, CA. Walk-in showers, custom tile, heated floors. Ulloa Construction — CSLB #1144906. Call (714) 487-1860.",
     schemaDescription:
       "Professional bathroom renovation services in Anaheim and Orange County, CA — including walk-in showers, custom tile, vanities, heated floors, and full gut remodels.",
   },
@@ -94,7 +94,7 @@ export const services: ServiceData[] = [
     ],
     relatedSlugs: ["interior-remodeling", "kitchen-remodeling", "bathroom-renovation"],
     metaDescription:
-      "Professional flooring installation in Anaheim & Orange County, CA. Hardwood, LVP, tile, carpet — Ulloa Construction. CSLB #1144906. Call (657) 400-2896.",
+      "Professional flooring installation in Anaheim & Orange County, CA. Hardwood, LVP, tile, carpet — Ulloa Construction. CSLB #1144906. Call (714) 487-1860.",
     schemaDescription:
       "Expert flooring installation services in Anaheim and Orange County, CA — hardwood, luxury vinyl plank, tile, and carpet with full subfloor prep and baseboard work.",
   },
@@ -118,7 +118,7 @@ export const services: ServiceData[] = [
     ],
     relatedSlugs: ["siding", "painting", "new-construction"],
     metaDescription:
-      "Licensed roofing contractor in Anaheim & Orange County, CA. Full re-roofing, repairs, and ventilation. Ulloa Construction — CSLB #1144906. Call (657) 400-2896.",
+      "Licensed roofing contractor in Anaheim & Orange County, CA. Full re-roofing, repairs, and ventilation. Ulloa Construction — CSLB #1144906. Call (714) 487-1860.",
     schemaDescription:
       "Residential roofing services in Anaheim and Orange County, CA — including tear-off, re-roofing, shingle and tile installation, flashing, and attic ventilation.",
   },
@@ -142,7 +142,7 @@ export const services: ServiceData[] = [
     ],
     relatedSlugs: ["drywall", "interior-remodeling", "siding"],
     metaDescription:
-      "Professional interior and exterior painting in Anaheim & Orange County, CA. Sherwin-Williams and Benjamin Moore. Ulloa Construction — CSLB #1144906. Call (657) 400-2896.",
+      "Professional interior and exterior painting in Anaheim & Orange County, CA. Sherwin-Williams and Benjamin Moore. Ulloa Construction — CSLB #1144906. Call (714) 487-1860.",
     schemaDescription:
       "Interior and exterior painting services in Anaheim and Orange County, CA — including surface prep, priming, wall painting, trim work, and exterior stucco and siding painting.",
   },
@@ -166,7 +166,7 @@ export const services: ServiceData[] = [
     ],
     relatedSlugs: ["painting", "interior-remodeling", "room-additions"],
     metaDescription:
-      "Expert drywall installation and repair in Anaheim & Orange County, CA. Texture matching, water damage, new construction. Ulloa Construction — CSLB #1144906. Call (657) 400-2896.",
+      "Expert drywall installation and repair in Anaheim & Orange County, CA. Texture matching, water damage, new construction. Ulloa Construction — CSLB #1144906. Call (714) 487-1860.",
     schemaDescription:
       "Drywall installation, repair, and texture services in Anaheim and Orange County, CA — including new construction drywall, water damage repair, popcorn removal, and texture matching.",
   },
@@ -190,7 +190,7 @@ export const services: ServiceData[] = [
     ],
     relatedSlugs: ["door-installation", "siding", "painting"],
     metaDescription:
-      "Professional window installation in Anaheim & Orange County, CA. Energy-efficient dual-pane windows, Title 24 compliant. Ulloa Construction — CSLB #1144906. Call (657) 400-2896.",
+      "Professional window installation in Anaheim & Orange County, CA. Energy-efficient dual-pane windows, Title 24 compliant. Ulloa Construction — CSLB #1144906. Call (714) 487-1860.",
     schemaDescription:
       "Window installation services in Anaheim and Orange County, CA — including energy-efficient replacement windows, new construction windows, flashing, and interior/exterior trim work.",
   },
@@ -214,7 +214,7 @@ export const services: ServiceData[] = [
     ],
     relatedSlugs: ["window-installation", "interior-remodeling", "painting"],
     metaDescription:
-      "Door installation in Anaheim & Orange County, CA. Entry doors, interior doors, French doors, sliding doors. Ulloa Construction — CSLB #1144906. Call (657) 400-2896.",
+      "Door installation in Anaheim & Orange County, CA. Entry doors, interior doors, French doors, sliding doors. Ulloa Construction — CSLB #1144906. Call (714) 487-1860.",
     schemaDescription:
       "Door installation services in Anaheim and Orange County, CA — including entry doors, interior doors, French doors, sliding glass doors, and hardware installation.",
   },
@@ -238,7 +238,7 @@ export const services: ServiceData[] = [
     ],
     relatedSlugs: ["painting", "roofing", "window-installation"],
     metaDescription:
-      "Siding installation in Anaheim & Orange County, CA. James Hardie, vinyl, stucco, wood lap. Ulloa Construction — CSLB #1144906. Call (657) 400-2896.",
+      "Siding installation in Anaheim & Orange County, CA. James Hardie, vinyl, stucco, wood lap. Ulloa Construction — CSLB #1144906. Call (714) 487-1860.",
     schemaDescription:
       "Siding installation and replacement in Anaheim and Orange County, CA — including James Hardie fiber cement, vinyl, stucco, and wood lap siding with moisture barrier installation.",
   },
@@ -262,7 +262,7 @@ export const services: ServiceData[] = [
     ],
     relatedSlugs: ["new-construction", "kitchen-remodeling", "bathroom-renovation"],
     metaDescription:
-      "Room additions and ADU construction in Anaheim & Orange County, CA. Full-service from permits to finish. Ulloa Construction — CSLB #1144906. Call (657) 400-2896.",
+      "Room additions and ADU construction in Anaheim & Orange County, CA. Full-service from permits to finish. Ulloa Construction — CSLB #1144906. Call (714) 487-1860.",
     schemaDescription:
       "Room addition and ADU construction in Anaheim and Orange County, CA — including architectural planning, permitting, foundation, framing, and complete finish work for home additions and accessory dwelling units.",
   },
@@ -286,7 +286,7 @@ export const services: ServiceData[] = [
     ],
     relatedSlugs: ["room-additions", "roofing", "flooring"],
     metaDescription:
-      "New home construction in Anaheim & Orange County, CA. Design-build from permits to final walkthrough. Ulloa Construction — CSLB #1144906. Call (657) 400-2896.",
+      "New home construction in Anaheim & Orange County, CA. Design-build from permits to final walkthrough. Ulloa Construction — CSLB #1144906. Call (714) 487-1860.",
     schemaDescription:
       "New residential construction in Anaheim and Orange County, CA — design-build services from architectural planning and permitting through framing, MEP, and complete interior and exterior finish.",
   },
@@ -310,7 +310,7 @@ export const services: ServiceData[] = [
     ],
     relatedSlugs: ["flooring", "kitchen-remodeling", "painting"],
     metaDescription:
-      "Whole-home interior remodeling in Anaheim & Orange County, CA. Open-concept conversions, flooring, trim, lighting. Ulloa Construction — CSLB #1144906. Call (657) 400-2896.",
+      "Whole-home interior remodeling in Anaheim & Orange County, CA. Open-concept conversions, flooring, trim, lighting. Ulloa Construction — CSLB #1144906. Call (714) 487-1860.",
     schemaDescription:
       "Interior remodeling services in Anaheim and Orange County, CA — including open-concept conversions, whole-home flooring, trim, doors, lighting, and paint as a single coordinated project.",
   },

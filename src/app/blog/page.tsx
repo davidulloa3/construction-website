@@ -104,10 +104,10 @@ export default function BlogPage() {
               Get a Free Estimate
             </Link>
             <a
-              href="tel:+16574002896"
+              href="tel:+17144871860"
               className="inline-flex items-center justify-center gap-2 border-2 border-white/70 hover:border-white text-white font-semibold px-8 py-4 rounded-xl transition-colors"
             >
-              (657) 400-2896
+              (714) 487-1860
             </a>
           </div>
         </div>
