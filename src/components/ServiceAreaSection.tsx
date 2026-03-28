@@ -1,15 +1,15 @@
 export default function ServiceAreaSection() {
   return (
     <section
-      className="py-20 bg-white relative overflow-hidden"
+      className="py-20 bg-[#0f0f0f] relative overflow-hidden"
       aria-labelledby="service-area-heading"
       id="service-area"
     >
       {/* Subtle background pattern */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.04]"
         style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, #0f172a 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 1px 1px, #f5f5f5 1px, transparent 0)`,
           backgroundSize: "40px 40px",
         }}
         aria-hidden="true"
@@ -21,17 +21,17 @@ export default function ServiceAreaSection() {
         </p>
         <h2
           id="service-area-heading"
-          className="text-4xl sm:text-5xl font-black text-slate-900 mb-6"
+          className="text-4xl sm:text-5xl font-black text-[#f5f5f5] mb-6"
         >
           Serving Orange County
           <br />
           <span className="text-amber-500">&amp; Surrounding Areas</span>
         </h2>
-        <p className="text-slate-600 text-lg leading-relaxed mb-4 max-w-2xl mx-auto">
+        <p className="text-[#a0a0a0] text-lg leading-relaxed mb-4 max-w-2xl mx-auto">
           Based in Tustin, CA, we work throughout Orange County — Irvine, Anaheim,
           Fullerton, Garden Grove, Yorba Linda, Santa Ana, and surrounding communities.
         </p>
-        <p className="text-slate-500 leading-relaxed mb-10 max-w-xl mx-auto">
+        <p className="text-[#a0a0a0] leading-relaxed mb-10 max-w-xl mx-auto">
           Not sure if we cover your area? Give us a call — we're happy to let you
           know and answer any questions about your project.
         </p>
@@ -51,7 +51,7 @@ export default function ServiceAreaSection() {
             </svg>
             (714) 487-1860
           </a>
-          <div className="inline-flex items-center justify-center gap-2 text-slate-500 text-sm px-4">
+          <div className="inline-flex items-center justify-center gap-2 text-[#a0a0a0] text-sm px-4">
             <svg
               viewBox="0 0 24 24"
               className="w-4 h-4 fill-amber-400 flex-shrink-0"

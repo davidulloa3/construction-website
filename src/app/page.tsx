@@ -4,8 +4,10 @@ import TrustBar from "@/components/TrustBar";
 import PainPointsSection from "@/components/PainPointsSection";
 import ServicesGrid from "@/components/ServicesGrid";
 import ProcessSection from "@/components/ProcessSection";
+import ProcessTimeline from "@/components/ProcessTimeline";
 import AboutSnapshot from "@/components/AboutSnapshot";
 import FeaturedProjects from "@/components/FeaturedProjects";
+import TransformationsSection from "@/components/TransformationsSection";
 import Testimonials from "@/components/Testimonials";
 import ServiceAreaSection from "@/components/ServiceAreaSection";
 import CTABanner from "@/components/CTABanner";
@@ -81,8 +83,10 @@ export default function HomePage() {
       <PainPointsSection />
       <ServicesGrid />
       <ProcessSection />
+      <ProcessTimeline />
       <AboutSnapshot />
       <FeaturedProjects />
+      <TransformationsSection />
       <Testimonials />
       <ServiceAreaSection />
       <CTABanner />

@@ -34,7 +34,7 @@ const steps = [
 export default function ProcessSection() {
   return (
     <section
-      className="py-24 bg-white"
+      className="py-24 bg-[#0f0f0f]"
       aria-labelledby="process-heading"
       id="process"
     >
@@ -45,7 +45,7 @@ export default function ProcessSection() {
           </p>
           <h2
             id="process-heading"
-            className="text-4xl sm:text-5xl font-black text-slate-900"
+            className="text-4xl sm:text-5xl font-black text-[#f5f5f5]"
           >
             A Simple Process.
             <br />
@@ -56,7 +56,7 @@ export default function ProcessSection() {
         <ol className="relative" role="list" aria-label="Our 5-step process">
           {/* Connecting line for desktop */}
           <div
-            className="hidden lg:block absolute left-[calc(50%-1px)] top-8 bottom-8 w-px bg-slate-100"
+            className="hidden lg:block absolute left-[calc(50%-1px)] top-8 bottom-8 w-px bg-[#2a2a2a]"
             aria-hidden="true"
           />
 
@@ -75,7 +75,7 @@ export default function ProcessSection() {
                   }`}
                 >
                   <div
-                    className={`bg-white border-2 border-amber-500 rounded-2xl p-6 shadow-lg max-w-sm ${
+                    className={`bg-[#1a1a1a] border-2 border-amber-500 rounded-2xl p-6 shadow-lg max-w-sm ${
                       i % 2 === 1 ? "lg:ml-0 lg:mr-auto" : "lg:ml-auto lg:mr-0"
                     }`}
                   >
@@ -84,10 +84,10 @@ export default function ProcessSection() {
                         {step.number}
                       </span>
                       <div>
-                        <h3 className="font-bold text-slate-900 text-lg mb-2">
+                        <h3 className="font-bold text-[#f5f5f5] text-lg mb-2">
                           {step.title}
                         </h3>
-                        <p className="text-slate-500 text-sm leading-relaxed">
+                        <p className="text-[#a0a0a0] text-sm leading-relaxed">
                           {step.description}
                         </p>
                       </div>

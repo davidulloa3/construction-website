@@ -77,15 +77,15 @@ export default function ServicesPage() {
   return (
     <div className="pt-16">
       {/* Page header */}
-      <section className="bg-slate-900 py-20 relative overflow-hidden" aria-labelledby="services-page-heading">
-        <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-amber-500/20 to-transparent" aria-hidden="true" />
+      <section className="bg-[#0f0f0f] py-20 relative overflow-hidden" aria-labelledby="services-page-heading">
+        <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-[#c0392b]/20 to-transparent" aria-hidden="true" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-amber-400 font-semibold text-sm uppercase tracking-widest mb-4">What We Offer</p>
-          <h1 id="services-page-heading" className="text-5xl sm:text-6xl font-black text-white mb-6">
+          <h1 id="services-page-heading" className="text-5xl sm:text-6xl font-black text-[#f5f5f5] mb-6">
             Remodeling Services in
             <span className="text-amber-400"> Orange County, CA</span>
           </h1>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-4">
+          <p className="text-xl text-[#a0a0a0] max-w-3xl mx-auto mb-4">
             We specialize in the projects that matter most — kitchens, bathrooms, interiors, and additions —
             done with honest pricing, clear communication, and craftsmanship that lasts.
           </p>
@@ -100,7 +100,7 @@ export default function ServicesPage() {
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white font-semibold px-8 py-4 rounded-xl transition-colors"
+              className="inline-flex items-center justify-center gap-2 border-2 border-[#f5f5f5]/30 hover:border-[#f5f5f5] text-[#f5f5f5] font-semibold px-8 py-4 rounded-xl transition-colors"
             >
               Get a Free Quote
             </Link>
@@ -109,7 +109,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services list */}
-      <section className="py-20 bg-white" aria-label="Detailed services list">
+      <section className="py-20 bg-[#0f0f0f]" aria-label="Detailed services list">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-20">
             {services.map((service, i) => (
@@ -121,7 +121,7 @@ export default function ServicesPage() {
               >
                 {/* Image - alternates side */}
                 <div className={`${i % 2 === 1 ? "lg:order-2" : ""}`}>
-                  <div className="rounded-2xl overflow-hidden shadow-xl aspect-[16/10] bg-slate-100">
+                  <div className="rounded-2xl overflow-hidden shadow-xl aspect-[16/10] bg-[#2a2a2a]">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={service.image}
@@ -136,19 +136,19 @@ export default function ServicesPage() {
                 <div className={`${i % 2 === 1 ? "lg:order-1" : ""} flex flex-col justify-center`}>
                   <h2
                     id={`service-${service.slug}`}
-                    className="text-3xl font-black text-slate-900 mb-4"
+                    className="text-3xl font-black text-[#f5f5f5] mb-4"
                   >
                     {service.title}{" "}
                     <span className="text-amber-500">in Orange County</span>
                   </h2>
-                  <p className="text-slate-600 leading-relaxed mb-6">
+                  <p className="text-[#a0a0a0] leading-relaxed mb-6">
                     {service.description}
                   </p>
 
                   {/* Details */}
                   <ul className="space-y-2.5 mb-8" role="list" aria-label={`${service.title} service details`}>
                     {service.details.map((detail) => (
-                      <li key={detail} className="flex items-center gap-3 text-slate-700">
+                      <li key={detail} className="flex items-center gap-3 text-[#f5f5f5]">
                         <svg viewBox="0 0 24 24" className="w-5 h-5 fill-amber-500 flex-shrink-0" aria-hidden="true">
                           <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                         </svg>
@@ -175,12 +175,12 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-slate-900 py-16" aria-label="Call to action">
+      <section className="bg-[#0f0f0f] py-16 border-t border-[#2a2a2a]" aria-label="Call to action">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-black text-white mb-4">
+          <h2 className="text-3xl font-black text-[#f5f5f5] mb-4">
             Ready to Start Your Project?
           </h2>
-          <p className="text-slate-400 mb-2">
+          <p className="text-[#a0a0a0] mb-2">
             Call our team today for a free, no-obligation estimate.
           </p>
           <p className="text-amber-400 text-sm font-medium mb-8">CSLB Lic. #1144906 — Licensed & Insured</p>
@@ -194,7 +194,7 @@ export default function ServicesPage() {
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center border-2 border-white/30 hover:border-white text-white font-semibold px-8 py-4 rounded-xl transition-colors"
+              className="inline-flex items-center justify-center border-2 border-[#f5f5f5]/30 hover:border-[#f5f5f5] text-[#f5f5f5] font-semibold px-8 py-4 rounded-xl transition-colors"
             >
               Contact Us Online
             </Link>

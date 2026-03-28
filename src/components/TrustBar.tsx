@@ -44,7 +44,7 @@ const stats = [
 export default function TrustBar() {
   return (
     <section
-      className="bg-slate-800 border-y border-slate-700"
+      className="bg-[#1a1a1a] border-y border-[#2a2a2a]"
       aria-label="Ulloa Construction trust and credentials"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
@@ -63,13 +63,13 @@ export default function TrustBar() {
               <div>
                 <dt className="sr-only">{stat.label}</dt>
                 <dd>
-                  <span className="block text-2xl font-black text-white">
+                  <span className="block text-2xl font-black text-[#f5f5f5]">
                     {stat.value}
                   </span>
                   <span className="block text-sm font-semibold text-amber-400 mt-0.5">
                     {stat.label}
                   </span>
-                  <span className="block text-xs text-slate-400 mt-0.5">
+                  <span className="block text-xs text-[#a0a0a0] mt-0.5">
                     {stat.sub}
                   </span>
                 </dd>

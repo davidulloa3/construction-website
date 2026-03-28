@@ -44,7 +44,7 @@ export const metadata: Metadata = {
       "Professional remodeling contractor in Orange County. Kitchens, bathrooms, interiors & additions. CSLB Lic. #1144906. Call (714) 487-1860.",
     images: [
       {
-        url: "/logo.png",
+        url: "/favicon.png",
         alt: "Ulloa Construction",
       },
       {

@@ -79,16 +79,16 @@ export default function ProjectsPage() {
   return (
     <div className="pt-16">
       {/* Header */}
-      <section className="bg-slate-900 py-20 relative overflow-hidden" aria-labelledby="projects-page-heading">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent opacity-50" aria-hidden="true" />
+      <section className="bg-[#0f0f0f] py-20 relative overflow-hidden" aria-labelledby="projects-page-heading">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#c0392b]/10 to-transparent opacity-50" aria-hidden="true" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-amber-400 font-semibold text-sm uppercase tracking-widest mb-4">Our Work</p>
-          <h1 id="projects-page-heading" className="text-5xl sm:text-6xl font-black text-white mb-6">
+          <h1 id="projects-page-heading" className="text-5xl sm:text-6xl font-black text-[#f5f5f5] mb-6">
             Featured Projects
             <br />
             <span className="text-amber-400">Across Orange County</span>
           </h1>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+          <p className="text-xl text-[#a0a0a0] max-w-2xl mx-auto">
             Browse our portfolio of completed construction projects throughout Anaheim, Irvine,
             Yorba Linda, Fullerton, and the greater Orange County area.
           </p>
@@ -96,7 +96,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Filter tabs */}
-      <nav className="bg-white border-b border-slate-100 sticky top-16 z-30" aria-label="Filter projects by category">
+      <nav className="bg-[#0f0f0f] border-b border-[#2a2a2a] sticky top-16 z-30" aria-label="Filter projects by category">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ul className="flex gap-1 py-3 overflow-x-auto" role="list">
             {categories.map((cat) => (
@@ -105,7 +105,7 @@ export default function ProjectsPage() {
                   className={`inline-block px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-colors cursor-default ${
                     cat === "All"
                       ? "bg-amber-500 text-white"
-                      : "text-slate-600 hover:text-slate-900"
+                      : "text-[#a0a0a0] hover:text-[#f5f5f5]"
                   }`}
                 >
                   {cat}
@@ -117,12 +117,12 @@ export default function ProjectsPage() {
       </nav>
 
       {/* Projects grid */}
-      <section className="py-16 bg-slate-50" aria-label="Project portfolio">
+      <section className="py-16 bg-[#1a1a1a]" aria-label="Project portfolio">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
             {projects.map((project) => (
               <li key={project.title}>
-                <article className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100">
+                <article className="bg-[#0f0f0f] rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-black/40 transition-shadow duration-300 border border-[#2a2a2a]">
                   {/* Image */}
                   <div className="aspect-[16/10] overflow-hidden relative">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -136,7 +136,7 @@ export default function ProjectsPage() {
                       <span className="bg-amber-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">
                         {project.category}
                       </span>
-                      <span className="bg-white/90 text-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">
+                      <span className="bg-[#1a1a1a]/90 text-[#a0a0a0] text-xs font-medium px-2.5 py-1 rounded-full">
                         {project.year}
                       </span>
                     </div>
@@ -145,17 +145,17 @@ export default function ProjectsPage() {
                   {/* Content */}
                   <div className="p-6">
                     <div className="flex items-start justify-between gap-3 mb-3">
-                      <h2 className="font-bold text-slate-900 text-xl leading-snug">
+                      <h2 className="font-bold text-[#f5f5f5] text-xl leading-snug">
                         {project.title}
                       </h2>
                     </div>
-                    <p className="text-slate-400 text-sm flex items-center gap-1 mb-3">
+                    <p className="text-[#a0a0a0] text-sm flex items-center gap-1 mb-3">
                       <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-current" aria-hidden="true">
                         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                       </svg>
                       {project.location}
                     </p>
-                    <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                    <p className="text-[#a0a0a0] text-sm leading-relaxed mb-4">
                       {project.description}
                     </p>
 
@@ -164,7 +164,7 @@ export default function ProjectsPage() {
                       {project.highlights.map((h) => (
                         <li
                           key={h}
-                          className="bg-slate-50 border border-slate-100 text-slate-600 text-xs px-2.5 py-1 rounded-full"
+                          className="bg-[#1a1a1a] border border-[#2a2a2a] text-[#a0a0a0] text-xs px-2.5 py-1 rounded-full"
                         >
                           {h}
                         </li>
@@ -179,12 +179,12 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-slate-900 py-16" aria-label="Start your project">
+      <section className="bg-[#0f0f0f] py-16 border-t border-[#2a2a2a]" aria-label="Start your project">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-black text-white mb-4">
+          <h2 className="text-3xl font-black text-[#f5f5f5] mb-4">
             Your Project Could Be Next
           </h2>
-          <p className="text-slate-400 mb-8">
+          <p className="text-[#a0a0a0] mb-8">
             Ready to transform your Anaheim or Orange County home? Let's talk about your vision.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -197,7 +197,7 @@ export default function ProjectsPage() {
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center border-2 border-white/30 hover:border-white text-white font-semibold px-8 py-4 rounded-xl transition-colors"
+              className="inline-flex items-center justify-center border-2 border-[#f5f5f5]/30 hover:border-[#f5f5f5] text-[#f5f5f5] font-semibold px-8 py-4 rounded-xl transition-colors"
             >
               Get a Free Quote
             </Link>

@@ -18,7 +18,7 @@ export default function HeroSection() {
       {/* Overlay */}
       <div className="absolute inset-0 hero-overlay" aria-hidden="true" />
 
-      {/* Amber accent line at bottom */}
+      {/* Crimson accent line at bottom */}
       <div
         className="absolute bottom-0 left-0 right-0 h-1 bg-amber-500"
         aria-hidden="true"
@@ -38,7 +38,7 @@ export default function HeroSection() {
             CSLB Lic. #1144906 — Licensed & Insured
           </p>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tight mb-6">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-[#f5f5f5] leading-tight tracking-tight mb-6">
             Professional Tustin
             <br />
             <span className="text-amber-400">Remodeling Contractor</span>
@@ -46,7 +46,7 @@ export default function HeroSection() {
             You Can Trust.
           </h1>
 
-          <p className="text-xl sm:text-2xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10">
+          <p className="text-xl sm:text-2xl text-[#a0a0a0] max-w-2xl mx-auto leading-relaxed mb-10">
             Highly-praised local OC general contractor specializing in kitchens,
             bathrooms, interior remodeling, and additions — with honest pricing
             and clear communication from start to finish.
@@ -69,7 +69,7 @@ export default function HeroSection() {
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 border-2 border-white/70 hover:border-white text-white font-semibold text-lg px-8 py-4 rounded-lg transition-all hover:bg-white/10"
+              className="inline-flex items-center gap-2 border-2 border-[#f5f5f5]/70 hover:border-[#f5f5f5] text-[#f5f5f5] font-semibold text-lg px-8 py-4 rounded-lg transition-all hover:bg-[#1a1a1a]"
               aria-label="Get a free estimate from Ulloa Construction"
             >
               Get a Free Estimate

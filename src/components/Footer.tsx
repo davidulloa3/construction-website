@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import logoSrc from "../../public/logo.png";
+import logoSrc from "../../public/favicon.png";
 
 const services = [
   "Kitchen Remodeling",
@@ -19,7 +19,7 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-slate-300" role="contentinfo">
+    <footer className="bg-[#0a0a0a] text-[#a0a0a0]" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company info */}
@@ -95,7 +95,7 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">
+            <h3 className="text-[#f5f5f5] font-semibold text-sm uppercase tracking-wider mb-4">
               Navigation
             </h3>
             <ul className="space-y-2" role="list">
@@ -114,7 +114,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">
+            <h3 className="text-[#f5f5f5] font-semibold text-sm uppercase tracking-wider mb-4">
               Our Services
             </h3>
             <ul className="space-y-2" role="list">
@@ -131,15 +131,22 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Reviews & Area */}
+          {/* Credentials & Reviews */}
           <div>
-            <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">
-              Reviews & Area
+            <h3 className="text-[#f5f5f5] font-semibold text-sm uppercase tracking-wider mb-4">
+              Credentials
             </h3>
-            <p className="text-xs text-slate-400 mb-4 leading-relaxed">
-              Proudly serving Orange County & surrounding areas — Tustin, Irvine, Anaheim,
-              Fullerton, Santa Ana, Garden Grove, Yorba Linda, and more.
-            </p>
+            {/* CSLB Badge */}
+            <div className="flex items-start gap-3 bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-4 mb-4">
+              <svg viewBox="0 0 24 24" className="w-6 h-6 fill-amber-500 flex-shrink-0 mt-0.5" aria-hidden="true">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+              </svg>
+              <div>
+                <p className="text-[#f5f5f5] font-bold text-sm">CSLB License #1144906</p>
+                <p className="text-[#a0a0a0] text-xs mt-0.5">General Contractor B · Fully Insured</p>
+                <p className="text-[#a0a0a0] text-xs">Workers&apos; Comp Included</p>
+              </div>
+            </div>
             <a
               href="https://www.yelp.com/biz/ulloa-construction-orange-county"
               target="_blank"
@@ -157,12 +164,12 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-[#2a2a2a] bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-slate-500">
+          <p className="text-xs text-[#a0a0a0]">
             © {new Date().getFullYear()} Ulloa Construction. All rights reserved. CSLB Lic. #1144906 — Licensed & Insured.
           </p>
-          <p className="text-xs text-slate-600">
+          <p className="text-xs text-[#a0a0a0]">
             Serving Orange County & surrounding areas
           </p>
         </div>

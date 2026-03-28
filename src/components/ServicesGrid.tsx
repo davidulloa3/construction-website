@@ -50,7 +50,7 @@ const services = [
 export default function ServicesGrid() {
   return (
     <section
-      className="py-24 bg-white"
+      className="py-24 bg-[#0f0f0f]"
       aria-labelledby="services-heading"
       id="services"
     >
@@ -62,13 +62,13 @@ export default function ServicesGrid() {
           </p>
           <h2
             id="services-heading"
-            className="text-4xl sm:text-5xl font-black text-slate-900 mb-4"
+            className="text-4xl sm:text-5xl font-black text-[#f5f5f5] mb-4"
           >
             Focused on What
             <br />
             <span className="text-amber-500">Matters Most</span>
           </h2>
-          <p className="text-lg text-slate-500 max-w-2xl mx-auto">
+          <p className="text-lg text-[#a0a0a0] max-w-2xl mx-auto">
             We specialize in the remodeling work that transforms how you live —
             kitchens, bathrooms, interiors, and additions done right.
           </p>
@@ -83,16 +83,16 @@ export default function ServicesGrid() {
             <li key={service.title}>
               <Link
                 href={service.href}
-                className="group flex flex-col h-full bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-amber-200 hover:-translate-y-1 transition-all duration-300"
+                className="group flex flex-col h-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-2xl p-6 hover:border-amber-500 hover:shadow-[0_0_24px_rgba(192,57,43,0.15)] hover:-translate-y-1 transition-all duration-300"
                 aria-label={`Learn more about ${service.title}`}
               >
-                <div className="w-12 h-12 rounded-xl bg-amber-50 text-amber-500 group-hover:bg-amber-500 group-hover:text-white flex items-center justify-center mb-4 transition-colors duration-300">
+                <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 group-hover:bg-amber-500 group-hover:text-white flex items-center justify-center mb-4 transition-colors duration-300">
                   {service.icon}
                 </div>
-                <h3 className="text-slate-900 font-bold text-lg mb-2 group-hover:text-amber-600 transition-colors">
+                <h3 className="text-[#f5f5f5] font-bold text-lg mb-2 group-hover:text-amber-400 transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-slate-500 text-sm leading-relaxed flex-1">
+                <p className="text-[#a0a0a0] text-sm leading-relaxed flex-1">
                   {service.description}
                 </p>
                 <div className="mt-4 flex items-center gap-1 text-amber-500 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
@@ -114,7 +114,7 @@ export default function ServicesGrid() {
         <div className="mt-12 text-center">
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-xl transition-colors"
+            className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-semibold px-8 py-4 rounded-xl transition-colors"
             aria-label="View all services offered by Ulloa Construction"
           >
             View All Services

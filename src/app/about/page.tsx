@@ -37,18 +37,18 @@ export default function AboutPage() {
   return (
     <div className="pt-16">
       {/* Header */}
-      <section className="bg-slate-900 py-20 relative overflow-hidden" aria-labelledby="about-page-heading">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent opacity-50" aria-hidden="true" />
+      <section className="bg-[#0f0f0f] py-20 relative overflow-hidden" aria-labelledby="about-page-heading">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#c0392b]/10 to-transparent opacity-50" aria-hidden="true" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-amber-400 font-semibold text-sm uppercase tracking-widest mb-4">Our Story</p>
-              <h1 id="about-page-heading" className="text-5xl sm:text-6xl font-black text-white mb-4">
+              <h1 id="about-page-heading" className="text-5xl sm:text-6xl font-black text-[#f5f5f5] mb-4">
                 Orange County&apos;s Trusted
                 <span className="text-amber-400"> Remodeling Contractor</span>
               </h1>
               <p className="text-amber-400 text-sm font-medium mb-6">CSLB Lic. #1144906 — Licensed & Insured</p>
-              <p className="text-xl text-slate-300 leading-relaxed">
+              <p className="text-xl text-[#a0a0a0] leading-relaxed">
                 Ulloa Construction is a locally-owned remodeling company built on honest
                 pricing, reliable communication, and craftsmanship that stands up over time.
                 We specialize in the work that matters most — kitchens, bathrooms, interiors,
@@ -68,13 +68,43 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Credentials strip */}
+      <section className="py-10 bg-[#1a1a1a] border-y border-[#2a2a2a]" aria-label="Credentials and certifications">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { label: "CSLB License", value: "#1144906", icon: "M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" },
+              { label: "General Contractor", value: "Class B", icon: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z" },
+              { label: "OC Seismic Code", value: "Certified", icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" },
+              { label: "Fully Insured", value: "Liability + Workers' Comp", icon: "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" },
+            ].map((cred) => (
+              <div key={cred.label} className="flex items-start gap-3 bg-[#0f0f0f] border border-[#2a2a2a] rounded-xl p-4">
+                <svg viewBox="0 0 24 24" className="w-5 h-5 fill-amber-500 flex-shrink-0 mt-0.5" aria-hidden="true">
+                  <path d={cred.icon} />
+                </svg>
+                <div>
+                  <p className="text-[#f5f5f5] font-bold text-sm">{cred.value}</p>
+                  <p className="text-[#a0a0a0] text-xs mt-0.5">{cred.label}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Story */}
-      <section className="py-20 bg-white" aria-labelledby="story-heading">
+      <section className="py-20 bg-[#0f0f0f]" aria-labelledby="story-heading">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="story-heading" className="text-3xl font-black text-slate-900 mb-8 text-center">
+          <h2 id="story-heading" className="text-3xl font-black text-[#f5f5f5] mb-8 text-center">
             The Contractor You <span className="text-amber-500">Actually Deserve</span>
           </h2>
-          <div className="prose prose-slate max-w-none space-y-6 text-slate-600 text-lg leading-relaxed">
+          {/* Pull quote accent bar */}
+          <div className="border-l-4 border-amber-500 pl-6 mb-8">
+            <p className="text-[#a0a0a0] text-lg leading-relaxed italic">
+              Homeowners deserve a contractor who shows up, communicates clearly, and gets the work done right.
+            </p>
+          </div>
+          <div className="space-y-6 text-[#a0a0a0] text-lg leading-relaxed">
             <p>
               Ulloa Construction was built around a simple idea: homeowners deserve a
               contractor who shows up, communicates clearly, and gets the work done right.
@@ -101,24 +131,24 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-20 bg-slate-50" aria-labelledby="values-heading">
+      <section className="py-20 bg-[#1a1a1a]" aria-labelledby="values-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <h2 id="values-heading" className="text-4xl font-black text-slate-900">
+            <h2 id="values-heading" className="text-4xl font-black text-[#f5f5f5]">
               Why Homeowners Choose Us
             </h2>
-            <p className="text-slate-500 mt-3 text-lg">
+            <p className="text-[#a0a0a0] mt-3 text-lg">
               The things that matter on every project
             </p>
           </div>
           <dl className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value) => (
-              <div key={value.title} className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
-                <div className="w-10 h-10 bg-amber-50 border border-amber-100 rounded-xl flex items-center justify-center mb-4">
+              <div key={value.title} className="bg-[#0f0f0f] rounded-2xl p-6 border border-[#2a2a2a]">
+                <div className="w-10 h-10 bg-amber-500/10 border border-amber-500/20 rounded-xl flex items-center justify-center mb-4">
                   <div className="w-3 h-3 bg-amber-500 rounded-full" aria-hidden="true" />
                 </div>
-                <dt className="font-bold text-slate-900 text-base mb-2">{value.title}</dt>
-                <dd className="text-slate-500 text-sm leading-relaxed">{value.description}</dd>
+                <dt className="font-bold text-[#f5f5f5] text-base mb-2">{value.title}</dt>
+                <dd className="text-[#a0a0a0] text-sm leading-relaxed">{value.description}</dd>
               </div>
             ))}
           </dl>
@@ -126,7 +156,7 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="py-20 bg-slate-900" aria-labelledby="stats-heading">
+      <section className="py-20 bg-[#0f0f0f]" aria-labelledby="stats-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="stats-heading" className="sr-only">Ulloa Construction by the numbers</h2>
           <dl className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
@@ -140,7 +170,7 @@ export default function AboutPage() {
                 <dt className="sr-only">{stat.label}</dt>
                 <dd>
                   <span className="block text-3xl font-black text-amber-400">{stat.value}</span>
-                  <span className="block text-slate-400 mt-1 text-sm">{stat.label}</span>
+                  <span className="block text-[#a0a0a0] mt-1 text-sm">{stat.label}</span>
                 </dd>
               </div>
             ))}
@@ -149,12 +179,12 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-white py-16" aria-label="Contact Ulloa Construction">
+      <section className="bg-[#1a1a1a] py-16" aria-label="Contact Ulloa Construction">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-black text-slate-900 mb-4">
+          <h2 className="text-3xl font-black text-[#f5f5f5] mb-4">
             Ready to Get Started?
           </h2>
-          <p className="text-slate-500 mb-8 text-lg">
+          <p className="text-[#a0a0a0] mb-8 text-lg">
             Contact us today for a free, no-obligation estimate on your Orange County remodeling project.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -167,7 +197,7 @@ export default function AboutPage() {
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center border-2 border-slate-900 hover:bg-slate-900 hover:text-white text-slate-900 font-semibold px-8 py-4 rounded-xl transition-all"
+              className="inline-flex items-center justify-center border-2 border-[#c0392b] hover:bg-[#c0392b] text-[#f5f5f5] hover:text-white font-semibold px-8 py-4 rounded-xl transition-all"
             >
               Get a Free Estimate
             </Link>

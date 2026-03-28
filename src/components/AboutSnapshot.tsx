@@ -46,7 +46,7 @@ const values = [
 export default function AboutSnapshot() {
   return (
     <section
-      className="py-24 bg-slate-50"
+      className="py-24 bg-[#0f0f0f]"
       aria-labelledby="about-heading"
       id="about"
     >
@@ -63,21 +63,21 @@ export default function AboutSnapshot() {
                 loading="lazy"
               />
               {/* Overlay badge */}
-              <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg">
-                <p className="text-2xl font-black text-slate-900">20+</p>
-                <p className="text-sm text-slate-500 font-medium">
+              <div className="absolute bottom-6 left-6 bg-[#1a1a1a]/95 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg border border-[#2a2a2a]">
+                <p className="text-2xl font-black text-[#f5f5f5]">20+</p>
+                <p className="text-sm text-[#a0a0a0] font-medium">
                   Years in Orange County
                 </p>
               </div>
             </div>
 
-            {/* Decorative amber block */}
+            {/* Decorative crimson block */}
             <div
               className="absolute -bottom-4 -right-4 w-32 h-32 bg-amber-500/20 rounded-2xl -z-10"
               aria-hidden="true"
             />
             <div
-              className="absolute -top-4 -left-4 w-20 h-20 bg-slate-200 rounded-xl -z-10"
+              className="absolute -top-4 -left-4 w-20 h-20 bg-[#2a2a2a] rounded-xl -z-10"
               aria-hidden="true"
             />
           </div>
@@ -89,18 +89,18 @@ export default function AboutSnapshot() {
             </p>
             <h2
               id="about-heading"
-              className="text-4xl sm:text-5xl font-black text-slate-900 leading-tight mb-6"
+              className="text-4xl sm:text-5xl font-black text-[#f5f5f5] leading-tight mb-6"
             >
               The Contractor You
               <br />
               <span className="text-amber-500">Actually Deserve.</span>
             </h2>
-            <p className="text-slate-600 text-lg leading-relaxed mb-6">
+            <p className="text-[#a0a0a0] text-lg leading-relaxed mb-6">
               Ulloa Construction is a locally-owned Orange County remodeling
               company built on honest pricing, reliable communication, and
               craftsmanship that stands up over time. CSLB Lic. #1144906.
             </p>
-            <p className="text-slate-600 leading-relaxed mb-8">
+            <p className="text-[#a0a0a0] leading-relaxed mb-8">
               We specialize in kitchens, bathrooms, interior remodeling, and
               additions — the work that matters most to how your family lives.
               Every project gets the same attention to detail, whether it's a
@@ -112,16 +112,16 @@ export default function AboutSnapshot() {
               {values.map((value) => (
                 <li key={value.title} className="flex gap-4">
                   <div
-                    className="w-10 h-10 rounded-lg bg-amber-50 border border-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5"
+                    className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center flex-shrink-0 mt-0.5"
                     aria-hidden="true"
                   >
                     {value.icon}
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-900 mb-1">
+                    <h3 className="font-semibold text-[#f5f5f5] mb-1">
                       {value.title}
                     </h3>
-                    <p className="text-slate-500 text-sm leading-relaxed">
+                    <p className="text-[#a0a0a0] text-sm leading-relaxed">
                       {value.description}
                     </p>
                   </div>

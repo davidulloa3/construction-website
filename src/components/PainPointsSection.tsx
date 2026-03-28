@@ -12,7 +12,7 @@ const painPoints = [
 export default function PainPointsSection() {
   return (
     <section
-      className="py-20 bg-slate-50"
+      className="py-20 bg-[#0f0f0f]"
       aria-labelledby="pain-points-heading"
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,7 +22,7 @@ export default function PainPointsSection() {
           </p>
           <h2
             id="pain-points-heading"
-            className="text-4xl sm:text-5xl font-black text-slate-900"
+            className="text-4xl sm:text-5xl font-black text-[#f5f5f5]"
           >
             If Any of This Sounds
             <br />
@@ -34,17 +34,17 @@ export default function PainPointsSection() {
           {painPoints.map((point) => (
             <li
               key={point}
-              className="flex items-start gap-4 bg-white rounded-xl px-6 py-5 border border-slate-100 shadow-sm"
+              className="flex items-start gap-4 bg-[#1a1a1a] rounded-xl px-6 py-5 border border-[#2a2a2a]"
             >
               <div
-                className="w-6 h-6 rounded-full bg-amber-500/10 border border-amber-200 flex items-center justify-center flex-shrink-0 mt-0.5"
+                className="w-6 h-6 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center flex-shrink-0 mt-0.5"
                 aria-hidden="true"
               >
                 <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-amber-500">
                   <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                 </svg>
               </div>
-              <p className="text-slate-700 leading-relaxed">{point}</p>
+              <p className="text-[#f5f5f5] leading-relaxed">{point}</p>
             </li>
           ))}
         </ul>
