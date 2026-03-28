@@ -19,7 +19,7 @@ const values = [
   {
     title: "Clean, Respectful Crews",
     description:
-      "We treat your home like it's our own — organized job sites, daily clean-up, and crews who show up on time and work with care.",
+      "We treat your home like it's our own with dust control, daily clean-up, and crews who show up on time and work with care.",
   },
   {
     title: "Clear, Transparent Pricing",
@@ -29,7 +29,7 @@ const values = [
   {
     title: "Direct Owner Communication",
     description:
-      "You'll work directly with the owner throughout your project — not a sales rep or a dispatcher. Your questions get real answers from someone who cares.",
+      "You'll work directly with a assigned manager throughout your project not a sales rep or a dispatcher. Your questions get real answers from someone who cares.",
   },
 ];
 
@@ -51,7 +51,7 @@ export default function AboutPage() {
               <p className="text-xl text-[#a0a0a0] leading-relaxed">
                 Ulloa Construction is a locally-owned remodeling company built on honest
                 pricing, reliable communication, and craftsmanship that stands up over time.
-                We specialize in the work that matters most — kitchens, bathrooms, interiors,
+                We specialize in the work the the areas that matter the most kitchens, bathrooms, interiors,
                 and additions.
               </p>
             </div>
@@ -75,7 +75,6 @@ export default function AboutPage() {
             {[
               { label: "CSLB License", value: "#1144906", icon: "M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" },
               { label: "General Contractor", value: "Class B", icon: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z" },
-              { label: "OC Seismic Code", value: "Certified", icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" },
               { label: "Fully Insured", value: "Liability + Workers' Comp", icon: "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" },
             ].map((cred) => (
               <div key={cred.label} className="flex items-start gap-3 bg-[#0f0f0f] border border-[#2a2a2a] rounded-xl p-4">
@@ -111,8 +110,8 @@ export default function AboutPage() {
               No runaround, no hidden costs, no endless wait for a callback.
             </p>
             <p>
-              We specialize in kitchens, bathrooms, interior remodeling, and room additions —
-              the projects that directly impact how your family lives every day. Our team
+              We specialize in kitchens, bathrooms, interior remodeling, and room additions.
+              The projects that directly impact how your family lives every day. Our team
               handles design consultation, permitting, and construction so you&apos;re not
               juggling multiple contractors or chasing down answers.
             </p>
