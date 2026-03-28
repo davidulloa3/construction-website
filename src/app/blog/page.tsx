@@ -31,7 +31,7 @@ export default function BlogPage() {
           </h1>
           <p className="text-[#a0a0a0] text-lg max-w-2xl mx-auto">
             Expert advice on kitchen remodels, bathroom renovations, roofing,
-            flooring, and more — written for Orange County homeowners by the
+            flooring, and everything construction written for Orange County homeowners by our
             team at Ulloa Construction.
           </p>
         </div>
