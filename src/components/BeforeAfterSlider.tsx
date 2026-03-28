@@ -122,7 +122,7 @@ export default function BeforeAfterSlider({
         >
           <svg
             viewBox="0 0 24 24"
-            className="w-5 h-5 fill-[#c0392b]"
+            className="w-5 h-5 fill-[#1565c0]"
           >
             <path d="M8.59 16.59L4 12l4.59-4.59L11 9.83 7.83 13 11 16.17 8.59 18.59zm6.82-1.42L19 12l-3.59-3.17L13 6.17 16.17 9 13 12.17 15.41 14.58z" />
           </svg>
@@ -132,7 +132,7 @@ export default function BeforeAfterSlider({
         <div className="absolute top-3 left-3 bg-black/70 text-[#f5f5f5] text-xs font-bold px-2.5 py-1 rounded pointer-events-none">
           BEFORE
         </div>
-        <div className="absolute top-3 right-3 bg-[#c0392b] text-white text-xs font-bold px-2.5 py-1 rounded pointer-events-none">
+        <div className="absolute top-3 right-3 bg-[#1565c0] text-white text-xs font-bold px-2.5 py-1 rounded pointer-events-none">
           AFTER
         </div>
       </div>

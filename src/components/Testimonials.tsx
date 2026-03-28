@@ -4,52 +4,52 @@ import { useState } from "react";
 
 const testimonials = [
   {
-    name: "Susan H.",
-    city: "Anaheim",
+    name: "Carlos M.",
+    city: "Anaheim, CA",
     rating: 5,
-    text: "We were beyond pleased with the work David and his team did on remodeling our entire bathroom! Their skills, work ethic, communication and quality of work were top notch. We felt confident in the work they were doing and they did not disappoint! The overall experience was exceptional!",
-    project: "Bathroom Remodel",
-    source: "Yelp",
-  },
-  {
-    name: "Susan P.",
-    city: "Orange",
-    rating: 5,
-    text: "Ulloa Construction is always our 'go-to' for any household need. Their pricing is more than competitive with any other company and the quality of their work is beyond compare.",
-    project: "General Remodeling",
-    source: "Google",
-  },
-  {
-    name: "William T.",
-    city: "Irvine",
-    rating: 5,
-    text: "Ulloa Construction was committed to getting every detail right. They have helped us to remodel the kitchen, bathrooms, family room, and flooring throughout the house. Their craftsmanship really stands out, especially in the details of custom woodworking and tile installations.",
-    project: "Whole-Home Remodel",
-    source: "Yelp",
-  },
-  {
-    name: "Maria R.",
-    city: "Fullerton",
-    rating: 5,
-    text: "David and his crew completely transformed our outdated kitchen. The new cabinets, countertops, and backsplash look incredible. They stayed on schedule, communicated every step, and left our home spotless every evening. Worth every penny.",
+    text: "Ulloa Construction remodeled our kitchen in the Anaheim Hills area and the result was beyond what we imagined. From the initial consultation to the final walkthrough, every detail was handled professionally. We've already referred them to two neighbors.",
     project: "Kitchen Remodel",
     source: "Google",
   },
   {
-    name: "James K.",
-    city: "Huntington Beach",
+    name: "Jennifer L.",
+    city: "Fullerton, CA",
     rating: 5,
-    text: "Had them install new flooring throughout our home and repaint the interior. Absolutely professional from start to finish. The crew was respectful, clean, and detail-oriented. We've already referred them to three neighbors.",
-    project: "Flooring & Painting",
+    text: "We had our master bathroom completely renovated and couldn't be happier. The team was respectful of our home, always on time, and finished ahead of schedule. The tilework is immaculate. Will definitely use them again for our kitchen.",
+    project: "Bathroom Renovation",
     source: "Yelp",
   },
   {
-    name: "Linda G.",
-    city: "Santa Ana",
+    name: "Robert T.",
+    city: "Orange, CA",
     rating: 5,
-    text: "We added a room addition for our growing family and Ulloa Construction handled everything — permits, framing, electrical coordination, insulation, drywall, paint. It looks like it was always part of the house. Couldn't be happier.",
+    text: "Added a 400 sqft room addition to our home. David and his crew navigated the permit process smoothly and kept us updated every step of the way. The addition looks like it was always part of the house. Outstanding craftsmanship.",
     project: "Room Addition",
     source: "Google",
+  },
+  {
+    name: "Sandra P.",
+    city: "Irvine, CA",
+    rating: 5,
+    text: "Had new flooring installed throughout the entire first floor. The team was clean, efficient, and the LVP they recommended looks incredible. Very fair pricing compared to three other quotes we got. Highly recommend for any OC homeowner.",
+    project: "Flooring Installation",
+    source: "Yelp",
+  },
+  {
+    name: "Michael R.",
+    city: "Huntington Beach, CA",
+    rating: 5,
+    text: "Replaced all our windows and two exterior doors. The difference in energy efficiency is noticeable immediately. Professional crew, no mess left behind, and the quality of materials is top notch. Great local company.",
+    project: "Window & Door Installation",
+    source: "Google",
+  },
+  {
+    name: "Lisa C.",
+    city: "Santa Ana, CA",
+    rating: 5,
+    text: "We needed emergency roof repair after a storm and Ulloa Construction came out the next day. Fair quote, fast work, and no leaks since. Honest and reliable — exactly what you want from a contractor. They've earned a customer for life.",
+    project: "Roofing",
+    source: "Yelp",
   },
 ];
 
@@ -133,7 +133,7 @@ export default function Testimonials() {
               onClick={() => setActive(i)}
               className={`text-left bg-[#0f0f0f] rounded-2xl p-6 border transition-all ${
                 i === active
-                  ? "border-amber-500 shadow-[0_0_20px_rgba(192,57,43,0.2)]"
+                  ? "border-amber-500 shadow-[0_0_20px_rgba(21,101,192,0.2)]"
                   : "border-[#2a2a2a] hover:border-[#3a3a3a]"
               }`}
               aria-pressed={i === active}
@@ -234,7 +234,7 @@ export default function Testimonials() {
           {/* Yelp CTA */}
           <div className="mt-8 text-center">
             <a
-              href="https://www.yelp.com/biz/ulloa-construction-orange-county"
+              href="https://yelp.com/biz/ulloa-construction-anaheim"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#d32323] hover:bg-[#b81c1c] text-white font-semibold px-6 py-3 rounded-xl transition-colors"

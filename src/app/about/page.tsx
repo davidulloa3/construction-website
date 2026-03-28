@@ -38,7 +38,7 @@ export default function AboutPage() {
     <div className="pt-16">
       {/* Header */}
       <section className="bg-[#0f0f0f] py-20 relative overflow-hidden" aria-labelledby="about-page-heading">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#c0392b]/10 to-transparent opacity-50" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1565c0]/10 to-transparent opacity-50" aria-hidden="true" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -123,7 +123,7 @@ export default function AboutPage() {
               call it done.
             </p>
             <p>
-              We serve Tustin, Irvine, Anaheim, Fullerton, Garden Grove, Santa Ana, Yorba
+              We serve Anaheim, Irvine, Anaheim, Fullerton, Garden Grove, Santa Ana, Yorba
               Linda, Orange, and the surrounding Orange County area. CSLB Lic. #1144906.
             </p>
           </div>
@@ -189,15 +189,15 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+17144871860"
+              href="tel:+16574002896"
               className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-4 rounded-xl transition-colors"
-              aria-label="Call Ulloa Construction at (714) 487-1860"
+              aria-label="Call Ulloa Construction at (657) 400-2896"
             >
-              (714) 487-1860
+              (657) 400-2896
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center border-2 border-[#c0392b] hover:bg-[#c0392b] text-[#f5f5f5] hover:text-white font-semibold px-8 py-4 rounded-xl transition-all"
+              className="inline-flex items-center justify-center border-2 border-[#1565c0] hover:bg-[#1565c0] text-[#f5f5f5] hover:text-white font-semibold px-8 py-4 rounded-xl transition-all"
             >
               Get a Free Estimate
             </Link>

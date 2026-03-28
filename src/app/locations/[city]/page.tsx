@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import ProcessTimeline from "@/components/ProcessTimeline";
+import ZigzagTimeline from "@/components/ZigzagTimeline";
+import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { getLocation, locationSlugList, allServiceSlugs, allServiceNames } from "@/lib/locations";
 
 interface Props {
@@ -136,7 +137,7 @@ export default async function LocationPage({ params }: Props) {
               <Link
                 key={slug}
                 href={`/services/${slug}`}
-                className="bg-[#0f0f0f] border border-[#2a2a2a] hover:border-amber-500 rounded-xl p-5 group transition-all hover:shadow-[0_0_20px_rgba(192,57,43,0.15)]"
+                className="bg-[#0f0f0f] border border-[#2a2a2a] hover:border-amber-500 rounded-xl p-5 group transition-all hover:shadow-[0_0_20px_rgba(21,101,192,0.15)]"
               >
                 <h3 className="font-bold text-[#f5f5f5] group-hover:text-amber-400 transition-colors mb-1">
                   {allServiceNames[slug]}
@@ -154,7 +155,7 @@ export default async function LocationPage({ params }: Props) {
       </section>
 
       {/* ── Process ───────────────────────────────────────────── */}
-      <ProcessTimeline />
+      <ZigzagTimeline />
 
       {/* ── Why Ulloa ─────────────────────────────────────────── */}
       <section className="py-16 bg-[#0f0f0f]" aria-labelledby="why-loc-heading">
@@ -201,8 +202,21 @@ export default async function LocationPage({ params }: Props) {
         </div>
       </section>
 
+      {/* ── Lead Form ─────────────────────────────────────────── */}
+      <section className="py-16 bg-[#0f0f0f]" aria-labelledby="location-form-heading">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="location-form-heading" className="text-3xl font-black text-[#f5f5f5] mb-3 text-center">
+            Get a Free Estimate in {location.name}
+          </h2>
+          <p className="text-[#a0a0a0] text-center mb-8">
+            Fill out the form and we&apos;ll be in touch within 24 hours.
+          </p>
+          <LeadCaptureForm />
+        </div>
+      </section>
+
       {/* ── CTA Banner ────────────────────────────────────────── */}
-      <section className="py-16 bg-[#c0392b]" aria-label="Call to action">
+      <section className="py-16 bg-[#1565c0]" aria-label="Call to action">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl sm:text-4xl font-black text-white mb-4">
             Serving {location.name} &amp; Surrounding OC Communities
@@ -213,7 +227,7 @@ export default async function LocationPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-white hover:bg-[#f5f5f5] text-[#c0392b] font-bold px-8 py-4 rounded-xl transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-white hover:bg-[#f5f5f5] text-[#1565c0] font-bold px-8 py-4 rounded-xl transition-colors"
             >
               Get a Free Estimate
             </Link>

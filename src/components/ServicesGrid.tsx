@@ -83,7 +83,7 @@ export default function ServicesGrid() {
             <li key={service.title}>
               <Link
                 href={service.href}
-                className="group flex flex-col h-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-2xl p-6 hover:border-amber-500 hover:shadow-[0_0_24px_rgba(192,57,43,0.15)] hover:-translate-y-1 transition-all duration-300"
+                className="group flex flex-col h-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-2xl p-6 hover:border-amber-500 hover:shadow-[0_0_24px_rgba(21,101,192,0.15)] hover:-translate-y-1 transition-all duration-300"
                 aria-label={`Learn more about ${service.title}`}
               >
                 <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 group-hover:bg-amber-500 group-hover:text-white flex items-center justify-center mb-4 transition-colors duration-300">

@@ -28,7 +28,7 @@ export default function ServiceAreaSection() {
           <span className="text-amber-500">&amp; Surrounding Areas</span>
         </h2>
         <p className="text-[#a0a0a0] text-lg leading-relaxed mb-4 max-w-2xl mx-auto">
-          Based in Tustin, CA, we work throughout Orange County — Irvine, Anaheim,
+          Based in Anaheim, CA, we work throughout Orange County — Irvine, Anaheim,
           Fullerton, Garden Grove, Yorba Linda, Santa Ana, and surrounding communities.
         </p>
         <p className="text-[#a0a0a0] leading-relaxed mb-10 max-w-xl mx-auto">
@@ -38,9 +38,9 @@ export default function ServiceAreaSection() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="tel:+17144871860"
+            href="tel:+16574002896"
             className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
-            aria-label="Call Ulloa Construction at (714) 487-1860"
+            aria-label="Call Ulloa Construction at (657) 400-2896"
           >
             <svg
               viewBox="0 0 24 24"
@@ -49,7 +49,7 @@ export default function ServiceAreaSection() {
             >
               <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
             </svg>
-            (714) 487-1860
+            (657) 400-2896
           </a>
           <div className="inline-flex items-center justify-center gap-2 text-[#a0a0a0] text-sm px-4">
             <svg

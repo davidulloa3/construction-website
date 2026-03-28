@@ -10,9 +10,9 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --color-amber-400: #e74c3c;
-  --color-amber-500: #c0392b;
-  --color-amber-600: #e74c3c;
+  --color-amber-400: #1e88e5;
+  --color-amber-500: #1565c0;
+  --color-amber-600: #1e88e5;
   --color-navy: #0f0f0f;
   --color-navy-800: #1a1a1a;
 }

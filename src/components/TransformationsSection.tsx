@@ -68,7 +68,7 @@ export default function TransformationsSection() {
         <div className="mt-12 text-center">
           <a
             href="/projects"
-            className="inline-flex items-center gap-2 border-2 border-[#c0392b] hover:bg-[#c0392b] text-[#f5f5f5] hover:text-white font-semibold px-7 py-3 rounded-xl transition-all"
+            className="inline-flex items-center gap-2 border-2 border-[#1565c0] hover:bg-[#1565c0] text-[#f5f5f5] hover:text-white font-semibold px-7 py-3 rounded-xl transition-all"
           >
             View Full Portfolio
             <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true">

@@ -80,7 +80,7 @@ export default function ProjectsPage() {
     <div className="pt-16">
       {/* Header */}
       <section className="bg-[#0f0f0f] py-20 relative overflow-hidden" aria-labelledby="projects-page-heading">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#c0392b]/10 to-transparent opacity-50" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1565c0]/10 to-transparent opacity-50" aria-hidden="true" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-amber-400 font-semibold text-sm uppercase tracking-widest mb-4">Our Work</p>
           <h1 id="projects-page-heading" className="text-5xl sm:text-6xl font-black text-[#f5f5f5] mb-6">
@@ -189,11 +189,11 @@ export default function ProjectsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+17144871860"
+              href="tel:+16574002896"
               className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-4 rounded-xl transition-colors"
-              aria-label="Call (714) 487-1860"
+              aria-label="Call (657) 400-2896"
             >
-              (714) 487-1860
+              (657) 400-2896
             </a>
             <Link
               href="/contact"

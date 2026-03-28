@@ -52,7 +52,7 @@ export default function FeaturedProjects() {
           </div>
           <Link
             href="/projects"
-            className="flex-shrink-0 inline-flex items-center gap-2 border-2 border-[#c0392b] hover:bg-[#c0392b] text-[#f5f5f5] hover:text-white font-semibold px-6 py-3 rounded-xl transition-all"
+            className="flex-shrink-0 inline-flex items-center gap-2 border-2 border-[#1565c0] hover:bg-[#1565c0] text-[#f5f5f5] hover:text-white font-semibold px-6 py-3 rounded-xl transition-all"
             aria-label="View all construction projects by Ulloa Construction"
           >
             View All Projects

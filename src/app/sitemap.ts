@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { serviceSlugList } from "@/lib/services";
 import { locationSlugList } from "@/lib/locations";
+import { blogSlugList } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://ulloaonstruction.com";
@@ -12,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/about`, lastModified, changeFrequency: "yearly", priority: 0.8 },
     { url: `${baseUrl}/projects`, lastModified, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/contact`, lastModified, changeFrequency: "yearly", priority: 0.9 },
+    { url: `${baseUrl}/blog`, lastModified, changeFrequency: "weekly", priority: 0.8 },
   ];
 
   const servicePages: MetadataRoute.Sitemap = serviceSlugList.map((slug) => ({
@@ -28,5 +30,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...servicePages, ...locationPages];
+  const blogPages: MetadataRoute.Sitemap = blogSlugList.map((slug) => ({
+    url: `${baseUrl}/blog/${slug}`,
+    lastModified,
+    changeFrequency: "yearly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...servicePages, ...locationPages, ...blogPages];
 }

@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import ProcessTimeline from "@/components/ProcessTimeline";
+import ZigzagTimeline from "@/components/ZigzagTimeline";
+import LeadCaptureForm from "@/components/LeadCaptureForm";
 
 // Note: metadata export must be in a separate server component since this file uses "use client"
 // See: src/app/contact/layout.tsx
@@ -51,7 +52,7 @@ export default function ContactPage() {
       </section>
 
       {/* Process */}
-      <ProcessTimeline />
+      <ZigzagTimeline />
 
       {/* Main content */}
       <section className="py-16 bg-[#0f0f0f]" aria-label="Contact information and form">
@@ -66,9 +67,9 @@ export default function ContactPage() {
                 </h2>
                 <address className="not-italic space-y-5">
                   <a
-                    href="tel:+17144871860"
+                    href="tel:+16574002896"
                     className="flex items-start gap-4 group"
-                    aria-label="Call Ulloa Construction at (714) 487-1860"
+                    aria-label="Call Ulloa Construction at (657) 400-2896"
                   >
                     <div className="w-12 h-12 bg-amber-500/10 border border-amber-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-amber-500 group-hover:border-amber-500 transition-colors">
                       <svg viewBox="0 0 24 24" className="w-5 h-5 fill-amber-500 group-hover:fill-white transition-colors" aria-hidden="true">
@@ -77,7 +78,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-[#f5f5f5] group-hover:text-amber-400 transition-colors">
-                        (714) 487-1860
+                        (657) 400-2896
                       </p>
                       <p className="text-[#a0a0a0] text-sm">Call or text anytime</p>
                     </div>
@@ -108,7 +109,7 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <p className="font-semibold text-[#f5f5f5]">Tustin, CA</p>
+                      <p className="font-semibold text-[#f5f5f5]">Anaheim, CA</p>
                       <p className="text-[#a0a0a0] text-sm">
                         Serving Orange County & surrounding areas
                       </p>
@@ -230,7 +231,7 @@ export default function ContactPage() {
                           value={form.city}
                           onChange={(e) => setForm({ ...form, city: e.target.value })}
                           className="w-full bg-[#0f0f0f] border border-[#2a2a2a] text-[#f5f5f5] placeholder-[#a0a0a0] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors"
-                          placeholder="Tustin, Irvine, Anaheim..."
+                          placeholder="Anaheim, Irvine, Anaheim..."
                         />
                       </div>
                     </div>

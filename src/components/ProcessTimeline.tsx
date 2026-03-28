@@ -84,7 +84,7 @@ export default function ProcessTimeline() {
               <li key={step.number} className="relative flex lg:flex-col items-start lg:items-center gap-5 lg:gap-0 lg:text-center">
                 {/* Number bubble */}
                 <div className="relative z-10 flex-shrink-0">
-                  <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-[#c0392b] flex items-center justify-center text-white lg:mx-auto mb-0 lg:mb-5">
+                  <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-[#1565c0] flex items-center justify-center text-white lg:mx-auto mb-0 lg:mb-5">
                     <span className="font-black text-sm">{step.number}</span>
                   </div>
                 </div>
