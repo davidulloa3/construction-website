@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import logoSrc from "../../public/logo.png";
 
 const services = [
   "Kitchen Remodeling",
@@ -22,19 +24,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company info */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4 group">
-              <div className="w-8 h-8 bg-amber-500 rounded flex items-center justify-center flex-shrink-0">
-                <svg
-                  viewBox="0 0 24 24"
-                  className="w-5 h-5 fill-white"
-                  aria-hidden="true"
-                >
-                  <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-                </svg>
-              </div>
-              <span className="text-white font-bold text-lg">
-                Ulloa<span className="text-amber-400"> Construction</span>
-              </span>
+            <Link href="/" aria-label="Ulloa Construction - Home" className="inline-block mb-4">
+              <Image
+                src={logoSrc}
+                alt="Ulloa Construction"
+                style={{ width: "auto", opacity: 0.9 }}
+                className="h-14 w-auto"
+              />
             </Link>
             <p className="text-sm leading-relaxed mb-1">
               Professional remodeling contractor serving Orange County & surrounding areas.

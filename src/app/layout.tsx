@@ -44,6 +44,10 @@ export const metadata: Metadata = {
       "Professional remodeling contractor in Orange County. Kitchens, bathrooms, interiors & additions. CSLB Lic. #1144906. Call (714) 487-1860.",
     images: [
       {
+        url: "/logo.png",
+        alt: "Ulloa Construction",
+      },
+      {
         url: "/images/hero.jpg",
         width: 1600,
         height: 900,
@@ -78,6 +82,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
+      </head>
       <body className="min-h-full flex flex-col">
         <Navbar />
         <main className="flex-1">{children}</main>

@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import logoSrc from "../../public/logo.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -37,25 +39,16 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2 group"
           aria-label="Ulloa Construction - Home"
+          className="flex-shrink-0"
         >
-          <div className="w-8 h-8 bg-amber-500 rounded flex items-center justify-center flex-shrink-0">
-            <svg
-              viewBox="0 0 24 24"
-              className="w-5 h-5 fill-white"
-              aria-hidden="true"
-            >
-              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-            </svg>
-          </div>
-          <div>
-            <span className="text-white font-bold text-lg leading-tight block">
-              Ulloa
-              <span className="text-amber-400"> Construction</span>
-            </span>
-            <span className="text-slate-400 text-[10px] leading-none">CSLB Lic. #1144906</span>
-          </div>
+          <Image
+            src={logoSrc}
+            alt="Ulloa Construction"
+            priority
+            style={{ width: "auto" }}
+            className="h-9 md:h-12 w-auto drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]"
+          />
         </Link>
 
         {/* Desktop nav */}
