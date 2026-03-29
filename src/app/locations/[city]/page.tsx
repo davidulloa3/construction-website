@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `General Contractor in ${location.name}, CA | Ulloa Construction`,
     description: `Licensed general contractor serving ${location.name}, CA. Kitchen remodels, bathroom renovations, room additions, and all of Orange County. CSLB #1144906. Call (714) 487-1860.`,
-    alternates: { canonical: `https://ulloaonstruction.com/locations/${city}` },
+    alternates: { canonical: `https://ulloa-construction.com/locations/${city}` },
   };
 }
 
@@ -34,7 +34,7 @@ export default async function LocationPage({ params }: Props) {
     "@type": "LocalBusiness",
     name: "Ulloa Construction",
     telephone: "+1-714-487-1860",
-    url: "https://ulloaonstruction.com",
+    url: "https://ulloa-construction.com",
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "CSLB License",

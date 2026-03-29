@@ -121,6 +121,16 @@ export default function Testimonials() {
             </div>
             <span className="text-[#f5f5f5] font-bold text-sm">4.9 stars</span>
             <span className="text-[#a0a0a0] text-sm">across 80+ reviews</span>
+            {/* TODO: Replace GOOGLE_PLACE_ID with the actual Place ID from Google Business Profile */}
+            <a
+              href="https://search.google.com/local/writereview?placeid=GOOGLE_PLACE_ID"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-2 text-xs text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors"
+              aria-label="View Ulloa Construction reviews on Google"
+            >
+              View Google Reviews
+            </a>
           </div>
         </div>
 
@@ -231,8 +241,8 @@ export default function Testimonials() {
             </div>
           </div>
 
-          {/* Yelp CTA */}
-          <div className="mt-8 text-center">
+          {/* Review CTAs */}
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="https://yelp.com/biz/ulloa-construction-anaheim"
               target="_blank"
@@ -244,6 +254,19 @@ export default function Testimonials() {
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
               </svg>
               View All Reviews on Yelp
+            </a>
+            {/* TODO: Replace GOOGLE_PLACE_ID with the actual Place ID from Google Business Profile */}
+            <a
+              href="https://search.google.com/local/writereview?placeid=GOOGLE_PLACE_ID"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-[#1565c0] hover:bg-[#1e88e5] text-white font-semibold px-6 py-3 rounded-xl transition-colors"
+              aria-label="Leave Ulloa Construction a review on Google"
+            >
+              <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+              </svg>
+              Leave Us a Google Review
             </a>
           </div>
         </div>

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Browse Ulloa Construction's portfolio of completed projects across Orange County, CA — kitchen renovations, home remodels, new construction, bathrooms, and more in Anaheim and OC.",
   alternates: {
-    canonical: "https://ulloaonstruction.com/projects",
+    canonical: "https://ulloa-construction.com/projects",
   },
 };
 

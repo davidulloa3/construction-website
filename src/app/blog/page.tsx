@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Construction & Remodeling Tips | Ulloa Construction Blog",
   description:
     "Expert remodeling tips, cost guides, and home improvement advice for Orange County homeowners from Ulloa Construction in Anaheim, CA.",
-  alternates: { canonical: "https://ulloaonstruction.com/blog" },
+  alternates: { canonical: "https://ulloa-construction.com/blog" },
 };
 
 export default function BlogPage() {

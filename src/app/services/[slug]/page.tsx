@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${service.name} in Anaheim CA | Ulloa Construction`,
     description: service.metaDescription,
-    alternates: { canonical: `https://ulloaonstruction.com/services/${slug}` },
+    alternates: { canonical: `https://ulloa-construction.com/services/${slug}` },
   };
 }
 
@@ -66,7 +66,7 @@ export default async function ServiceSlugPage({ params }: Props) {
     },
     areaServed: "Orange County, CA",
     description: service.schemaDescription,
-    url: `https://ulloaonstruction.com/services/${slug}`,
+    url: `https://ulloa-construction.com/services/${slug}`,
   };
 
   return (

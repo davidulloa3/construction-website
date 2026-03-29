@@ -4,7 +4,7 @@ import { locationSlugList } from "@/lib/locations";
 import { blogSlugList } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://ulloaonstruction.com";
+  const baseUrl = "https://ulloa-construction.com";
   const lastModified = new Date();
 
   const staticPages: MetadataRoute.Sitemap = [

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Ulloa Construction specializes in kitchen remodeling, bathroom remodeling, interior remodeling, and room additions/ADUs throughout Orange County, CA. CSLB Lic. #1144906. Call (714) 487-1860.",
   alternates: {
-    canonical: "https://ulloaonstruction.com/services",
+    canonical: "https://ulloa-construction.com/services",
   },
 };
 

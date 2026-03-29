@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Learn about Ulloa Construction — a licensed Orange County remodeling contractor specializing in kitchens, bathrooms, interior remodeling, and additions. CSLB Lic. #1144906. Honest pricing. Clear communication.",
   alternates: {
-    canonical: "https://ulloaonstruction.com/about",
+    canonical: "https://ulloa-construction.com/about",
   },
 };
 

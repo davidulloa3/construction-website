@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${post.title} | Ulloa Construction`,
     description: post.metaDescription,
     alternates: {
-      canonical: `https://ulloaonstruction.com/blog/${slug}`,
+      canonical: `https://ulloa-construction.com/blog/${slug}`,
     },
   };
 }
@@ -31,22 +31,22 @@ export default async function BlogPostPage({ params }: Props) {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: post.title,
     description: post.metaDescription,
     datePublished: post.date,
     author: {
       "@type": "Organization",
       name: "Ulloa Construction",
-      url: "https://ulloaonstruction.com",
+      url: "https://ulloa-construction.com",
     },
     publisher: {
       "@type": "Organization",
       name: "Ulloa Construction",
-      url: "https://ulloaonstruction.com",
+      url: "https://ulloa-construction.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://ulloaonstruction.com/icon.png",
+        url: "https://ulloa-construction.com/icon.png",
       },
     },
   };
