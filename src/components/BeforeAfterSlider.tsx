@@ -77,24 +77,24 @@ export default function BeforeAfterSlider({
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
       >
-        {/* After image — full width behind */}
+        {/* Before image — full width behind */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={afterSrc}
-          alt={afterAlt}
+          src={beforeSrc}
+          alt={beforeAlt}
           className="absolute inset-0 w-full h-full object-cover pointer-events-none"
           draggable={false}
         />
 
-        {/* Before image — clipped by position */}
+        {/* After image — clipped by position */}
         <div
           className="absolute inset-0 overflow-hidden pointer-events-none"
           style={{ width: `${position}%` }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={beforeSrc}
-            alt={beforeAlt}
+            src={afterSrc}
+            alt={afterAlt}
             draggable={false}
             style={{
               position: "absolute",
@@ -129,11 +129,11 @@ export default function BeforeAfterSlider({
         </div>
 
         {/* Labels */}
-        <div className="absolute top-3 left-3 bg-black/70 text-[#f5f5f5] text-xs font-bold px-2.5 py-1 rounded pointer-events-none">
-          BEFORE
-        </div>
-        <div className="absolute top-3 right-3 bg-[#1565c0] text-white text-xs font-bold px-2.5 py-1 rounded pointer-events-none">
+        <div className="absolute top-3 left-3 bg-[#1565c0] text-white text-xs font-bold px-2.5 py-1 rounded pointer-events-none">
           AFTER
+        </div>
+        <div className="absolute top-3 right-3 bg-black/70 text-[#f5f5f5] text-xs font-bold px-2.5 py-1 rounded pointer-events-none">
+          BEFORE
         </div>
       </div>
     </div>

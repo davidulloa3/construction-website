@@ -4,7 +4,7 @@ const transformations = [
   {
     label: "Kitchen",
     beforeSrc: "/images/948faca5-dc3e-439f-94ed-5275d9ba7f87.png",
-    afterSrc: "/images/IMG_0671.HEIC",
+    afterSrc: "/images/IMG_0671.jpg",
     beforeAlt: "Outdated kitchen before Ulloa Construction remodel in Anaheim CA",
     afterAlt: "Modern luxury kitchen remodel completed by Ulloa Construction in Orange County CA",
   },
