@@ -30,8 +30,8 @@ export const services: ServiceData[] = [
     slug: "kitchen-remodeling",
     name: "Kitchen Remodeling",
     heroImage: "/images/gallery-2.jpg",
-    beforeImage: "/images/gallery-9.jpg",
-    afterImage: "/images/gallery-1.jpg",
+    beforeImage: "/images/948faca5-dc3e-439f-94ed-5275d9ba7f87.png",
+    afterImage: "/images/IMG_0671.png",
     intro:
       "Your kitchen is the most-used room in your Anaheim home, and a thoughtful remodel changes everything about how your family lives. Ulloa Construction has delivered hundreds of kitchen renovations across Orange County — from open-concept conversions in Anaheim Hills to custom cabinet builds in Irvine — with honest pricing and no subcontractor runaround. We coordinate every trade, pull all required permits, and provide a detailed written scope before any work begins. Every kitchen we build is backed by CSLB License #1144906 and full general liability insurance.",
     included: [
@@ -54,8 +54,8 @@ export const services: ServiceData[] = [
     slug: "bathroom-renovation",
     name: "Bathroom Renovation",
     heroImage: "/images/gallery-3.jpg",
-    beforeImage: "/images/gallery-4.jpg",
-    afterImage: "/images/gallery-3.jpg",
+    beforeImage: "/images/5185400809350868211.jpeg",
+    afterImage: "/images/431122808612452824.jpeg",
     intro:
       "A properly executed bathroom renovation adds lasting comfort and resale value to your Orange County home. Ulloa Construction specializes in spa-caliber bathroom remodels throughout Anaheim, Irvine, and the greater OC area — from master suite overhauls with custom walk-in showers to secondary bath updates with new vanities and tile. We handle waterproofing, ventilation, tile layout, and all plumbing coordination so you have one licensed contractor from demo to final inspection. Our work meets Orange County seismic and moisture codes, and is fully insured under CSLB #1144906.",
     included: [
