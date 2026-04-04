@@ -285,6 +285,31 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Map */}
+      <section className="py-16 bg-[#1a1a1a]" aria-label="Our location map">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#f5f5f5] mb-3">
+              Our <span className="text-amber-400">Location</span>
+            </h2>
+            <p className="text-[#a0a0a0] text-base">
+              Serving Anaheim and all of Orange County — CSLB Lic. #1144906
+            </p>
+          </div>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-[#2a2a2a]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d425168.74078669486!2d-117.7803964!3d33.64081399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x66e29cc824ae99d7%3A0xa4eaa9cb34e5320c!2sUlloa%20Construction!5e0!3m2!1sen!2sus!4v1775336408651!5m2!1sen!2sus"
+              className="absolute inset-0 w-full h-full"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Ulloa Construction location map"
+            />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
