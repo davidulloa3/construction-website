@@ -123,7 +123,7 @@ export default function Testimonials() {
             <span className="text-[#a0a0a0] text-sm">across 80+ reviews</span>
             {/* TODO: Replace GOOGLE_PLACE_ID with the actual Place ID from Google Business Profile */}
             <a
-              href="https://search.google.com/local/writereview?placeid=GOOGLE_PLACE_ID"
+              href="https://g.page/r/CQwy5TTLqeqkEAI/review"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-2 text-xs text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors"
@@ -257,7 +257,7 @@ export default function Testimonials() {
             </a>
             {/* TODO: Replace GOOGLE_PLACE_ID with the actual Place ID from Google Business Profile */}
             <a
-              href="https://search.google.com/local/writereview?placeid=GOOGLE_PLACE_ID"
+              href="https://g.page/r/CQwy5TTLqeqkEAI/review"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#1565c0] hover:bg-[#1e88e5] text-white font-semibold px-6 py-3 rounded-xl transition-colors"
