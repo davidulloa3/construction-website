@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   description:
     "Ulloa Construction — Professional remodeling contractor in Anaheim & Orange County, CA. Kitchens, bathrooms, interior remodeling, and room additions. CSLB Lic. #1144906. Call (714) 487-1860.",
   verification: {
-     google: "google-site-verification" content="KM50ZedxSPc-CqOQn6FSSKes52HZGzhoGIYtkYdU1PA",
+  google: "KM50ZedxSPc-CqOQn6FSSKes52HZGzhoGIYtkYdU1PA",
 },
 keywords: [
     "construction",
