@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import ZigzagTimeline from "@/components/ZigzagTimeline";
-import LeadCaptureForm from "@/components/LeadCaptureForm";
 
 // Note: metadata export must be in a separate server component since this file uses "use client"
 // See: src/app/contact/layout.tsx
@@ -16,20 +15,7 @@ const serviceTypes = [
 ];
 
 export default function ContactPage() {
-  const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    service: "",
-    city: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
+  const [state, handleSubmit] = useForm("xovznekk");
 
   return (
     <div className="pt-16">
@@ -154,7 +140,7 @@ export default function ContactPage() {
             {/* Right: Form */}
             <div className="lg:col-span-3">
               <div className="bg-[#1a1a1a] rounded-3xl p-8 border border-[#2a2a2a]">
-                {submitted ? (
+                {state.succeeded ? (
                   <div className="text-center py-12">
                     <div className="w-20 h-20 bg-amber-500/10 rounded-full flex items-center justify-center mx-auto mb-5">
                       <svg viewBox="0 0 24 24" className="w-10 h-10 fill-amber-500" aria-hidden="true">
@@ -163,11 +149,11 @@ export default function ContactPage() {
                     </div>
                     <h2 className="text-3xl font-black text-[#f5f5f5] mb-3">Message Sent!</h2>
                     <p className="text-[#a0a0a0] text-lg">
-                      After you submit, we&apos;ll receive your details by email and follow up as soon as possible.
+                      We&apos;ll be in touch within 24 hours.
                     </p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} aria-label="Contact form for Ulloa Construction">
+                  <form onSubmit={handleSubmit} aria-label="Contact form for Ulloa Construction" noValidate>
                     <h2 className="text-2xl font-black text-[#f5f5f5] mb-2">
                       Request a Free Estimate
                     </h2>
@@ -183,12 +169,12 @@ export default function ContactPage() {
                         <input
                           id="contact-name"
                           type="text"
+                          name="name"
                           required
-                          value={form.name}
-                          onChange={(e) => setForm({ ...form, name: e.target.value })}
                           className="w-full bg-[#0f0f0f] border border-[#2a2a2a] text-[#f5f5f5] placeholder-[#a0a0a0] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors"
                           placeholder="John Smith"
                         />
+                        <ValidationError prefix="Name" field="name" errors={state.errors} className="mt-1 text-red-400 text-xs" />
                       </div>
                       <div>
                         <label htmlFor="contact-phone" className="block text-sm font-medium text-[#a0a0a0] mb-1.5">
@@ -197,12 +183,12 @@ export default function ContactPage() {
                         <input
                           id="contact-phone"
                           type="tel"
+                          name="phone"
                           required
-                          value={form.phone}
-                          onChange={(e) => setForm({ ...form, phone: e.target.value })}
                           className="w-full bg-[#0f0f0f] border border-[#2a2a2a] text-[#f5f5f5] placeholder-[#a0a0a0] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors"
                           placeholder="(714) 555-0123"
                         />
+                        <ValidationError prefix="Phone" field="phone" errors={state.errors} className="mt-1 text-red-400 text-xs" />
                       </div>
                     </div>
 
@@ -214,12 +200,12 @@ export default function ContactPage() {
                         <input
                           id="contact-email"
                           type="email"
+                          name="email"
                           required
-                          value={form.email}
-                          onChange={(e) => setForm({ ...form, email: e.target.value })}
                           className="w-full bg-[#0f0f0f] border border-[#2a2a2a] text-[#f5f5f5] placeholder-[#a0a0a0] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors"
                           placeholder="john@example.com"
                         />
+                        <ValidationError prefix="Email" field="email" errors={state.errors} className="mt-1 text-red-400 text-xs" />
                       </div>
                       <div>
                         <label htmlFor="contact-city" className="block text-sm font-medium text-[#a0a0a0] mb-1.5">
@@ -228,8 +214,7 @@ export default function ContactPage() {
                         <input
                           id="contact-city"
                           type="text"
-                          value={form.city}
-                          onChange={(e) => setForm({ ...form, city: e.target.value })}
+                          name="city"
                           className="w-full bg-[#0f0f0f] border border-[#2a2a2a] text-[#f5f5f5] placeholder-[#a0a0a0] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors"
                           placeholder="Anaheim, Irvine, Anaheim..."
                         />
@@ -242,9 +227,9 @@ export default function ContactPage() {
                       </label>
                       <select
                         id="contact-service"
+                        name="service"
                         required
-                        value={form.service}
-                        onChange={(e) => setForm({ ...form, service: e.target.value })}
+                        defaultValue=""
                         className="w-full bg-[#0f0f0f] border border-[#2a2a2a] text-[#f5f5f5] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors"
                       >
                         <option value="" disabled>Select a project type...</option>
@@ -252,6 +237,7 @@ export default function ContactPage() {
                           <option key={s} value={s}>{s}</option>
                         ))}
                       </select>
+                      <ValidationError prefix="Service" field="service" errors={state.errors} className="mt-1 text-red-400 text-xs" />
                     </div>
 
                     <div className="mb-6">
@@ -260,9 +246,8 @@ export default function ContactPage() {
                       </label>
                       <textarea
                         id="contact-message"
+                        name="message"
                         rows={4}
-                        value={form.message}
-                        onChange={(e) => setForm({ ...form, message: e.target.value })}
                         className="w-full bg-[#0f0f0f] border border-[#2a2a2a] text-[#f5f5f5] placeholder-[#a0a0a0] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors resize-none"
                         placeholder="Tell us about your project — what are you looking to remodel or build?"
                       />
@@ -270,10 +255,11 @@ export default function ContactPage() {
 
                     <button
                       type="submit"
-                      className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 rounded-xl transition-all hover:scale-[1.01] shadow-lg shadow-amber-500/20 text-lg"
+                      disabled={state.submitting}
+                      className="w-full bg-amber-500 hover:bg-amber-600 disabled:opacity-60 text-white font-bold py-4 rounded-xl transition-all hover:scale-[1.01] shadow-lg shadow-amber-500/20 text-lg"
                       aria-label="Submit contact form to Ulloa Construction"
                     >
-                      Send My Request
+                      {state.submitting ? "Sending…" : "Send My Request"}
                     </button>
                     <p className="text-center text-[#a0a0a0] text-xs mt-3">
                       After you submit, we&apos;ll receive your details by email and follow up as soon as possible.
