@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ulloa-construction.com"),
+  metadataBase: new URL("https://www.ulloa-construction.com"),
   title: {
     default: "Ulloa Construction | Anaheim & Orange County Remodeling Contractor",
     template: "%s | Ulloa Construction - Orange County Remodeling",
