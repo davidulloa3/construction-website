@@ -5,7 +5,7 @@ const steps = [
     number: "01",
     title: "Free Consultation",
     description:
-      "We visit your home, assess the project in person, and discuss your vision, budget, and timeline — at no cost and with no pressure.",
+      "We visit your home, assess the project in person, and discuss your vision, budget, and timeline. No cost and no pressure.",
     icon: (
       <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current" aria-hidden="true">
         <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" />
@@ -16,7 +16,7 @@ const steps = [
     number: "02",
     title: "Custom Proposal",
     description:
-      "You receive a detailed written estimate with materials, timeline, and total cost. Clear allowances, no hidden line items — no surprises.",
+      "You receive a detailed written estimate with materials, timeline, and total cost. Clear allowances, no hidden line items, no surprises.",
     icon: (
       <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current" aria-hidden="true">
         <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
@@ -70,7 +70,7 @@ export default function ProcessTimeline() {
 
         {/* Steps */}
         <div className="relative">
-          {/* Connecting line — desktop only */}
+          {/* Connecting line (desktop only) */}
           <div
             className="hidden lg:block absolute top-12 left-0 right-0 h-px bg-[#2a2a2a]"
             aria-hidden="true"

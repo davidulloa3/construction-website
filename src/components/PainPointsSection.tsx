@@ -26,7 +26,7 @@ export default function PainPointsSection() {
           >
             If Any of This Sounds
             <br />
-            <span className="text-amber-500">Like You — Let's Talk.</span>
+            <span className="text-amber-500">Like You, Let&apos;s Talk.</span>
           </h2>
         </div>
 

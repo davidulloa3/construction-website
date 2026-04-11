@@ -38,7 +38,7 @@ const valueCards = [
   },
   {
     title: "Seismic Code Specialists",
-    description: "All work meets California seismic requirements — critical for Orange County remodels and additions.",
+    description: "All work meets California seismic requirements. This is critical for Orange County remodels and additions.",
     iconPath: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z",
   },
 ];
@@ -80,7 +80,7 @@ export default async function ServiceSlugPage({ params }: Props) {
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#1565c0]" aria-hidden="true" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
           <p className="inline-flex items-center gap-2 text-[#1e88e5] text-sm font-semibold tracking-widest uppercase mb-5 bg-[#1565c0]/10 border border-[#1565c0]/20 px-4 py-1.5 rounded-full">
-            CSLB Lic. #1144906 — Licensed &amp; Insured
+            CSLB Lic. #1144906. Licensed &amp; Insured.
           </p>
           <h1 id="service-hero-heading" className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#f5f5f5] leading-tight mb-6">
             {service.name} in Anaheim<br /><span className="text-[#1e88e5]">&amp; Orange County</span>
@@ -96,7 +96,7 @@ export default async function ServiceSlugPage({ params }: Props) {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-[#a0a0a0] text-lg leading-relaxed">{service.intro}</p>
           <p className="text-amber-500 font-semibold text-sm mt-6">
-            Serving all of Orange County — from Anaheim to San Clemente and everywhere in between.
+            Serving all of Orange County, from Anaheim to San Clemente and everywhere in between.
           </p>
         </div>
       </section>
@@ -124,8 +124,8 @@ export default async function ServiceSlugPage({ params }: Props) {
           <h2 id="ba-heading" className="text-3xl font-black text-[#f5f5f5] mb-3 text-center">
             See the <span className="text-[#1565c0]">Transformation</span>
           </h2>
-          <p className="text-[#a0a0a0] text-center mb-10">Drag the slider to compare — real work by our crew in Orange County.</p>
-          <BeforeAfterSlider beforeSrc={service.beforeImage} afterSrc={service.afterImage} beforeAlt={`Before ${service.name} — dated space in Anaheim CA before Ulloa Construction`} afterAlt={`After ${service.name} — finished result by Ulloa Construction in Orange County CA`} />
+          <p className="text-[#a0a0a0] text-center mb-10">Drag the slider to compare. Real work by our crew in Orange County.</p>
+          <BeforeAfterSlider beforeSrc={service.beforeImage} afterSrc={service.afterImage} beforeAlt={`Before ${service.name} project in Anaheim CA by Ulloa Construction`} afterAlt={`After ${service.name} completed by Ulloa Construction in Orange County CA`} />
         </div>
       </section>
 

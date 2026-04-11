@@ -21,7 +21,7 @@ export default function BlogPage() {
       >
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="inline-flex items-center gap-2 text-[#1565c0] text-sm font-semibold tracking-widest uppercase mb-5 bg-[#1565c0]/10 border border-[#1565c0]/20 px-4 py-1.5 rounded-full">
-            Ulloa Construction — Anaheim, CA
+            Ulloa Construction. Anaheim, CA
           </p>
           <h1
             id="blog-hero-heading"

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Ulloa Construction - Orange County Remodeling",
   },
   description:
-    "Ulloa Construction — Professional remodeling contractor in Anaheim & Orange County, CA. Kitchens, bathrooms, interior remodeling, and room additions. CSLB Lic. #1144906. Call (714) 487-1860.",
+    "Ulloa Construction. Professional remodeling contractor in Anaheim and Orange County, CA. Kitchens, bathrooms, interior remodeling, and room additions. CSLB Lic. #1144906. Call (714) 487-1860.",
   verification: {
   google: "KM50ZedxSPc-CqOQn6FSSKes52HZGzhoGIYtkYdU1PA",
 },

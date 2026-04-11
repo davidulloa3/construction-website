@@ -161,7 +161,7 @@ export default function Testimonials() {
                 </div>
                 <div>
                   <cite className="not-italic font-bold text-[#f5f5f5] text-sm block">{t.name}</cite>
-                  <span className="text-[#a0a0a0] text-xs">{t.city} — {t.project}</span>
+                  <span className="text-[#a0a0a0] text-xs">{t.city} · {t.project}</span>
                 </div>
               </div>
             </button>

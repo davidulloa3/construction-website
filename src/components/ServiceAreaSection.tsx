@@ -40,7 +40,7 @@ export default function ServiceAreaSection() {
           <span className="text-amber-500">&amp; Surrounding Areas</span>
         </h2>
         <p className="text-[#a0a0a0] text-lg leading-relaxed mb-4 max-w-2xl mx-auto">
-          From Anaheim to San Clemente — we serve every city in Orange County.
+          We serve every city in Orange County, from Anaheim to San Clemente.
         </p>
 
         <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2 mb-10 text-left" role="list">
@@ -52,7 +52,7 @@ export default function ServiceAreaSection() {
         </ul>
 
         <p className="text-[#a0a0a0] leading-relaxed mb-10 max-w-xl mx-auto">
-          Not sure if we cover your area? Give us a call — we're happy to let you
+          Not sure if we cover your area? Give us a call. We are happy to let you
           know and answer any questions about your project.
         </p>
 

@@ -136,7 +136,7 @@ export default async function BlogPostPage({ params }: Props) {
               Ready to start your project?
             </p>
             <p className="text-[#a0a0a0] mb-6">
-              Get a free estimate from Ulloa Construction — serving Anaheim and
+              Get a free estimate from Ulloa Construction, serving Anaheim and
               all of Orange County. CSLB Lic. #1144906.
             </p>
             <Link

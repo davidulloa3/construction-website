@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Ulloa Construction — a licensed Orange County remodeling contractor specializing in kitchens, bathrooms, interior remodeling, and additions. CSLB Lic. #1144906. Honest pricing. Clear communication.",
+    "Learn about Ulloa Construction, a licensed Orange County remodeling contractor specializing in kitchens, bathrooms, interior remodeling, and additions. CSLB Lic. #1144906. Honest pricing. Clear communication.",
   alternates: {
     canonical: "https://ulloa-construction.com/about",
   },
@@ -12,24 +12,24 @@ export const metadata: Metadata = {
 
 const values = [
   {
-    title: "CSLB Licensed #1144906 & Fully Insured",
+    title: "CSLB Licensed #1144906 and Fully Insured",
     description:
-      "You're protected from day one. Our California contractor's license and full insurance coverage mean you can move forward with confidence.",
+      "Our California contractor license and full insurance are verifiable on cslb.ca.gov right now. You are covered on every job, from demo day to final inspection.",
   },
   {
     title: "Clean, Respectful Crews",
     description:
-      "We treat your home like it's our own with dust control, daily clean-up, and crews who show up on time and work with care.",
+      "We clean up the job site every day before we leave. Crews show up when they say they will, use dust barriers when needed, and work carefully around your belongings.",
   },
   {
-    title: "Clear, Transparent Pricing",
+    title: "Clear, Upfront Pricing",
     description:
-      "No surprise line items or hidden costs. You get a detailed scope with clear allowances so you know exactly what you're investing in before work starts.",
+      "No buried costs, no allowances that inflate mid-project. You get a written scope before work starts. What we quote is what you pay, unless the scope changes.",
   },
   {
     title: "Direct Owner Communication",
     description:
-      "You'll work directly with a assigned manager throughout your project not a sales rep or a dispatcher. Your questions get real answers from someone who cares.",
+      "You work directly with a project manager throughout your job, not a dispatcher. Questions get answered by someone who actually knows the status of your project.",
   },
 ];
 
@@ -47,12 +47,11 @@ export default function AboutPage() {
                 Orange County&apos;s Trusted
                 <span className="text-amber-400"> Remodeling Contractor</span>
               </h1>
-              <p className="text-amber-400 text-sm font-medium mb-6">CSLB Lic. #1144906 — Licensed & Insured</p>
+              <p className="text-amber-400 text-sm font-medium mb-6">CSLB Lic. #1144906. Licensed &amp; Insured.</p>
               <p className="text-xl text-[#a0a0a0] leading-relaxed">
                 Ulloa Construction is a locally-owned remodeling company built on honest
-                pricing, reliable communication, and craftsmanship that stands up over time.
-                We specialize in the work the the areas that matter the most kitchens, bathrooms, interiors,
-                and additions.
+                pricing, reliable communication, and craftsmanship that holds up over time.
+                We focus on the projects that matter most: kitchens, bathrooms, interiors, and additions.
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
@@ -105,25 +104,25 @@ export default function AboutPage() {
           </div>
           <div className="space-y-6 text-[#a0a0a0] text-lg leading-relaxed">
             <p>
-              Ulloa Construction was built around a simple idea: homeowners deserve a
+              We built Ulloa Construction around a simple idea: homeowners deserve a
               contractor who shows up, communicates clearly, and gets the work done right.
-              No runaround, no hidden costs, no endless wait for a callback.
+              No runaround, no hidden costs, no weeks of silence between updates.
             </p>
             <p>
-              We specialize in kitchens, bathrooms, interior remodeling, and room additions.
-              The projects that directly impact how your family lives every day. Our team
-              handles design consultation, permitting, and construction so you&apos;re not
-              juggling multiple contractors or chasing down answers.
+              We focus on kitchens, bathrooms, interior remodeling, and room additions.
+              The projects that directly change how your family lives every day. We handle
+              design coordination, permitting, and construction under one contract so you are
+              not juggling multiple people or chasing down answers.
             </p>
             <p>
-              Every estimate comes with a detailed scope and clear allowances. Every project
+              Every estimate includes a detailed scope with clear allowances. Every project
               gets daily clean-up and consistent communication. And every finished job gets
-              a final walkthrough where we address every item on your punch list before we
-              call it done.
+              a final walkthrough where we go through the punch list together before we call
+              it done.
             </p>
             <p>
-              We serve Anaheim, Irvine, Anaheim, Fullerton, Garden Grove, Santa Ana, Yorba
-              Linda, Orange, and the surrounding Orange County area. CSLB Lic. #1144906.
+              We are based in Anaheim and work throughout Orange County, including Fullerton,
+              Garden Grove, Santa Ana, Yorba Linda, Orange, and surrounding areas. CSLB Lic. #1144906.
             </p>
           </div>
         </div>
@@ -184,7 +183,7 @@ export default function AboutPage() {
             Ready to Get Started?
           </h2>
           <p className="text-[#a0a0a0] mb-8 text-lg">
-            Contact us today for a free, no-obligation estimate on your Orange County remodeling project.
+            Call or fill out the form online. We will get back to you within 24 hours to discuss your project.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

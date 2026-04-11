@@ -81,7 +81,7 @@ export default async function LocationPage({ params }: Props) {
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
           <p className="inline-flex items-center gap-2 text-amber-400 text-sm font-semibold tracking-widest uppercase mb-5 bg-amber-500/10 border border-amber-500/20 px-4 py-1.5 rounded-full">
-            CSLB Lic. #1144906 — Serving {location.county}
+            CSLB Lic. #1144906. Serving {location.county}
           </p>
           <h1
             id="location-hero-heading"
@@ -130,7 +130,7 @@ export default async function LocationPage({ params }: Props) {
             <span className="text-amber-500">{location.name}</span>
           </h2>
           <p className="text-[#a0a0a0] mb-10">
-            All work is performed by our licensed crew — CSLB #1144906, fully insured, and based in Orange County.
+            All work is performed by our licensed crew. CSLB #1144906, fully insured, and based in Orange County.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {allServiceSlugs.map((slug) => (
@@ -181,7 +181,7 @@ export default async function LocationPage({ params }: Props) {
               },
               {
                 title: "Seismic Code Specialists",
-                desc: "All work meets California seismic requirements — critical for Orange County remodels and additions.",
+                desc: "All work meets California seismic requirements. This is critical for Orange County remodels and additions.",
                 path: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z",
               },
             ].map((card) => (

@@ -15,7 +15,7 @@ const services = [
   {
     title: "Bathroom Remodeling",
     description:
-      "Walk-in showers, custom tile, vanities, waterproofing, and ventilation — designed for both durability and a calm, spa-like feel.",
+      "Walk-in showers, custom tile, vanities, waterproofing, and ventilation. Built for durability and a calm, clean feel that holds up over time.",
     href: "/services#bathroom",
     icon: (
       <svg viewBox="0 0 24 24" className="w-7 h-7 fill-current" aria-hidden="true">
@@ -37,7 +37,7 @@ const services = [
   {
     title: "Room Additions & ADUs",
     description:
-      "Permits, planning, and construction for additions, garage conversions, and ADUs that blend seamlessly with your existing home.",
+      "Permits, planning, and construction for additions, garage conversions, and ADUs that match your existing home. One contractor, one contract.",
     href: "/services#additions",
     icon: (
       <svg viewBox="0 0 24 24" className="w-7 h-7 fill-current" aria-hidden="true">
@@ -69,7 +69,7 @@ export default function ServicesGrid() {
             <span className="text-amber-500">Matters Most</span>
           </h2>
           <p className="text-lg text-[#a0a0a0] max-w-2xl mx-auto">
-            We specialize in the remodeling work that transforms how you live —
+            We specialize in the remodeling work that changes how you live:
             kitchens, bathrooms, interiors, and additions done right.
           </p>
         </div>

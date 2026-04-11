@@ -15,7 +15,7 @@ const services = [
     title: "Kitchen Remodeling",
     slug: "kitchen",
     description:
-      "A kitchen remodel is one of the highest-impact projects you can do for your home — and it shows in how your family actually uses the space every day. We handle layout changes, custom or semi-custom cabinets, countertops, backsplashes, lighting, and flooring. Every decision is built around how you live.",
+      "A kitchen remodel changes how your family actually uses the space every day. We handle layout changes, cabinets, countertops, backsplashes, lighting, and flooring. Every decision is built around how you live, not what looks good in a catalog.",
     details: [
       "Layout changes & open-concept conversions",
       "Custom and semi-custom cabinet design & installation",
@@ -30,7 +30,7 @@ const services = [
     title: "Bathroom Remodeling",
     slug: "bathroom",
     description:
-      "Your bathroom should feel calm and clean — not cramped and outdated. We specialize in walk-in showers, custom tile work, vanities, waterproofing, and ventilation. Every detail is designed for durability and a spa-like feel that holds up over time.",
+      "Your bathroom should feel calm and clean, not cramped and outdated. We build walk-in showers, handle the tile work, install vanities, and take care of waterproofing and ventilation. Built to last, not just to look good on day one.",
     details: [
       "Walk-in shower design & construction",
       "Custom tile installation (floor, walls, niches)",
@@ -45,7 +45,7 @@ const services = [
     title: "Interior Remodeling",
     slug: "interior",
     description:
-      "Sometimes it's not one room — it's the whole interior that needs to feel cohesive and updated. We handle flooring, doors, trim, paint, lighting, and wall changes that modernize your home while keeping a clean, organized work environment for your family.",
+      "Sometimes it is not one room. It is the whole interior that needs to feel like it belongs together. We handle flooring, doors, trim, paint, lighting, and wall changes. Clean work environment, consistent progress updates throughout.",
     details: [
       "Flooring installation (hardwood, LVP, tile, carpet)",
       "Interior door replacement & trim work",
@@ -60,7 +60,7 @@ const services = [
     title: "Room Additions & ADUs",
     slug: "additions",
     description:
-      "Need more space but love your location? We handle the full process — permits, planning, and construction for room additions, garage conversions, and ADUs that blend seamlessly with your existing home. No juggling multiple contractors.",
+      "Need more space but love where you live? We handle permits, planning, and construction for room additions, garage conversions, and ADUs that match your existing home. One contractor, one contract, no coordination headaches.",
     details: [
       "Room additions (master suite, family room, office)",
       "ADU (Accessory Dwelling Unit) construction",
@@ -86,10 +86,10 @@ export default function ServicesPage() {
             <span className="text-amber-400"> Orange County, CA</span>
           </h1>
           <p className="text-xl text-[#a0a0a0] max-w-3xl mx-auto mb-4">
-            We specialize in the projects that matter most — kitchens, bathrooms, interiors, and additions —
+            We specialize in the projects that matter most: kitchens, bathrooms, interiors, and additions,
             done with honest pricing, clear communication, and craftsmanship that lasts.
           </p>
-          <p className="text-sm text-amber-400 font-medium mb-8">CSLB Lic. #1144906 — Licensed & Insured</p>
+          <p className="text-sm text-amber-400 font-medium mb-8">CSLB Lic. #1144906. Licensed &amp; Insured</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+17144871860"
@@ -183,7 +183,7 @@ export default function ServicesPage() {
           <p className="text-[#a0a0a0] mb-2">
             Call our team today for a free, no-obligation estimate.
           </p>
-          <p className="text-amber-400 text-sm font-medium mb-8">CSLB Lic. #1144906 — Licensed & Insured</p>
+          <p className="text-amber-400 text-sm font-medium mb-8">CSLB Lic. #1144906. Licensed &amp; Insured</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+17144871860"

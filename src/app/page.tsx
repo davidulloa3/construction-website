@@ -14,7 +14,7 @@ import CTABanner from "@/components/CTABanner";
 export const metadata: Metadata = {
   title: "Ulloa Construction | Anaheim & Orange County Remodeling Contractor",
   description:
-    "Ulloa Construction — Professional Anaheim remodeling contractor. Kitchens, bathrooms, interior remodeling & room additions in Orange County, CA. CSLB Lic. #1144906. Call (714) 487-1860.",
+    "Ulloa Construction. Professional Anaheim remodeling contractor. Kitchens, bathrooms, interior remodeling and room additions in Orange County, CA. CSLB Lic. #1144906. Call (714) 487-1860.",
   alternates: { canonical: "https://ulloa-construction.com" },
 };
 

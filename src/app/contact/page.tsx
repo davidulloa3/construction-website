@@ -29,10 +29,9 @@ export default function ContactPage() {
             Contact Ulloa
             <span className="text-amber-400"> Construction</span>
           </h1>
-          <p className="text-amber-400 text-sm font-medium mb-4">CSLB Lic. #1144906 — Licensed & Insured</p>
+          <p className="text-amber-400 text-sm font-medium mb-4">CSLB Lic. #1144906. Licensed &amp; Insured.</p>
           <p className="text-xl text-[#a0a0a0] max-w-2xl mx-auto">
-            Ready to start your remodeling project? Call us or fill out the form
-            below for a free, no-obligation estimate.
+            Ready to get started? Call us or fill out the form below. We will follow up within 24 hours to talk through your project.
           </p>
         </div>
       </section>
@@ -249,7 +248,7 @@ export default function ContactPage() {
                         name="message"
                         rows={4}
                         className="w-full bg-[#0f0f0f] border border-[#2a2a2a] text-[#f5f5f5] placeholder-[#a0a0a0] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors resize-none"
-                        placeholder="Tell us about your project — what are you looking to remodel or build?"
+                        placeholder="Tell us about your project. What are you looking to remodel or build?"
                       />
                     </div>
 
@@ -280,7 +279,7 @@ export default function ContactPage() {
               Our <span className="text-amber-400">Location</span>
             </h2>
             <p className="text-[#a0a0a0] text-base">
-              Serving Anaheim and all of Orange County — CSLB Lic. #1144906
+              Serving Anaheim and all of Orange County. CSLB Lic. #1144906
             </p>
           </div>
           <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-[#2a2a2a]">

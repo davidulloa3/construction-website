@@ -46,7 +46,7 @@ export default function TransformationsSection() {
             <span className="text-amber-500">Real Results.</span>
           </h2>
           <p className="text-[#a0a0a0] text-lg max-w-xl mx-auto">
-            Drag the slider to see the transformation — real projects across Orange County.
+            Drag the slider to see the transformation. Real projects across Orange County.
           </p>
         </div>
 

@@ -9,7 +9,7 @@ const steps = [
     number: "02",
     title: "Transparent Proposal",
     description:
-      "You receive a detailed scope with clear allowances and pricing — no surprise line items buried in the fine print.",
+      "You receive a detailed scope with clear allowances and pricing. No surprise line items buried in the fine print.",
   },
   {
     number: "03",

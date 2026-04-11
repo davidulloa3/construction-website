@@ -8,7 +8,7 @@ const steps = [
     number: "01",
     title: "Free Consultation",
     description:
-      "We visit your home, assess the scope, and discuss your vision — at no cost and no obligation.",
+      "We visit your home, assess the scope, and discuss your vision. No cost and no obligation.",
     icon: (
       <svg viewBox="0 0 24 24" className="w-7 h-7 fill-[#1565c0]" aria-hidden="true">
         <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" />

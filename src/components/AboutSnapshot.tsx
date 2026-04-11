@@ -2,9 +2,9 @@ import Link from "next/link";
 
 const values = [
   {
-    title: "CSLB Licensed #1144906 & Fully Insured",
+    title: "CSLB Licensed #1144906 and Fully Insured",
     description:
-      "You're protected from day one. Our California contractor's license and full insurance coverage give you peace of mind throughout your project.",
+      "Our California contractor license and full insurance are on file and ready to verify. You are protected on every job, from demo day to final walkthrough.",
     icon: (
       <svg viewBox="0 0 24 24" className="w-5 h-5 fill-amber-500" aria-hidden="true">
         <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
@@ -14,7 +14,7 @@ const values = [
   {
     title: "Clean, Respectful Crews",
     description:
-      "We treat your home like it's our own — organized job sites, daily clean-up, and crews who show up on time and work with care.",
+      "We clean up the job site every day before we leave. Crews show up when they say they will and treat your home the way they would want theirs treated.",
     icon: (
       <svg viewBox="0 0 24 24" className="w-5 h-5 fill-amber-500" aria-hidden="true">
         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
@@ -22,9 +22,9 @@ const values = [
     ),
   },
   {
-    title: "Clear, Transparent Pricing",
+    title: "Clear, Upfront Pricing",
     description:
-      "No surprise line items or buried costs. You get a detailed scope with clear allowances so you know exactly what you're investing in.",
+      "No surprise line items. You get a written scope with clear allowances before any work starts. What we quote is what you pay, unless the scope changes.",
     icon: (
       <svg viewBox="0 0 24 24" className="w-5 h-5 fill-amber-500" aria-hidden="true">
         <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" />
@@ -34,7 +34,7 @@ const values = [
   {
     title: "Direct Owner Communication",
     description:
-      "You'll work directly with the owner throughout your project — not a sales rep or middleman. Your calls and questions get real answers.",
+      "You work directly with the owner throughout your project. Not a sales rep. Not a call center. Real answers from someone who knows the status of your job.",
     icon: (
       <svg viewBox="0 0 24 24" className="w-5 h-5 fill-amber-500" aria-hidden="true">
         <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" />
@@ -96,15 +96,10 @@ export default function AboutSnapshot() {
               <span className="text-amber-500">Actually Deserve.</span>
             </h2>
             <p className="text-[#a0a0a0] text-lg leading-relaxed mb-6">
-              Ulloa Construction is a locally-owned Orange County remodeling
-              company built on honest pricing, reliable communication, and
-              craftsmanship that stands up over time. CSLB Lic. #1144906.
+              We are a locally-owned company based in Anaheim. We built this business on one idea: show up, do the work right, and tell people what things actually cost. CSLB Lic. #1144906.
             </p>
             <p className="text-[#a0a0a0] leading-relaxed mb-8">
-              We specialize in kitchens, bathrooms, interior remodeling, and
-              additions — the work that matters most to how your family lives.
-              Every project gets the same attention to detail, whether it's a
-              single bathroom or a full interior renovation.
+              We focus on kitchens, bathrooms, interior remodeling, and additions. The work that changes how your family lives every day. Every project gets the same care, whether it is one bathroom or a full interior renovation.
             </p>
 
             {/* Values */}

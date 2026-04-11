@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Projects & Portfolio",
   description:
-    "Browse Ulloa Construction's portfolio of completed projects across Orange County, CA — kitchen renovations, home remodels, new construction, bathrooms, and more in Anaheim and OC.",
+    "Browse Ulloa Construction's portfolio of completed projects across Orange County, CA: kitchen renovations, home remodels, new construction, bathrooms, and more in Anaheim and OC.",
   alternates: {
     canonical: "https://ulloa-construction.com/projects",
   },

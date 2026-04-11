@@ -83,7 +83,7 @@ export default function Footer() {
                 >
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                 </svg>
-                Anaheim, CA — Orange County
+                Anaheim, CA. Orange County
               </p>
               <p className="flex items-center gap-2">
                 <svg
@@ -229,7 +229,7 @@ export default function Footer() {
       <div className="border-t border-[#2a2a2a] bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-[#a0a0a0]">
-            © {new Date().getFullYear()} Ulloa Construction. All rights reserved. CSLB Lic. #1144906 — Licensed & Insured.
+            © {new Date().getFullYear()} Ulloa Construction. All rights reserved. CSLB Lic. #1144906. Licensed &amp; Insured.
           </p>
           <p className="text-xs text-[#a0a0a0]">
             Serving Orange County & surrounding areas

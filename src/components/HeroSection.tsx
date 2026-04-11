@@ -24,24 +24,22 @@ export default function HeroSection() {
             <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true">
               <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
             </svg>
-            CSLB Lic. #1144906 — Licensed &amp; Insured
+            CSLB Lic. #1144906. Licensed &amp; Insured.
           </p>
 
           <h1
             className="font-black text-[#f5f5f5] leading-tight tracking-tight mb-6"
             style={{ fontSize: "clamp(2rem, 8vw, 5rem)" }}
           >
-            Professional Anaheim
+            Anaheim Remodeling
             <br />
-            <span className="text-[#1e88e5]">Remodeling Contractor</span>
+            <span className="text-[#1e88e5]">Contractor.</span>
             <br />
-            You Can Trust.
+            Built on Honest Work.
           </h1>
 
           <p className="text-lg sm:text-xl text-[#a0a0a0] max-w-2xl mx-auto leading-relaxed mb-10">
-            Highly-praised local OC general contractor specializing in kitchens,
-            bathrooms, interior remodeling, and additions — with honest pricing
-            and clear communication from start to finish.
+            We are a locally-owned crew based in Anaheim. Kitchens, bathrooms, interiors, and additions done right. Straight pricing, no runaround, and a contractor who actually picks up the phone.
           </p>
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 w-full max-w-sm mx-auto sm:max-w-none">
