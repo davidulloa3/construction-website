@@ -108,11 +108,7 @@ const faqs = [
     answer:
       "A typical full bathroom remodel takes 2–4 weeks from demo to completion, depending on the complexity of the project and material lead times. We provide a detailed project schedule before work begins so you always know what to expect.",
   },
-  {
-    question: "Do you offer financing?",
-    answer:
-      "Yes. We understand that a quality bathroom remodel is a significant investment, and we can discuss financing options during your consultation to help make your project work within your budget.",
-  },
+
   {
     question: "Do you handle both design and construction?",
     answer:
@@ -181,7 +177,7 @@ export default function BathroomRemodelingPage() {
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/431122808612452824.jpeg"
+          src="/images/gallery-5.jpg"
           alt="Luxury bathroom remodel completed by Ulloa Construction in Orange County, CA"
           className="absolute inset-0 w-full h-full object-cover"
           fetchPriority="high"
@@ -362,8 +358,8 @@ export default function BathroomRemodelingPage() {
 
           <div className="max-w-3xl mx-auto mb-12">
             <BeforeAfterSlider
-              beforeSrc="/images/5185400809350868211.jpeg"
-              afterSrc="/images/431122808612452824.jpeg"
+              beforeSrc="/images/IMG_1088.jpg"
+              afterSrc="/images/IMG_1089.jpg"
               beforeAlt="Bathroom before remodel — outdated tile and fixtures in Orange County home"
               afterAlt="Luxury bathroom after remodel by Ulloa Construction in Orange County, CA"
               label="Ulloa Construction — Orange County Bathroom Transformation"
@@ -373,12 +369,12 @@ export default function BathroomRemodelingPage() {
           {/* Project gallery grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
             {[
-              { src: "/images/gallery-1.jpg", alt: "Bathroom remodel project by Ulloa Construction" },
-              { src: "/images/gallery-2.jpg", alt: "Custom bathroom renovation in Orange County" },
+              { src: "/images/20230526_175036 copy.jpg", alt: "Bathroom remodel project by Ulloa Construction" },
+              { src: "/images/20230526_175036.jpg", alt: "Custom bathroom renovation in Orange County" },
               { src: "/images/gallery-3.jpg", alt: "Luxury bathroom remodel — Ulloa Construction OC" },
               { src: "/images/gallery-4.jpg", alt: "Bathroom tile and vanity project in Orange County" },
-              { src: "/images/gallery-5.jpg", alt: "Walk-in shower remodel by Ulloa Construction" },
-              { src: "/images/gallery-6.jpg", alt: "Master bathroom renovation in Orange County, CA" },
+              { src: "/images/20200922_173905.jpg", alt: "Walk-in shower remodel by Ulloa Construction" },
+              { src: "/images/20230526_175036 copy.jpg", alt: "Master bathroom renovation in Orange County, CA" },
             ].map((img) => (
               <div
                 key={img.src}
