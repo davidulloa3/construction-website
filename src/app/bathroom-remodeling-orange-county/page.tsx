@@ -369,12 +369,12 @@ export default function BathroomRemodelingPage() {
           {/* Project gallery grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
             {[
-              { src: "/images/20230526_175036 copy.jpg", alt: "Bathroom remodel project by Ulloa Construction" },
+              { src: "/images/20250204_150949.jpg", alt: "Bathroom remodel project by Ulloa Construction" },
               { src: "/images/20230526_175036.jpg", alt: "Custom bathroom renovation in Orange County" },
               { src: "/images/gallery-3.jpg", alt: "Luxury bathroom remodel — Ulloa Construction OC" },
               { src: "/images/gallery-4.jpg", alt: "Bathroom tile and vanity project in Orange County" },
               { src: "/images/20200922_173905.jpg", alt: "Walk-in shower remodel by Ulloa Construction" },
-              { src: "/images/20230526_175036 copy.jpg", alt: "Master bathroom renovation in Orange County, CA" },
+              { src: "/images/431122808612452824.jpeg", alt: "Master bathroom renovation in Orange County, CA" },
             ].map((img) => (
               <div
                 key={img.src}
