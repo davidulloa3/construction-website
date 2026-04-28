@@ -1,11 +1,68 @@
 "use client";
 
-import { useForm, ValidationError } from "@formspree/react";
+import { useState } from "react";
+
+interface FormFields {
+  name: string;
+  phone: string;
+  email: string;
+  city: string;
+  timeline: string;
+  budget: string;
+  homeowner_status: string;
+}
+
+type Status = "idle" | "submitting" | "succeeded" | "error";
+
+const INITIAL: FormFields = {
+  name: "",
+  phone: "",
+  email: "",
+  city: "",
+  timeline: "",
+  budget: "",
+  homeowner_status: "",
+};
 
 export default function BathroomLeadForm() {
-  const [state, handleSubmit] = useForm("xovznekk");
+  const [fields, setFields] = useState<FormFields>(INITIAL);
+  const [status, setStatus] = useState<Status>("idle");
 
-  if (state.succeeded) {
+  const set = (key: keyof FormFields) => (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => setFields((prev) => ({ ...prev, [key]: e.target.value }));
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("submitting");
+
+    const payload = new FormData();
+    // User-visible fields
+    payload.append("name", fields.name);
+    payload.append("phone", fields.phone);
+    payload.append("email", fields.email);
+    payload.append("city", fields.city);
+    payload.append("timeline", fields.timeline);
+    payload.append("budget", fields.budget);
+    payload.append("homeowner_status", fields.homeowner_status);
+    // Hidden tracking fields
+    payload.append("source", "Meta Ad");
+    payload.append("service", "Bathroom Remodeling");
+    payload.append("landing_page", "Bathroom Remodel Orange County");
+
+    try {
+      const res = await fetch("https://formspree.io/f/xovznekk", {
+        method: "POST",
+        body: payload,
+        headers: { Accept: "application/json" },
+      });
+      setStatus(res.ok ? "succeeded" : "error");
+    } catch {
+      setStatus("error");
+    }
+  };
+
+  if (status === "succeeded") {
     return (
       <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-2xl p-10 text-center">
         <div className="flex justify-center mb-5">
@@ -36,11 +93,6 @@ export default function BathroomLeadForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4" noValidate>
-      {/* Hidden tracking fields */}
-      <input type="hidden" name="source" value="Meta Ad" />
-      <input type="hidden" name="service" value="Bathroom Remodeling" />
-      <input type="hidden" name="landing_page" value="Bathroom Remodel Orange County" />
-
       {/* Full Name */}
       <div>
         <label htmlFor="bath-name" className="block text-sm font-semibold text-[#f5f5f5] mb-1.5">
@@ -51,10 +103,11 @@ export default function BathroomLeadForm() {
           type="text"
           name="name"
           required
+          value={fields.name}
+          onChange={set("name")}
           placeholder="Your full name"
           className="w-full h-12 px-4 bg-[#1a1a1a] border border-[#2a2a2a] focus:border-[#1565c0] rounded-xl text-[#f5f5f5] placeholder-[#606060] text-base outline-none transition-colors"
         />
-        <ValidationError prefix="Name" field="name" errors={state.errors} className="mt-1 text-red-400 text-sm" />
       </div>
 
       {/* Phone */}
@@ -67,10 +120,11 @@ export default function BathroomLeadForm() {
           type="tel"
           name="phone"
           required
+          value={fields.phone}
+          onChange={set("phone")}
           placeholder="(714) 000-0000"
           className="w-full h-12 px-4 bg-[#1a1a1a] border border-[#2a2a2a] focus:border-[#1565c0] rounded-xl text-[#f5f5f5] placeholder-[#606060] text-base outline-none transition-colors"
         />
-        <ValidationError prefix="Phone" field="phone" errors={state.errors} className="mt-1 text-red-400 text-sm" />
       </div>
 
       {/* Email */}
@@ -83,10 +137,11 @@ export default function BathroomLeadForm() {
           type="email"
           name="email"
           required
+          value={fields.email}
+          onChange={set("email")}
           placeholder="you@email.com"
           className="w-full h-12 px-4 bg-[#1a1a1a] border border-[#2a2a2a] focus:border-[#1565c0] rounded-xl text-[#f5f5f5] placeholder-[#606060] text-base outline-none transition-colors"
         />
-        <ValidationError prefix="Email" field="email" errors={state.errors} className="mt-1 text-red-400 text-sm" />
       </div>
 
       {/* City */}
@@ -99,10 +154,11 @@ export default function BathroomLeadForm() {
           type="text"
           name="city"
           required
+          value={fields.city}
+          onChange={set("city")}
           placeholder="e.g. Irvine, Anaheim, Huntington Beach…"
           className="w-full h-12 px-4 bg-[#1a1a1a] border border-[#2a2a2a] focus:border-[#1565c0] rounded-xl text-[#f5f5f5] placeholder-[#606060] text-base outline-none transition-colors"
         />
-        <ValidationError prefix="City" field="city" errors={state.errors} className="mt-1 text-red-400 text-sm" />
       </div>
 
       {/* Timeline */}
@@ -113,14 +169,15 @@ export default function BathroomLeadForm() {
         <select
           id="bath-timeline"
           name="timeline"
-          defaultValue=""
+          value={fields.timeline}
+          onChange={set("timeline")}
           className="w-full h-12 px-4 bg-[#1a1a1a] border border-[#2a2a2a] focus:border-[#1565c0] rounded-xl text-[#f5f5f5] text-base outline-none transition-colors appearance-none"
         >
           <option value="">When are you looking to start?</option>
-          <option>ASAP</option>
-          <option>1–3 months</option>
-          <option>3–6 months</option>
-          <option>Just researching</option>
+          <option value="ASAP">ASAP</option>
+          <option value="1–3 months">1–3 months</option>
+          <option value="3–6 months">3–6 months</option>
+          <option value="Just researching">Just researching</option>
         </select>
       </div>
 
@@ -132,42 +189,50 @@ export default function BathroomLeadForm() {
         <select
           id="bath-budget"
           name="budget"
-          defaultValue=""
+          value={fields.budget}
+          onChange={set("budget")}
           className="w-full h-12 px-4 bg-[#1a1a1a] border border-[#2a2a2a] focus:border-[#1565c0] rounded-xl text-[#f5f5f5] text-base outline-none transition-colors appearance-none"
         >
           <option value="">Select a budget range…</option>
-          <option>Under $10,000</option>
-          <option>$10,000–$25,000</option>
-          <option>$25,000–$50,000</option>
-          <option>$50,000+</option>
-          <option>Not sure yet</option>
+          <option value="Under $10,000">Under $10,000</option>
+          <option value="$10,000–$25,000">$10,000–$25,000</option>
+          <option value="$25,000–$50,000">$25,000–$50,000</option>
+          <option value="$50,000+">$50,000+</option>
+          <option value="Not sure yet">Not sure yet</option>
         </select>
       </div>
 
-      {/* Homeowner */}
+      {/* Homeowner status */}
       <div>
         <label htmlFor="bath-homeowner" className="block text-sm font-semibold text-[#f5f5f5] mb-1.5">
           Are You the Homeowner?
         </label>
         <select
           id="bath-homeowner"
-          name="homeowner"
-          defaultValue=""
+          name="homeowner_status"
+          value={fields.homeowner_status}
+          onChange={set("homeowner_status")}
           className="w-full h-12 px-4 bg-[#1a1a1a] border border-[#2a2a2a] focus:border-[#1565c0] rounded-xl text-[#f5f5f5] text-base outline-none transition-colors appearance-none"
         >
           <option value="">Select…</option>
-          <option>Yes</option>
-          <option>No</option>
-          <option>I&apos;m helping make the decision</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="I'm helping make the decision">I&apos;m helping make the decision</option>
         </select>
       </div>
 
+      {status === "error" && (
+        <p className="text-red-400 text-sm text-center">
+          Something went wrong. Please try again or call (714) 487-1860.
+        </p>
+      )}
+
       <button
         type="submit"
-        disabled={state.submitting}
+        disabled={status === "submitting"}
         className="w-full h-14 bg-[#1565c0] hover:bg-[#1e88e5] disabled:opacity-60 text-white font-bold text-lg rounded-xl transition-colors shadow-lg shadow-[#1565c0]/25"
       >
-        {state.submitting ? "Sending…" : "Schedule My Free Consultation"}
+        {status === "submitting" ? "Sending…" : "Schedule My Free Consultation"}
       </button>
 
       <p className="text-center text-xs text-[#606060]">
