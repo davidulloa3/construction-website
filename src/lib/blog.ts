@@ -10,6 +10,161 @@ export interface BlogPost {
 
 const posts: BlogPost[] = [
   {
+    slug: "adu-cost-orange-county-2026",
+    title: "How Much Does an ADU Cost in Orange County in 2026?",
+    date: "2026-05-01",
+    readTime: "7 min read",
+    excerpt:
+      "Thinking about building an ADU in Orange County? Learn what affects ADU costs, timelines, permits, and how to plan your Anaheim or OC backyard unit.",
+    metaDescription:
+      "Thinking about building an ADU in Orange County? Learn what affects ADU costs, timelines, permits, and how to plan your Anaheim or OC backyard unit.",
+    body: `
+<p>If you own a home in Orange County, there is a good chance you have thought about building an ADU.</p>
+<p>Maybe you want a private space for your parents. Maybe your adult kids need a place to live while they save money. Maybe you are looking at rental income and wondering if your backyard could help pay for itself.</p>
+<p>Whatever the reason, ADUs have become one of the most popular home improvement projects in Southern California. They add usable space, can increase property value, and give homeowners more flexibility without having to buy another property.</p>
+<p>But the big question is usually the same.</p>
+<p>How much does an ADU actually cost in Orange County?</p>
+<p>The honest answer is that it depends on the size, design, site conditions, utility work, and finish level. Still, most homeowners can get a realistic idea of what to expect before they start calling architects or contractors.</p>
+
+<h2>Average ADU Cost in Orange County</h2>
+<p>In 2026, a typical ADU in Orange County can range from about $150,000 to $350,000 or more depending on the project.</p>
+<p>Here is a simple breakdown:</p>
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;">
+  <thead>
+    <tr>
+      <th style="text-align:left;padding:10px 12px;color:#f5f5f5;border-bottom:1px solid #2a2a2a;">ADU Type</th>
+      <th style="text-align:right;padding:10px 12px;color:#f5f5f5;border-bottom:1px solid #2a2a2a;">Typical Cost Range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;">Garage conversion ADU</td>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;text-align:right;">$100,000 to $180,000</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;">Small detached ADU</td>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;text-align:right;">$175,000 to $275,000</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;">Larger detached ADU</td>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;text-align:right;">$250,000 to $350,000 plus</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 12px;color:#a0a0a0;">High end custom ADU</td>
+      <td style="padding:10px 12px;color:#a0a0a0;text-align:right;">$350,000 plus</td>
+    </tr>
+  </tbody>
+</table>
+<p>These numbers are not one size fits all. A simple garage conversion in Anaheim will usually cost less than a detached backyard ADU in Irvine, Newport Beach, or Yorba Linda with custom finishes and major utility upgrades.</p>
+<p>The best way to look at ADU pricing is by scope. Are you converting space that already exists, or are you building a brand new structure from the ground up? That one question makes a big difference.</p>
+
+<h2>What Affects ADU Cost?</h2>
+<p>A lot goes into an ADU besides the walls and roof. Here are the biggest cost factors homeowners should understand.</p>
+
+<h2>1. Site Conditions</h2>
+<p>Before you can build, the property needs to be evaluated. The size of the lot, access to the backyard, slope, drainage, soil conditions, trees, easements, and distance from utilities can all affect the cost.</p>
+<p>A flat backyard with easy access is usually more affordable to build on. A tight lot with limited equipment access may require more labor, smaller machinery, and extra planning.</p>
+
+<h2>2. Foundation and Framing</h2>
+<p>Detached ADUs need a new foundation, framing, roof system, windows, doors, insulation, and exterior finishes. This is one of the reasons detached units cost more than garage conversions.</p>
+<p>The structure also needs to meet current California building codes, energy requirements, and local inspection standards.</p>
+
+<h2>3. Utilities</h2>
+<p>Every ADU needs electrical, plumbing, heating, cooling, and sewer connection planning. Some homes need panel upgrades. Some need longer utility runs. Some need trenching across the yard.</p>
+<p>This is where costs can change quickly. A good contractor should inspect the site and explain what utility work may be needed before giving you a final number.</p>
+
+<h2>4. Kitchen and Bathroom Finishes</h2>
+<p>An ADU is not just a bedroom in the backyard. It usually includes a kitchen, bathroom, living area, sleeping area, storage, and laundry hookups.</p>
+<p>Cabinets, countertops, tile, flooring, plumbing fixtures, lighting, and appliances all affect the final price. You can keep the cost under control with smart material choices, but it is important to budget for real living space, not just basic construction.</p>
+
+<h2>5. Permits and Plans</h2>
+<p>ADUs require proper plans and permits. In Anaheim, homeowners can use the standard ADU review process, pre-approved plan options, or ADU Express for certain qualified single family properties.</p>
+<p>Even when the city makes the process easier, you still need a clear plan set, code compliant construction, inspections, and a contractor who understands how to move the project through the permit process.</p>
+
+<h2>Garage Conversion vs Detached ADU</h2>
+<p>For many Orange County homeowners, the first decision is whether to convert an existing garage or build a detached ADU.</p>
+<p>A garage conversion can be more affordable because the structure already exists. You may already have a slab, walls, and roof. However, the garage still has to be brought up to living standards. That can include insulation, drywall, flooring, windows, plumbing, electrical, heating, cooling, and waterproofing.</p>
+<p>A detached ADU gives you more privacy and design flexibility. It can feel like a true second home on the property. The tradeoff is that it usually costs more because you are building a new structure from scratch.</p>
+<p>Both options can be a good investment. The right choice depends on your lot, budget, parking needs, and how you plan to use the space.</p>
+
+<h2>How Long Does an ADU Take to Build?</h2>
+<p>A realistic ADU timeline in Orange County is usually 6 to 12 months from early planning to final inspection.</p>
+<p>A rough timeline looks like this:</p>
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;">
+  <thead>
+    <tr>
+      <th style="text-align:left;padding:10px 12px;color:#f5f5f5;border-bottom:1px solid #2a2a2a;">Phase</th>
+      <th style="text-align:right;padding:10px 12px;color:#f5f5f5;border-bottom:1px solid #2a2a2a;">Typical Timeline</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;">Planning and design</td>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;text-align:right;">1 to 3 months</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;">Permitting</td>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;text-align:right;">1 to 3 months</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;">Construction</td>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;text-align:right;">3 to 6 months</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 12px;color:#a0a0a0;">Final inspections and punch list</td>
+      <td style="padding:10px 12px;color:#a0a0a0;text-align:right;">1 to 3 weeks</td>
+    </tr>
+  </tbody>
+</table>
+<p>Some projects move faster. Others take longer because of city review times, plan revisions, utility upgrades, weather, material availability, or site surprises.</p>
+<p>The best thing you can do is start with a contractor who gives you a clear process from the beginning.</p>
+
+<h2>Are ADUs Worth It in Orange County?</h2>
+<p>For many homeowners, yes.</p>
+<p>ADUs can provide extra living space, rental income, multigenerational housing, or a private guest suite. In Orange County, where housing is expensive and moving is not always practical, an ADU can be a smart way to make your current property work harder for your family.</p>
+<p>It is not just about adding square footage. It is about creating options.</p>
+
+<h2>Common ADU Uses in Orange County</h2>
+<p>Homeowners build ADUs for many reasons, including:</p>
+<ul>
+  <li>A private space for parents or in-laws</li>
+  <li>A rental unit for extra monthly income</li>
+  <li>Housing for adult children</li>
+  <li>A guest house</li>
+  <li>A home office or studio</li>
+  <li>A downsizing option for the homeowner while renting the main house</li>
+  <li>A long term investment in the property</li>
+</ul>
+<p>Before you design the ADU, think about how it will actually be used. A rental unit may need different storage, parking, privacy, and durability than a family guest suite.</p>
+
+<h2>How to Keep ADU Costs Under Control</h2>
+<p>You do not have to choose the cheapest materials to stay on budget. The better approach is to make smart decisions early.</p>
+<p>Here are a few ways to avoid unnecessary costs:</p>
+<ul>
+  <li>Keep the layout simple</li>
+  <li>Avoid moving utilities farther than needed</li>
+  <li>Choose durable mid range finishes</li>
+  <li>Decide on materials before construction starts</li>
+  <li>Build the right size, not the biggest size</li>
+  <li>Work with a contractor who understands local permits</li>
+  <li>Leave room in the budget for unexpected site conditions</li>
+</ul>
+<p>The most expensive ADU mistakes usually happen when homeowners rush into design without understanding the full scope.</p>
+
+<h2>Work With an Orange County ADU Contractor</h2>
+<p>Building an ADU is different from remodeling a bathroom or replacing flooring. It involves planning, permitting, site work, foundation, framing, utilities, inspections, and finish work.</p>
+<p>That is why it helps to work with a licensed general contractor who understands Orange County homes and local city requirements.</p>
+<p>At Ulloa Construction, we help homeowners throughout Anaheim and Orange County plan and build <a href="/services/room-additions" style="color:#1e88e5;">ADUs, room additions, and home remodeling projects</a> with clear communication from start to finish.</p>
+<p>If you are thinking about building an ADU, we can look at your property, talk through your goals, and help you understand what is realistic for your space and budget.</p>
+
+<h2>Ready to Start Your ADU Project?</h2>
+<p>If you are planning an ADU in Anaheim or anywhere in Orange County, Ulloa Construction is here to help.</p>
+<p><a href="/contact" style="color:#1e88e5;">Contact us today</a> for a free consultation and let us talk about what you want to build.</p>
+<p>Call or text us at <a href="tel:+17144871860" style="color:#1e88e5;">(714) 487-1860</a>. We are based in Anaheim and work throughout all of Orange County.</p>
+<p>CSLB Lic. #1144906. Licensed and Insured.</p>
+`,
+  },
+  {
     slug: "bathroom-remodel-cost-orange-county",
     title: "How Much Does a Bathroom Remodel Cost in Orange County in 2026?",
     date: "2026-04-11",
