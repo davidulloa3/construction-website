@@ -51,7 +51,7 @@ export default function BathroomLeadForm() {
     payload.append("landing_page", "Bathroom Remodel Orange County");
 
     try {
-      const res = await fetch("ulloa-nurture-production.up.railway.app", {
+      const res = await fetch("https://ulloa-nurture-production.up.railway.app/webhook/formspree", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({

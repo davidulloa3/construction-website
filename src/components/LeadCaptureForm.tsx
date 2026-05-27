@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 
-const RAILWAY_URL = "ulloa-nurture-production.up.railway.app";
+const RAILWAY_URL = "https://ulloa-nurture-production.up.railway.app/webhook/formspree";
 
 type Status = "idle" | "submitting" | "succeeded" | "error";
 

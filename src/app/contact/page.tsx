@@ -3,8 +3,7 @@
 import { useState } from "react";
 import ZigzagTimeline from "@/components/ZigzagTimeline";
 
-const RAILWAY_URL = "ulloa-nurture-production.up.railway.app";
-
+const RAILWAY_URL = "https://ulloa-nurture-production.up.railway.app/webhook/formspree";
 const serviceTypes = [
   "Kitchen Remodel",
   "Bathroom Remodel",
