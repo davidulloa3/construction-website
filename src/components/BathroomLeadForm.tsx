@@ -51,11 +51,17 @@ export default function BathroomLeadForm() {
     payload.append("landing_page", "Bathroom Remodel Orange County");
 
     try {
-      const res = await fetch("https://formspree.io/f/xovznekk", {
-        method: "POST",
-        body: payload,
-        headers: { Accept: "application/json" },
-      });
+      const res = await fetch("ulloa-nurture-production.up.railway.app", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    name:    fields.name,
+    phone:   fields.phone,
+    email:   fields.email,
+    service: "Bathroom Remodeling",
+    message: `City: ${fields.city} | Timeline: ${fields.timeline} | Budget: ${fields.budget} | Homeowner: ${fields.homeowner_status}`,
+  }),
+});
       setStatus(res.ok ? "succeeded" : "error");
     } catch {
       setStatus("error");

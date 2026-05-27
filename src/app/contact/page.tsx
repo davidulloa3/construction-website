@@ -1,10 +1,9 @@
 "use client";
 
-import { useForm, ValidationError } from "@formspree/react";
+import { useState } from "react";
 import ZigzagTimeline from "@/components/ZigzagTimeline";
 
-// Note: metadata export must be in a separate server component since this file uses "use client"
-// See: src/app/contact/layout.tsx
+const RAILWAY_URL = "ulloa-nurture-production.up.railway.app";
 
 const serviceTypes = [
   "Kitchen Remodel",
@@ -15,7 +14,34 @@ const serviceTypes = [
 ];
 
 export default function ContactPage() {
-  const [state, handleSubmit] = useForm("xovznekk");
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("submitting");
+
+    const form = e.currentTarget;
+    const data = {
+      name:    (form.elements.namedItem("name")    as HTMLInputElement).value,
+      email:   (form.elements.namedItem("email")   as HTMLInputElement).value,
+      phone:   (form.elements.namedItem("phone")   as HTMLInputElement).value,
+      service: (form.elements.namedItem("service") as HTMLSelectElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const res = await fetch(RAILWAY_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error("Submission failed");
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
+  }
 
   return (
     <div className="pt-16">
@@ -45,7 +71,6 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
             {/* Left: Contact info */}
             <div className="lg:col-span-2 space-y-8">
-              {/* NAP */}
               <div>
                 <h2 className="text-2xl font-black text-[#f5f5f5] mb-6">
                   Get in Touch
@@ -139,7 +164,7 @@ export default function ContactPage() {
             {/* Right: Form */}
             <div className="lg:col-span-3">
               <div className="bg-[#1a1a1a] rounded-3xl p-8 border border-[#2a2a2a]">
-                {state.succeeded ? (
+                {status === "success" ? (
                   <div className="text-center py-12">
                     <div className="w-20 h-20 bg-amber-500/10 rounded-full flex items-center justify-center mx-auto mb-5">
                       <svg viewBox="0 0 24 24" className="w-10 h-10 fill-amber-500" aria-hidden="true">
@@ -157,7 +182,7 @@ export default function ContactPage() {
                       Request a Free Estimate
                     </h2>
                     <p className="text-[#a0a0a0] text-sm mb-6">
-                      After you submit, we&apos;ll receive your details by email and follow up as soon as possible.
+                      After you submit, we&apos;ll receive your details and follow up within 24 hours.
                     </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
@@ -173,7 +198,6 @@ export default function ContactPage() {
                           className="w-full bg-[#0f0f0f] border border-[#2a2a2a] text-[#f5f5f5] placeholder-[#a0a0a0] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors"
                           placeholder="John Smith"
                         />
-                        <ValidationError prefix="Name" field="name" errors={state.errors} className="mt-1 text-red-400 text-xs" />
                       </div>
                       <div>
                         <label htmlFor="contact-phone" className="block text-sm font-medium text-[#a0a0a0] mb-1.5">
@@ -187,7 +211,6 @@ export default function ContactPage() {
                           className="w-full bg-[#0f0f0f] border border-[#2a2a2a] text-[#f5f5f5] placeholder-[#a0a0a0] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors"
                           placeholder="(714) 555-0123"
                         />
-                        <ValidationError prefix="Phone" field="phone" errors={state.errors} className="mt-1 text-red-400 text-xs" />
                       </div>
                     </div>
 
@@ -204,7 +227,6 @@ export default function ContactPage() {
                           className="w-full bg-[#0f0f0f] border border-[#2a2a2a] text-[#f5f5f5] placeholder-[#a0a0a0] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors"
                           placeholder="john@example.com"
                         />
-                        <ValidationError prefix="Email" field="email" errors={state.errors} className="mt-1 text-red-400 text-xs" />
                       </div>
                       <div>
                         <label htmlFor="contact-city" className="block text-sm font-medium text-[#a0a0a0] mb-1.5">
@@ -215,7 +237,7 @@ export default function ContactPage() {
                           type="text"
                           name="city"
                           className="w-full bg-[#0f0f0f] border border-[#2a2a2a] text-[#f5f5f5] placeholder-[#a0a0a0] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors"
-                          placeholder="Anaheim, Irvine, Anaheim..."
+                          placeholder="Anaheim, Irvine..."
                         />
                       </div>
                     </div>
@@ -236,7 +258,6 @@ export default function ContactPage() {
                           <option key={s} value={s}>{s}</option>
                         ))}
                       </select>
-                      <ValidationError prefix="Service" field="service" errors={state.errors} className="mt-1 text-red-400 text-xs" />
                     </div>
 
                     <div className="mb-6">
@@ -252,16 +273,22 @@ export default function ContactPage() {
                       />
                     </div>
 
+                    {status === "error" && (
+                      <p className="text-red-400 text-sm mb-4">
+                        Something went wrong. Please try again or call us at (714) 487-1860.
+                      </p>
+                    )}
+
                     <button
                       type="submit"
-                      disabled={state.submitting}
+                      disabled={status === "submitting"}
                       className="w-full bg-amber-500 hover:bg-amber-600 disabled:opacity-60 text-white font-bold py-4 rounded-xl transition-all hover:scale-[1.01] shadow-lg shadow-amber-500/20 text-lg"
                       aria-label="Submit contact form to Ulloa Construction"
                     >
-                      {state.submitting ? "Sending…" : "Send My Request"}
+                      {status === "submitting" ? "Sending…" : "Send My Request"}
                     </button>
                     <p className="text-center text-[#a0a0a0] text-xs mt-3">
-                      After you submit, we&apos;ll receive your details by email and follow up as soon as possible.
+                      We&apos;ll receive your details and follow up as soon as possible.
                     </p>
                   </form>
                 )}

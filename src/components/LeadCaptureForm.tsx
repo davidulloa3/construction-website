@@ -1,11 +1,42 @@
 "use client";
 
-import { useForm, ValidationError } from "@formspree/react";
+import { useState, useRef } from "react";
+
+const RAILWAY_URL = "ulloa-nurture-production.up.railway.app";
+
+type Status = "idle" | "submitting" | "succeeded" | "error";
 
 export default function LeadCaptureForm() {
-  const [state, handleSubmit] = useForm("xovznekk");
+  const [status, setStatus] = useState<Status>("idle");
+  const formRef = useRef<HTMLFormElement>(null);
 
-  if (state.succeeded) {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("submitting");
+
+    const form = e.currentTarget;
+    const get = (name: string) =>
+      (form.elements.namedItem(name) as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement)?.value ?? "";
+
+    try {
+      const res = await fetch(RAILWAY_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name:    get("name"),
+          phone:   get("phone"),
+          email:   get("email"),
+          service: get("service"),
+          message: `Timeline: ${get("timeline")} | ${get("message")}`,
+        }),
+      });
+      setStatus(res.ok ? "succeeded" : "error");
+    } catch {
+      setStatus("error");
+    }
+  };
+
+  if (status === "succeeded") {
     return (
       <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-2xl p-10 text-center">
         <div className="flex justify-center mb-5">
@@ -35,7 +66,7 @@ export default function LeadCaptureForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+    <form ref={formRef} onSubmit={handleSubmit} className="space-y-4" noValidate>
       {/* Full Name */}
       <div>
         <label htmlFor="lead-name" className="block text-sm font-semibold text-[#f5f5f5] mb-1.5">
@@ -49,7 +80,6 @@ export default function LeadCaptureForm() {
           placeholder="Your full name"
           className="w-full h-12 px-4 bg-[#1a1a1a] border border-[#2a2a2a] focus:border-[#1565c0] rounded-xl text-[#f5f5f5] placeholder-[#606060] text-base outline-none transition-colors"
         />
-        <ValidationError prefix="Name" field="name" errors={state.errors} className="mt-1 text-red-400 text-sm" />
       </div>
 
       {/* Phone */}
@@ -65,7 +95,6 @@ export default function LeadCaptureForm() {
           placeholder="(714) 000-0000"
           className="w-full h-12 px-4 bg-[#1a1a1a] border border-[#2a2a2a] focus:border-[#1565c0] rounded-xl text-[#f5f5f5] placeholder-[#606060] text-base outline-none transition-colors"
         />
-        <ValidationError prefix="Phone" field="phone" errors={state.errors} className="mt-1 text-red-400 text-sm" />
       </div>
 
       {/* Email */}
@@ -81,7 +110,6 @@ export default function LeadCaptureForm() {
           placeholder="you@email.com"
           className="w-full h-12 px-4 bg-[#1a1a1a] border border-[#2a2a2a] focus:border-[#1565c0] rounded-xl text-[#f5f5f5] placeholder-[#606060] text-base outline-none transition-colors"
         />
-        <ValidationError prefix="Email" field="email" errors={state.errors} className="mt-1 text-red-400 text-sm" />
       </div>
 
       {/* Service */}
@@ -110,7 +138,6 @@ export default function LeadCaptureForm() {
           <option>New Construction</option>
           <option>Interior Remodeling</option>
         </select>
-        <ValidationError prefix="Service" field="service" errors={state.errors} className="mt-1 text-red-400 text-sm" />
       </div>
 
       {/* Timeline */}
@@ -145,15 +172,20 @@ export default function LeadCaptureForm() {
           placeholder="Briefly describe your project…"
           className="w-full px-4 py-3 bg-[#1a1a1a] border border-[#2a2a2a] focus:border-[#1565c0] rounded-xl text-[#f5f5f5] placeholder-[#606060] text-base outline-none transition-colors resize-none"
         />
-        <ValidationError prefix="Message" field="message" errors={state.errors} className="mt-1 text-red-400 text-sm" />
       </div>
+
+      {status === "error" && (
+        <p className="text-red-400 text-sm text-center">
+          Something went wrong. Please try again or call (714) 487-1860.
+        </p>
+      )}
 
       <button
         type="submit"
-        disabled={state.submitting}
+        disabled={status === "submitting"}
         className="w-full h-14 bg-[#1565c0] hover:bg-[#1e88e5] disabled:opacity-60 text-white font-bold text-lg rounded-xl transition-colors shadow-lg shadow-[#1565c0]/25"
       >
-        {state.submitting ? "Sending…" : "Send My Request"}
+        {status === "submitting" ? "Sending…" : "Send My Request"}
       </button>
 
       <p className="text-center text-xs text-[#606060]">
