@@ -43,11 +43,15 @@ export interface LocationData {
   para1: string;
   para2: string;
   callout: string;
+  serviceCtaHtml?: string;
 }
 
 export const allServiceSlugs: ServiceSlug[] = [
   "kitchen-remodeling",
-  "bathroom-renovation",
+  "bathroom-remodeling",
+  "interior-remodeling",
+  "room-additions",
+  "adu-construction",
   "flooring",
   "roofing",
   "painting",
@@ -55,14 +59,16 @@ export const allServiceSlugs: ServiceSlug[] = [
   "window-installation",
   "door-installation",
   "siding",
-  "room-additions",
   "new-construction",
-  "interior-remodeling",
 ];
 
 export const allServiceNames: Record<ServiceSlug, string> = {
   "kitchen-remodeling": "Kitchen Remodeling",
+  "bathroom-remodeling": "Bathroom Remodeling",
   "bathroom-renovation": "Bathroom Renovation",
+  "interior-remodeling": "Interior Remodeling",
+  "room-additions": "Room Additions & ADUs",
+  "adu-construction": "ADU Construction",
   "flooring": "Flooring Installation",
   "roofing": "Roofing",
   "painting": "Interior & Exterior Painting",
@@ -70,9 +76,7 @@ export const allServiceNames: Record<ServiceSlug, string> = {
   "window-installation": "Window Installation",
   "door-installation": "Door Installation",
   "siding": "Siding Installation & Replacement",
-  "room-additions": "Room Additions & ADUs",
   "new-construction": "New Home Construction",
-  "interior-remodeling": "Interior Remodeling",
 };
 
 export const locations: LocationData[] = [
@@ -85,6 +89,7 @@ export const locations: LocationData[] = [
     para2:
       "Anaheim homes range from post-war ranch houses in West Anaheim to custom hillside builds in the 92807 zip code. We've remodeled across all of them. We understand the seismic zone requirements, the City of Anaheim building department's inspection schedule, and the aesthetic preferences of OC homeowners who want modern, durable results without over-designed gimmicks. Call (714) 487-1860 to talk through your project with the owner directly.",
     callout: "Serving Anaheim, Anaheim Hills, and all surrounding Orange County communities.",
+    serviceCtaHtml: `Anaheim homeowners most often reach us for <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom remodeling</a>, and <a href="/services/room-additions" style="color:#1e88e5;">room additions and ADU construction</a>. Every project includes full permit handling and a detailed written estimate before any work begins.`,
   },
   {
     slug: "fullerton",
@@ -95,6 +100,7 @@ export const locations: LocationData[] = [
     para2:
       "Whether your Fullerton home needs a single bathroom renovation or a whole-house overhaul that includes flooring, paint, new doors, and kitchen cabinetry, Ulloa Construction provides the licensed general contracting services to handle it all under one contract. We're licensed under CSLB #1144906, fully insured, and committed to the direct-owner communication that Fullerton homeowners consistently tell us they appreciate most.",
     callout: "Serving Fullerton and all surrounding North Orange County communities.",
+    serviceCtaHtml: `Fullerton homeowners most often ask us about <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom remodeling</a>, and <a href="/services/adu-construction" style="color:#1e88e5;">ADU construction</a>. We handle the full permit process with the City of Fullerton on every project.`,
   },
   {
     slug: "orange",
@@ -105,6 +111,7 @@ export const locations: LocationData[] = [
     para2:
       "Renovation projects in the City of Orange often require careful coordination with city inspectors, especially in historically significant areas. Our team is experienced in navigating local permitting requirements and coordinating with HOAs when applicable. We hold CSLB License #1144906, carry full general liability and workers' comp, and provide written estimates with clear allowances on every project.",
     callout: "Serving the City of Orange and all surrounding communities in Orange County.",
+    serviceCtaHtml: `Orange homeowners frequently contact us for <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom renovations</a>, and <a href="/services/interior-remodeling" style="color:#1e88e5;">whole-home interior remodeling</a>. We are experienced with the City of Orange's permit process, including projects in the historic Old Towne area.`,
   },
   {
     slug: "irvine",
@@ -115,6 +122,7 @@ export const locations: LocationData[] = [
     para2:
       "From high-end material selections to clean job-site practices that protect Irvine's manicured streets and common areas, we operate at the level Irvine projects demand. Ulloa Construction is licensed under CSLB #1144906, fully insured, and has never missed a final inspection in Irvine. Call (714) 487-1860 to speak with the owner about your Irvine remodeling project.",
     callout: "Serving Irvine and nearby South OC communities including Laguna Hills, Lake Forest, Mission Viejo, Aliso Viejo, and Laguna Niguel.",
+    serviceCtaHtml: `Irvine homeowners most often work with us on <a href="/services/bathroom-remodeling" style="color:#1e88e5;">luxury bathroom remodeling</a>, <a href="/services/kitchen-remodeling" style="color:#1e88e5;">custom kitchen renovations</a>, and <a href="/services/adu-construction" style="color:#1e88e5;">ADU construction</a>. We are experienced with Irvine HOA design review requirements and the City of Irvine building department.`,
   },
   {
     slug: "huntington-beach",
@@ -125,6 +133,7 @@ export const locations: LocationData[] = [
     para2:
       "Coastal construction in Huntington Beach requires attention to corrosion-resistant fasteners, moisture barriers, and material selection that performs in a marine environment. Our CSLB-licensed crew (#1144906) understands these requirements and specifies accordingly. Whether you need a full kitchen remodel near the beach or a room addition that takes advantage of ocean views, we handle every detail from permit to final walkthrough.",
     callout: "Serving Huntington Beach, Sunset Beach, Huntington Harbour, and surrounding coastal OC communities.",
+    serviceCtaHtml: `Huntington Beach homeowners reach us most for <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom remodeling</a>, <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen renovations</a>, and <a href="/services/room-additions" style="color:#1e88e5;">room additions</a>. We use marine-grade materials and proper moisture barriers on all coastal construction projects.`,
   },
   {
     slug: "santa-ana",
@@ -135,6 +144,7 @@ export const locations: LocationData[] = [
     para2:
       "Santa Ana's building department has specific requirements for older homes, including careful attention to lead paint and asbestos testing for pre-1978 construction. Our team follows all required protocols, coordinates with certified abatement contractors when needed, and works through the City of Santa Ana's inspection process efficiently. We hold CSLB License #1144906, carry full insurance, and bring the same commitment to quality to every Santa Ana project.",
     callout: "Serving Santa Ana and all surrounding communities in Central Orange County.",
+    serviceCtaHtml: `Santa Ana homeowners most often contact us for <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom remodeling</a>, and <a href="/services/interior-remodeling" style="color:#1e88e5;">interior renovations</a>. We follow all required protocols for pre-1978 construction in Santa Ana, including lead paint and asbestos testing coordination.`,
   },
   {
     slug: "mission-viejo",
@@ -145,6 +155,7 @@ export const locations: LocationData[] = [
     para2:
       "Mission Viejo homes range from late 1960s tract homes to custom builds in the hills, and our crew has the experience to work across the full spectrum. Whether you're updating a primary bathroom with a walk-in shower and new tile or undertaking a whole-home interior remodel, Ulloa Construction provides the licensed general contracting services to handle it all under one contract. We hold CSLB License #1144906, carry full general liability and workers' comp insurance, and serve Mission Viejo and nearby communities including Laguna Hills, Lake Forest, Aliso Viejo, and Rancho Santa Margarita.",
     callout: "Serving Mission Viejo and all surrounding South Orange County communities.",
+    serviceCtaHtml: `Mission Viejo homeowners frequently ask us about <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom renovations</a>, and <a href="/services/adu-construction" style="color:#1e88e5;">ADU construction</a>. We manage HOA design review and the City of Mission Viejo permit process as part of every project.`,
   },
   {
     slug: "laguna-niguel",
@@ -155,6 +166,7 @@ export const locations: LocationData[] = [
     para2:
       "Laguna Niguel's building department and local HOAs have specific design requirements, and our team is experienced in navigating both. We prepare complete permit packages, coordinate HOA submittals when required, and maintain clean job sites throughout the project. Ulloa Construction holds CSLB License #1144906, is fully insured, and also serves nearby Aliso Viejo, Mission Viejo, Dana Point, and Laguna Beach as part of our South OC service area.",
     callout: "Serving Laguna Niguel and all surrounding South Orange County communities.",
+    serviceCtaHtml: `Laguna Niguel homeowners most often work with us on <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom renovations</a>, and <a href="/services/room-additions" style="color:#1e88e5;">room additions</a>. We handle HOA submittals and coordinate the full permit process with Laguna Niguel's building department.`,
   },
   {
     slug: "san-clemente",
@@ -165,6 +177,7 @@ export const locations: LocationData[] = [
     para2:
       "Coastal construction in San Clemente requires careful attention to materials that perform in a marine environment. Corrosion-resistant fasteners, moisture barriers, and marine-grade fixtures are standard on our coastal projects. We hold CSLB License #1144906 and carry full insurance, and our team understands San Clemente's building department requirements and the special considerations for homes near the bluffs and ocean. We also serve nearby Dana Point, San Juan Capistrano, and Laguna Niguel as part of our South OC coverage.",
     callout: "Serving San Clemente and all surrounding South Orange County communities.",
+    serviceCtaHtml: `San Clemente homeowners reach us for <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen renovations</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom remodeling</a>, and <a href="/services/room-additions" style="color:#1e88e5;">room additions</a>. We use corrosion-resistant materials and proper marine-grade construction details on all coastal projects near the bluffs and ocean.`,
   },
   {
     slug: "dana-point",
@@ -175,6 +188,7 @@ export const locations: LocationData[] = [
     para2:
       "Dana Point's combination of ocean proximity, architectural variety, and HOA oversight in some communities means remodeling projects require an experienced general contractor who can navigate the full permitting and approval process. Ulloa Construction holds CSLB License #1144906, carries full general liability and workers' comp insurance, and provides detailed written proposals on every project. We serve Dana Point and the surrounding South OC communities of San Clemente, San Juan Capistrano, Laguna Niguel, and Laguna Beach.",
     callout: "Serving Dana Point and all surrounding South Orange County communities.",
+    serviceCtaHtml: `Dana Point homeowners most often reach us for <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom renovations</a>, and <a href="/services/room-additions" style="color:#1e88e5;">room additions</a>. Our coastal construction experience is essential for projects near the harbor and blufftop neighborhoods.`,
   },
   {
     slug: "san-juan-capistrano",
@@ -185,6 +199,7 @@ export const locations: LocationData[] = [
     para2:
       "San Juan Capistrano's older housing stock and historic district considerations require a contractor experienced in working with existing structures that may have specific permit or preservation requirements. Our team is knowledgeable about the city's building process and coordinates all inspections in-house. Ulloa Construction holds CSLB License #1144906, is fully insured, and serves San Juan Capistrano alongside nearby Dana Point, San Clemente, Laguna Niguel, and Mission Viejo.",
     callout: "Serving San Juan Capistrano and all surrounding South Orange County communities.",
+    serviceCtaHtml: `San Juan Capistrano homeowners frequently work with us on <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom renovations</a>, and <a href="/services/adu-construction" style="color:#1e88e5;">ADU construction</a>. We are experienced with the city's historic district considerations and building permit requirements.`,
   },
   {
     slug: "aliso-viejo",
@@ -195,6 +210,7 @@ export const locations: LocationData[] = [
     para2:
       "Aliso Viejo's building department and active HOA landscape require a general contractor who understands the approval process from end to end. We prepare and submit complete permit applications, coordinate with HOA design review boards when needed, and maintain clear communication throughout the project. Ulloa Construction holds CSLB License #1144906 and carries full insurance. We serve Aliso Viejo and the surrounding South OC communities of Laguna Niguel, Laguna Hills, Mission Viejo, and Laguna Beach.",
     callout: "Serving Aliso Viejo and all surrounding South Orange County communities.",
+    serviceCtaHtml: `Aliso Viejo homeowners most often contact us for <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom renovations</a>, and <a href="/services/interior-remodeling" style="color:#1e88e5;">interior remodeling</a>. We manage HOA design review and coordinate the full permit process in Aliso Viejo's planned communities.`,
   },
   {
     slug: "brea",
@@ -205,6 +221,7 @@ export const locations: LocationData[] = [
     para2:
       "Brea's housing stock includes a wide range of construction eras — older ranchers that benefit from updated kitchens and baths, and mid-century homes that are increasingly being transformed with open-concept layouts and modern finishes. Our CSLB-licensed crew (#1144906) is experienced with the City of Brea's building and permit process and serves Brea alongside neighboring Fullerton, Placentia, and La Habra as part of our North Orange County coverage.",
     callout: "Serving Brea and all surrounding North Orange County communities.",
+    serviceCtaHtml: `Brea homeowners most often reach us for <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom renovations</a>, and <a href="/services/interior-remodeling" style="color:#1e88e5;">interior remodeling</a>. We work throughout Brea's established neighborhoods and the newer developments above Carbon Canyon.`,
   },
   {
     slug: "buena-park",
@@ -215,6 +232,7 @@ export const locations: LocationData[] = [
     para2:
       "Many Buena Park homes are prime candidates for modernization — original kitchens with dated cabinetry, bathrooms with older fixtures, and interiors that can benefit from updated flooring and fresh layouts. Our team brings the same licensed, insured craftsmanship (CSLB #1144906) to every Buena Park project, working efficiently through the city's permitting process to keep projects on schedule. We also serve neighboring Anaheim, Fullerton, La Palma, and Cypress.",
     callout: "Serving Buena Park and all surrounding North Orange County communities.",
+    serviceCtaHtml: `Buena Park homeowners most often ask us about <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom remodeling</a>, and <a href="/services/interior-remodeling" style="color:#1e88e5;">interior renovations</a>. Buena Park's 1960s and 70s homes are ideal candidates for modern kitchen and bathroom updates.`,
   },
   {
     slug: "costa-mesa",
@@ -225,6 +243,7 @@ export const locations: LocationData[] = [
     para2:
       "Costa Mesa's diverse housing stock — from 1940s bungalows on the Eastside to 1970s tract homes in Mesa Verde and contemporary builds near Segerstrom Center — means every project requires a contractor experienced across multiple construction eras. Ulloa Construction holds CSLB License #1144906, carries full insurance, and works seamlessly through Costa Mesa's building and permit process. We also serve nearby Newport Beach, Huntington Beach, Irvine, and Santa Ana.",
     callout: "Serving Costa Mesa and all surrounding central Orange County communities.",
+    serviceCtaHtml: `Costa Mesa homeowners frequently work with us on <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom renovations</a>, and <a href="/services/adu-construction" style="color:#1e88e5;">ADU construction</a>. Costa Mesa's diverse housing stock spans several decades, and our crew is experienced across all of them.`,
   },
   {
     slug: "cypress",
@@ -235,6 +254,7 @@ export const locations: LocationData[] = [
     para2:
       "Cypress homes are predominantly from the 1960s and 1970s and are well-suited for modernization — updated kitchens with new cabinetry and countertops, bathrooms renovated with walk-in showers and contemporary tile, and whole-home flooring replacements that transform the feel of the space. Our CSLB-licensed crew (#1144906) handles the full scope, from design coordination through permit and final inspection. We serve Cypress alongside neighboring Buena Park, La Palma, Los Alamitos, and Garden Grove.",
     callout: "Serving Cypress and all surrounding North Orange County communities.",
+    serviceCtaHtml: `Cypress homeowners most often contact us for <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom remodeling</a>, and <a href="/services/interior-remodeling" style="color:#1e88e5;">interior renovations</a>. Cypress's 1960s and 70s homes are well-suited for kitchen and bathroom modernization.`,
   },
   {
     slug: "fountain-valley",
@@ -245,6 +265,7 @@ export const locations: LocationData[] = [
     para2:
       "Fountain Valley homes from the 1960s and early 1970s often feature original kitchens and baths that are ripe for transformation — and our crews deliver modern results that respect the character of these well-built homes. We hold CSLB License #1144906, carry full general liability and workers' comp insurance, and are thoroughly familiar with the City of Fountain Valley's building department requirements. We also serve neighboring Huntington Beach, Westminster, Garden Grove, and Costa Mesa.",
     callout: "Serving Fountain Valley and all surrounding central Orange County communities.",
+    serviceCtaHtml: `Fountain Valley homeowners most often reach us for <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom renovations</a>, and <a href="/services/interior-remodeling" style="color:#1e88e5;">interior remodeling</a>. Fountain Valley's well-built 1960s and 70s ranch homes transform beautifully with modern kitchen and bath updates.`,
   },
   {
     slug: "garden-grove",
@@ -255,6 +276,7 @@ export const locations: LocationData[] = [
     para2:
       "Garden Grove's housing stock spans several decades of construction — from the post-war ranch homes of the 1950s to 1970s tract neighborhoods and more recent infill development. Our CSLB-licensed crew (#1144906) handles all eras of residential construction and works efficiently through Garden Grove's building department permitting process. We serve Garden Grove alongside neighboring Anaheim, Santa Ana, Westminster, Stanton, and Fountain Valley.",
     callout: "Serving Garden Grove and all surrounding central Orange County communities.",
+    serviceCtaHtml: `Garden Grove homeowners most often contact us for <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom remodeling</a>, and <a href="/services/interior-remodeling" style="color:#1e88e5;">interior renovations</a>. We serve homeowners throughout Garden Grove's diverse neighborhoods and work efficiently through the city's permit process.`,
   },
   {
     slug: "la-habra",
@@ -265,6 +287,7 @@ export const locations: LocationData[] = [
     para2:
       "La Habra's older housing stock provides excellent opportunities for meaningful renovation — kitchens that benefit from new cabinetry, bathrooms upgraded with modern tile and fixtures, and interiors that open up beautifully with new flooring and fresh paint. Our licensed crew (CSLB #1144906) is experienced in navigating both the City of La Habra and Los Angeles County permitting requirements for projects near the county line. We serve La Habra alongside neighboring Brea, Fullerton, and Buena Park.",
     callout: "Serving La Habra and all surrounding North Orange County communities.",
+    serviceCtaHtml: `La Habra homeowners most often ask us about <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom renovations</a>, and <a href="/services/room-additions" style="color:#1e88e5;">room additions</a>. We are experienced with both City of La Habra and LA County permitting for properties near the county line.`,
   },
   {
     slug: "la-palma",
@@ -275,6 +298,7 @@ export const locations: LocationData[] = [
     para2:
       "La Palma's homes are well-maintained but often still carry original kitchens and bathrooms from their construction era — ideal candidates for modern renovations that increase both livability and value. We hold CSLB License #1144906, carry full insurance, and work with the City of La Palma's building department to ensure all work is properly permitted and inspected. We serve La Palma alongside neighboring Buena Park, Cypress, and Cerritos.",
     callout: "Serving La Palma and all surrounding North Orange County communities.",
+    serviceCtaHtml: `La Palma homeowners most often reach us for <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom remodeling</a>, and <a href="/services/interior-remodeling" style="color:#1e88e5;">interior renovations</a>. La Palma's well-maintained 1960s and 70s homes are excellent candidates for kitchen and bathroom modernization.`,
   },
   {
     slug: "laguna-beach",
@@ -285,6 +309,7 @@ export const locations: LocationData[] = [
     para2:
       "Remodeling in Laguna Beach requires a contractor who understands the city's strict design review process, coastal commission requirements, and the specific material and construction demands of a marine environment. Our CSLB-licensed crew (#1144906) is experienced with corrosion-resistant construction details, HOA coordination in Emerald Bay and other gated communities, and navigating Laguna Beach's design review board for projects requiring architectural approval. We also serve nearby Laguna Niguel, Dana Point, and Aliso Viejo.",
     callout: "Serving Laguna Beach and all surrounding South Orange County communities.",
+    serviceCtaHtml: `Laguna Beach homeowners most often work with us on <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom renovations</a>, and <a href="/services/room-additions" style="color:#1e88e5;">room additions</a>. We are experienced with Laguna Beach's design review process, coastal commission requirements, and HOA coordination in gated communities.`,
   },
   {
     slug: "laguna-hills",
@@ -295,6 +320,7 @@ export const locations: LocationData[] = [
     para2:
       "Laguna Hills homes from the 1970s and 1980s often benefit significantly from targeted renovations — updated kitchens with new cabinetry and quartz countertops, master bathrooms transformed with walk-in showers and modern fixtures, and whole-home flooring replacements. Our CSLB-licensed crew (#1144906) handles all of it, including coordination with any applicable HOA design review requirements. We serve Laguna Hills alongside neighboring Mission Viejo, Aliso Viejo, Laguna Niguel, and Lake Forest.",
     callout: "Serving Laguna Hills and all surrounding South Orange County communities.",
+    serviceCtaHtml: `Laguna Hills homeowners most often contact us for <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom renovations</a>, and <a href="/services/interior-remodeling" style="color:#1e88e5;">interior remodeling</a>. Laguna Hills homes from the 1970s and 80s transform beautifully with updated kitchens, bathrooms, and fresh flooring throughout.`,
   },
   {
     slug: "laguna-woods",
@@ -305,6 +331,7 @@ export const locations: LocationData[] = [
     para2:
       "Remodeling within Laguna Woods Village requires careful coordination with the multiple HOAs and the Village's architectural approval process. Our CSLB-licensed crew (#1144906) is experienced working within the community's established procedures, scheduling work to minimize disruption to neighbors, and using materials and methods that comply with HOA guidelines. We serve Laguna Woods alongside nearby Laguna Hills, Mission Viejo, Aliso Viejo, and Laguna Niguel.",
     callout: "Serving Laguna Woods and all surrounding South Orange County communities.",
+    serviceCtaHtml: `Laguna Woods residents most often ask us about <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom renovations</a>, and <a href="/services/interior-remodeling" style="color:#1e88e5;">interior updates</a>. We coordinate all work within Laguna Woods Village's HOA approval process and schedule projects to minimize disruption for neighbors.`,
   },
   {
     slug: "lake-forest",
@@ -315,6 +342,7 @@ export const locations: LocationData[] = [
     para2:
       "Lake Forest's housing spans several decades — 1970s–80s tract homes in older El Toro neighborhoods that benefit from modernization, and newer construction in planned communities like Foothill Ranch and Baker Ranch where HOA coordination is part of the process. Our team holds CSLB License #1144906, carries full insurance, and handles the permit process with the City of Lake Forest from application through final inspection. We serve Lake Forest alongside neighboring Mission Viejo, Laguna Hills, Aliso Viejo, and Irvine.",
     callout: "Serving Lake Forest and all surrounding South Orange County communities.",
+    serviceCtaHtml: `Lake Forest homeowners most often work with us on <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom renovations</a>, and <a href="/services/adu-construction" style="color:#1e88e5;">ADU construction</a>. We serve homes across Lake Forest from the older El Toro neighborhoods to newer builds in Baker Ranch.`,
   },
   {
     slug: "los-alamitos",
@@ -325,6 +353,7 @@ export const locations: LocationData[] = [
     para2:
       "Los Alamitos homes are often well-maintained but carry original kitchens and bathrooms from their construction era — the perfect canvas for renovations that modernize the space while preserving the character of these solid mid-century builds. Our CSLB-licensed crew (#1144906) handles the entire project, including coordination with both the City of Los Alamitos and applicable LA County permit jurisdictions for properties near the county line. We serve Los Alamitos alongside neighboring Seal Beach, Cypress, Garden Grove, and Long Beach.",
     callout: "Serving Los Alamitos and all surrounding northwest Orange County communities.",
+    serviceCtaHtml: `Los Alamitos homeowners most often contact us for <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom renovations</a>, and <a href="/services/interior-remodeling" style="color:#1e88e5;">interior renovations</a>. We handle permitting with both the City of Los Alamitos and applicable LA County jurisdictions for properties near the county line.`,
   },
   {
     slug: "newport-beach",
@@ -335,6 +364,7 @@ export const locations: LocationData[] = [
     para2:
       "Newport Beach projects demand the highest standard of craftsmanship, material quality, and professionalism. That is precisely what Ulloa Construction delivers. We are experienced with Newport Beach's building and planning departments, coastal commission requirements for properties within the coastal zone, and HOA design review in communities throughout the city. We hold CSLB License #1144906, carry full general liability and workers' comp insurance, and serve Newport Beach alongside neighboring Costa Mesa, Irvine, and Laguna Beach.",
     callout: "Serving Newport Beach and all surrounding Orange County communities.",
+    serviceCtaHtml: `Newport Beach homeowners most often work with us on <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">luxury bathroom renovations</a>, and <a href="/services/room-additions" style="color:#1e88e5;">room additions</a>. We are experienced with Newport Beach's building and planning departments, coastal commission requirements, and HOA design review processes.`,
   },
   {
     slug: "placentia",
@@ -345,6 +375,7 @@ export const locations: LocationData[] = [
     para2:
       "Placentia's older housing stock — including Craftsman and Spanish Colonial homes near the downtown historic district — requires a contractor experienced in working with existing structures and permit requirements for historically significant properties. Our CSLB-licensed crew (#1144906) is familiar with the City of Placentia's building department process and brings the same standard of licensed, insured craftsmanship to every project. We serve Placentia alongside neighboring Fullerton, Brea, Anaheim, and Yorba Linda.",
     callout: "Serving Placentia and all surrounding North Orange County communities.",
+    serviceCtaHtml: `Placentia homeowners most often reach us for <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom renovations</a>, and <a href="/services/interior-remodeling" style="color:#1e88e5;">interior renovations</a>. We are experienced with Placentia's older Craftsman and Spanish Colonial homes and the City of Placentia permit process.`,
   },
   {
     slug: "rancho-santa-margarita",
@@ -355,6 +386,7 @@ export const locations: LocationData[] = [
     para2:
       "Rancho Santa Margarita homes built in the late 1980s and early 1990s are entering their prime renovation window — kitchens and baths that are functionally sound but aesthetically dated, and interiors that benefit from updated flooring, lighting, and modern finishes. Our team holds CSLB License #1144906 and is experienced coordinating with Rancho Santa Margarita's HOA design review process. We serve RSM alongside neighboring Mission Viejo, Coto de Caza, Laguna Hills, and Aliso Viejo.",
     callout: "Serving Rancho Santa Margarita and all surrounding South Orange County communities.",
+    serviceCtaHtml: `Rancho Santa Margarita homeowners most often contact us for <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom renovations</a>, and <a href="/services/interior-remodeling" style="color:#1e88e5;">interior remodeling</a>. RSM's late 80s and early 90s homes are entering their prime renovation window, and we coordinate HOA design review as part of every project.`,
   },
   {
     slug: "seal-beach",
@@ -365,6 +397,7 @@ export const locations: LocationData[] = [
     para2:
       "Seal Beach's coastal location demands careful material selection — corrosion-resistant fasteners, moisture barriers, marine-grade fixtures, and coatings that withstand salt air. Our CSLB-licensed crew (#1144906) specifies accordingly on every project near the coast. We also coordinate with Seal Beach's building department and, where applicable, HOA design standards in communities throughout the city. We serve Seal Beach alongside neighboring Long Beach, Los Alamitos, Huntington Beach, and Cypress.",
     callout: "Serving Seal Beach and all surrounding northwest Orange County communities.",
+    serviceCtaHtml: `Seal Beach homeowners most often work with us on <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom renovations</a>, and <a href="/services/room-additions" style="color:#1e88e5;">room additions</a>. We use corrosion-resistant materials and marine-grade construction details for all projects near Seal Beach's coastline.`,
   },
   {
     slug: "stanton",
@@ -375,6 +408,7 @@ export const locations: LocationData[] = [
     para2:
       "Stanton homes are often original construction — kitchens with dated cabinetry and laminate countertops, bathrooms with original tile, and interiors that transform dramatically with new flooring and updated layouts. Our CSLB-licensed crew (#1144906) is familiar with Stanton's building department and provides full permit coordination on every project. We serve Stanton alongside neighboring Anaheim, Garden Grove, Buena Park, and Cypress.",
     callout: "Serving Stanton and all surrounding North Orange County communities.",
+    serviceCtaHtml: `Stanton homeowners most often ask us about <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom remodeling</a>, and <a href="/services/interior-remodeling" style="color:#1e88e5;">interior renovations</a>. Stanton's 1950s and 60s homes are excellent candidates for modern kitchen and bathroom updates that add real value without the cost of moving.`,
   },
   {
     slug: "tustin",
@@ -385,6 +419,7 @@ export const locations: LocationData[] = [
     para2:
       "Old Tustin's historic homes require a contractor experienced in working with older structures — understanding original framing, plumbing, and electrical systems and bringing them up to code while preserving the character of the home. In Tustin Ranch, HOA design review is part of the process, and our team manages all submittals and approvals. We hold CSLB License #1144906, carry full insurance, and serve Tustin alongside neighboring Irvine, Orange, Santa Ana, and Anaheim.",
     callout: "Serving Tustin and all surrounding central Orange County communities.",
+    serviceCtaHtml: `Tustin homeowners most often reach us for <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom renovations</a>, and <a href="/services/adu-construction" style="color:#1e88e5;">ADU construction</a>. We work in both historic Old Tustin and the planned communities of Tustin Ranch, managing HOA submittals when required.`,
   },
   {
     slug: "villa-park",
@@ -395,6 +430,7 @@ export const locations: LocationData[] = [
     para2:
       "Villa Park projects often involve larger scopes — full kitchen overhauls with custom cabinetry, spa bathrooms with premium tile and fixtures, and room additions that require careful attention to the existing home's architecture. Our CSLB-licensed crew (#1144906) brings the management skills and trade coordination to handle complex, multi-phase renovations. We serve Villa Park alongside neighboring Orange, Anaheim Hills, Anaheim, and Placentia.",
     callout: "Serving Villa Park and all surrounding central Orange County communities.",
+    serviceCtaHtml: `Villa Park homeowners most often work with us on <a href="/services/kitchen-remodeling" style="color:#1e88e5;">high-end kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">luxury bathroom renovations</a>, and <a href="/services/room-additions" style="color:#1e88e5;">room additions</a>. Villa Park projects often involve larger scopes with premium materials, custom cabinetry, and multi-phase renovation work.`,
   },
   {
     slug: "westminster",
@@ -405,6 +441,7 @@ export const locations: LocationData[] = [
     para2:
       "Westminster's older housing stock offers significant renovation potential — original kitchens and bathrooms that benefit from modern updates, and interiors that open up with new flooring, updated lighting, and contemporary finishes. Our CSLB-licensed crew (#1144906) is experienced with the City of Westminster's building and permit process and works efficiently through inspections to keep projects on schedule. We serve Westminster alongside neighboring Garden Grove, Fountain Valley, Huntington Beach, and Seal Beach.",
     callout: "Serving Westminster and all surrounding central Orange County communities.",
+    serviceCtaHtml: `Westminster homeowners most often contact us for <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom renovations</a>, and <a href="/services/interior-remodeling" style="color:#1e88e5;">interior remodeling</a>. Westminster's post-war and 60s-70s housing stock offers excellent renovation potential with updated kitchens and bathrooms that transform the feel of the home.`,
   },
   {
     slug: "yorba-linda",
@@ -415,6 +452,7 @@ export const locations: LocationData[] = [
     para2:
       "Yorba Linda projects often involve larger, higher-quality scopes — custom cabinetry, premium tile and stone, and architectural details that reflect the character of these well-appointed homes. Our CSLB-licensed crew (#1144906) provides the full-scope general contracting, trade coordination, and permit management that complex Yorba Linda projects require. We serve Yorba Linda alongside neighboring Anaheim Hills, Placentia, Brea, and Chino Hills as part of our North Orange County coverage.",
     callout: "Serving Yorba Linda and all surrounding North Orange County communities.",
+    serviceCtaHtml: `Yorba Linda homeowners most often work with us on <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">luxury bathroom renovations</a>, and <a href="/services/room-additions" style="color:#1e88e5;">room additions and ADU construction</a>. Yorba Linda projects often involve premium materials and multi-trade scopes that benefit from a single licensed general contractor.`,
   },
 ];
 

@@ -9,7 +9,7 @@ export default function HeroSection() {
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/images/hero.jpg"
-        alt="Modern construction project in Anaheim, Orange County California"
+        alt="Kitchen and bathroom remodeling contractor in Anaheim, Orange County California - Ulloa Construction"
         className="absolute inset-0 w-full h-full object-cover"
         fetchPriority="high"
         width={1600}

@@ -7,17 +7,14 @@ import logoSrc from "../../public/favicon.png";
 
 const serviceLinks = [
   { href: "/services/kitchen-remodeling", label: "Kitchen Remodeling" },
-  { href: "/services/bathroom-renovation", label: "Bathroom Renovation" },
+  { href: "/services/bathroom-remodeling", label: "Bathroom Remodeling" },
+  { href: "/services/interior-remodeling", label: "Interior Remodeling" },
+  { href: "/services/room-additions", label: "Room Additions" },
+  { href: "/services/adu-construction", label: "ADU Construction" },
   { href: "/services/flooring", label: "Flooring Installation" },
   { href: "/services/roofing", label: "Roofing" },
-  { href: "/services/painting", label: "Interior & Exterior Painting" },
-  { href: "/services/drywall", label: "Drywall Installation & Repair" },
-  { href: "/services/window-installation", label: "Window Installation" },
-  { href: "/services/door-installation", label: "Door Installation" },
-  { href: "/services/siding", label: "Siding Installation & Replacement" },
-  { href: "/services/room-additions", label: "Room Additions & ADUs" },
-  { href: "/services/new-construction", label: "New Home Construction" },
-  { href: "/services/interior-remodeling", label: "Interior Remodeling" },
+  { href: "/services/painting", label: "Painting" },
+  { href: "/services", label: "All Services" },
 ];
 
 const locationLinks = [

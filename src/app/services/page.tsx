@@ -1,6 +1,61 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+const servicesFaqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What remodeling services does Ulloa Construction offer in Orange County?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ulloa Construction specializes in kitchen remodeling, bathroom remodeling, interior remodeling, room additions, and ADU construction throughout Anaheim and Orange County, CA. We are a licensed general contractor (CSLB #1144906) handling all trades under one contract from permits through final inspection.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does a kitchen remodel cost in Orange County?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Kitchen remodel costs in Orange County range from $15,000 for a cosmetic update to $80,000 or more for a full custom kitchen. A mid-range full remodel with new cabinetry, quartz countertops, and updated appliances typically runs $30,000 to $60,000. We provide free written estimates with itemized line items.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you pull permits for remodeling projects in Anaheim?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Ulloa Construction handles all permit applications and city inspections for every project that requires permits in Anaheim and throughout Orange County. We never ask you to pull your own permits. Permit costs are included in our project proposals so there are no surprises.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I get a free estimate from Ulloa Construction?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Call or text us at (714) 487-1860, or fill out the contact form on our website. We offer free, no-obligation in-home estimates throughout Anaheim and all of Orange County. We will walk the space with you, discuss your goals and budget, and provide a written estimate within a few days.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is Ulloa Construction licensed and insured in California?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Ulloa Construction holds an active CSLB General Contractor license (#1144906) and carries full general liability and workers' compensation insurance on every project. You can verify our license at cslb.ca.gov in about 60 seconds.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What cities in Orange County does Ulloa Construction serve?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ulloa Construction serves all 34 cities in Orange County, including Anaheim, Irvine, Fullerton, Orange, Huntington Beach, Santa Ana, Brea, Yorba Linda, Mission Viejo, Laguna Niguel, Newport Beach, and more. We are based in Anaheim and work throughout the entire county.",
+      },
+    },
+  ],
+};
+
 export const metadata: Metadata = {
   title: "Services",
   description:
@@ -76,6 +131,10 @@ const services = [
 export default function ServicesPage() {
   return (
     <div className="pt-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesFaqJsonLd).replace(/</g, "\\u003c") }}
+      />
       {/* Page header */}
       <section className="bg-[#0f0f0f] py-20 relative overflow-hidden" aria-labelledby="services-page-heading">
         <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-[#1565c0]/20 to-transparent" aria-hidden="true" />

@@ -5,7 +5,7 @@ const services = [
     title: "Kitchen Remodeling",
     description:
       "Layout changes, custom or semi-custom cabinets, countertops, backsplashes, lighting, and flooring built around how your family really uses the space.",
-    href: "/services#kitchen",
+    href: "/services/kitchen-remodeling",
     icon: (
       <svg viewBox="0 0 24 24" className="w-7 h-7 fill-current" aria-hidden="true">
         <path d="M18 2.01L6 2c-1.1 0-2 .89-2 2v16c0 1.11.9 2 2 2h12c1.1 0 2-.89 2-2V4c0-1.11-.9-1.99-2-1.99zM18 20H6V4h12v16zm-7.5-9h-1V7h-1v4h-1V7H7v4.5c0 1.17.86 2.13 2 2.4V19h2v-5.1c1.14-.27 2-1.23 2-2.4V7h-1.5v4zm4.5 0c0 1.1-.9 2-2 2s-2-.9-2-2V7h1.5v4h1V7H15v4z" />
@@ -16,7 +16,7 @@ const services = [
     title: "Bathroom Remodeling",
     description:
       "Walk-in showers, custom tile, vanities, waterproofing, and ventilation. Built for durability and a calm, clean feel that holds up over time.",
-    href: "/services#bathroom",
+    href: "/services/bathroom-remodeling",
     icon: (
       <svg viewBox="0 0 24 24" className="w-7 h-7 fill-current" aria-hidden="true">
         <path d="M7 6c0-.55-.45-1-1-1s-1 .45-1 1v13H3v2h18v-2h-2V9H8V6h-1zm1 3v10H5v-10h3zm6 0v10h-4V9h4zm5 0v10h-3V9h3z" />
@@ -27,7 +27,7 @@ const services = [
     title: "Interior Remodeling",
     description:
       "Flooring, doors, trim, paint, lighting, and wall changes that modernize your home while keeping a clean, organized work environment.",
-    href: "/services#interior",
+    href: "/services/interior-remodeling",
     icon: (
       <svg viewBox="0 0 24 24" className="w-7 h-7 fill-current" aria-hidden="true">
         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
@@ -38,7 +38,7 @@ const services = [
     title: "Room Additions & ADUs",
     description:
       "Permits, planning, and construction for additions, garage conversions, and ADUs that match your existing home. One contractor, one contract.",
-    href: "/services#additions",
+    href: "/services/room-additions",
     icon: (
       <svg viewBox="0 0 24 24" className="w-7 h-7 fill-current" aria-hidden="true">
         <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" />

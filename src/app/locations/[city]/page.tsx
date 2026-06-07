@@ -116,6 +116,12 @@ export default async function LocationPage({ params }: Props) {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           <p className="text-[#a0a0a0] text-lg leading-relaxed">{location.para1}</p>
           <p className="text-[#a0a0a0] text-lg leading-relaxed">{location.para2}</p>
+          {location.serviceCtaHtml && (
+            <p
+              className="text-[#a0a0a0] text-lg leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: location.serviceCtaHtml }}
+            />
+          )}
         </div>
       </section>
 

@@ -10,6 +10,210 @@ export interface BlogPost {
 
 const posts: BlogPost[] = [
   {
+    slug: "bathroom-remodel-cost-anaheim-2025",
+    title: "How Much Does a Bathroom Remodel Cost in Anaheim? (2025 Guide)",
+    date: "2025-10-15",
+    readTime: "7 min read",
+    excerpt:
+      "Local pricing data, range breakdowns, permit costs, and what actually drives your Anaheim bathroom remodel bill up or down. A practical guide for OC homeowners.",
+    metaDescription:
+      "How much does a bathroom remodel cost in Anaheim, CA? Budget, mid-range, and luxury price breakdowns for 2025, plus permit info and what affects cost. From Ulloa Construction (CSLB #1144906).",
+    body: `
+<p>If you are a homeowner in Anaheim thinking about redoing a bathroom, the first question is almost always the same: what is this going to cost me?</p>
+<p>The honest answer is that it depends on what you are trying to accomplish. A cosmetic refresh is very different from a full gut remodel. And a secondary bathroom is a completely different project from a master suite overhaul with a custom walk-in shower and heated floors.</p>
+<p>What we can give you here are real numbers based on what we are actually seeing on bathroom remodeling jobs in Anaheim and across Orange County in 2025.</p>
+
+<h2>Bathroom Remodel Cost Ranges in Anaheim (2025)</h2>
+<p>Here is a straightforward breakdown by project scope:</p>
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;">
+  <thead>
+    <tr>
+      <th style="text-align:left;padding:10px 12px;color:#f5f5f5;border-bottom:1px solid #2a2a2a;">Project Type</th>
+      <th style="text-align:right;padding:10px 12px;color:#f5f5f5;border-bottom:1px solid #2a2a2a;">Typical Cost Range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;">Budget refresh (fixtures, vanity, paint)</td>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;text-align:right;">$5,000 to $12,000</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;">Mid-range full remodel</td>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;text-align:right;">$18,000 to $35,000</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 12px;color:#a0a0a0;">Master bath or luxury remodel</td>
+      <td style="padding:10px 12px;color:#a0a0a0;text-align:right;">$35,000 to $65,000 and up</td>
+    </tr>
+  </tbody>
+</table>
+<p>These ranges reflect current labor and material costs in Anaheim and Orange County in 2025. Labor costs in Southern California run higher than the national average, and that gap has widened over the past few years.</p>
+
+<h2>Budget Bathroom Remodel: $5,000 to $12,000</h2>
+<p>A budget-range bathroom remodel in Anaheim usually means you are keeping the same layout and swapping out the visible elements. This might include replacing the vanity and mirror, updating fixtures and hardware, adding a new toilet, retiling the floor, and repainting. If you are not moving plumbing and not touching the shower surround, you can get a lot done for under $12,000.</p>
+<p>What you are not getting at this price point: a new shower, new waterproofing, heated floors, or any significant layout changes. It is a refresh, not a renovation.</p>
+
+<h2>Mid-Range Full Remodel: $18,000 to $35,000</h2>
+<p>This is where most Anaheim homeowners land when they want a real bathroom transformation. At the mid-range level, you can expect a full demo and subfloor waterproofing, a custom tiled shower (possibly with a frameless glass enclosure), a new vanity, updated lighting and exhaust fan, new flooring throughout, and fresh paint.</p>
+<p>A $25,000 bathroom remodel in Anaheim is a real project. It is not a luxury renovation, but it is not a surface refresh either. Done right, it looks and feels completely different from what you started with.</p>
+<p>For a typical 50 to 80 square foot bathroom in an Anaheim home, this range is realistic if you are choosing mid-grade tile (not imported stone), a stock or semi-custom vanity, and keeping the plumbing in roughly the same location.</p>
+
+<h2>Master Bath or Luxury Remodel: $35,000 to $65,000 and Up</h2>
+<p>Master bathroom remodels in Anaheim and across Orange County push costs up for several reasons. The space is bigger, the expectations are higher, and the materials are more expensive. At this level you might be doing a full gut remodel, building a custom walk-in shower with large-format stone tile, installing a freestanding soaking tub, adding heated floors, specifying a custom floating vanity, and upgrading the lighting throughout.</p>
+<p>A well-done master bathroom in an Anaheim Hills home or a larger property in Yorba Linda or Irvine can easily run $50,000 to $70,000 when you factor in the tile, the shower glass, the plumbing fixture selection, and the labor to install it all properly.</p>
+
+<h2>What Drives Your Anaheim Bathroom Remodel Cost Up or Down</h2>
+
+<h2>Layout Changes</h2>
+<p>If you are moving the toilet, shower drain, or vanity plumbing to a different location, you are looking at a plumbing reroute. That typically adds $2,000 to $6,000 depending on how far the pipes need to move and whether the work involves cutting the slab (common in Anaheim's concrete slab homes).</p>
+<p>Keeping the same plumbing layout saves money and time. Many of the most dramatic bathroom transformations we do in Anaheim involve no plumbing moves at all.</p>
+
+<h2>Tile Selection</h2>
+<p>Tile is one of the biggest variables in any Anaheim bathroom remodel budget. Basic ceramic tile runs $3 to $6 per square foot installed. Mid-grade porcelain runs $8 to $14 per square foot installed. Large-format imported stone or designer tile can run $20 to $35 per square foot installed.</p>
+<p>In a 70 square foot bathroom with about 200 square feet of wall tile and 70 square feet of floor tile, the difference between budget and luxury tile alone can swing the total project cost by $10,000 to $15,000.</p>
+
+<h2>Shower Type</h2>
+<p>A prefab shower unit is the most affordable option and can work well in a secondary bath. A fully custom tile shower with a frameless glass enclosure is one of the more expensive line items in any bathroom remodel. Budget $4,500 to $10,000 for a custom tiled shower with glass, depending on size and tile selection.</p>
+<p>A tub-to-shower conversion is one of the most popular requests we see in Anaheim bathrooms. Many older Anaheim homes have a tub in the secondary bath that never gets used. Converting it to a walk-in shower requires plumbing work and permits but usually costs less than building a new shower from scratch.</p>
+
+<h2>Permit Costs for Anaheim Bathroom Remodels</h2>
+<p>Permits are required for most full bathroom remodels in Anaheim if the work involves plumbing, electrical, or structural changes. This is not optional, and any contractor who suggests skipping permits is not someone you want working in your home.</p>
+<p>Permit fees in Anaheim for a bathroom remodel typically run $500 to $1,500 depending on the scope of work. We include permit costs in every written estimate we provide. The permit process adds a couple of weeks to the project timeline but protects you at resale and ensures the work is inspected and code-compliant.</p>
+
+<h2>What Anaheim Homeowners Often Don't Anticipate</h2>
+<p><strong>Water damage behind walls.</strong> Anaheim homes from the 1960s, 70s, and 80s frequently have moisture damage or mold behind the existing tile that is not visible until demo day. This is common and fixable, but it adds cost. Budget a 10 to 15 percent contingency for unexpected discoveries.</p>
+<p><strong>Subfloor issues.</strong> Older Anaheim homes sometimes have subfloor deterioration from years of moisture exposure. Replacing damaged subfloor adds $500 to $2,000 depending on the extent of the damage.</p>
+<p><strong>Electrical code updates.</strong> If your bathroom does not have a GFCI outlet within 3 feet of the sink, or if your exhaust fan is not properly ducted to the exterior, those need to be corrected as part of a permitted remodel. This is usually minor and adds $200 to $600.</p>
+
+<h2>How to Get an Accurate Number for Your Anaheim Bathroom</h2>
+<p>The only way to get a real number for your specific bathroom is to have a contractor walk the space. Photos are helpful but they don't show what is behind the walls, the condition of the subfloor, or the specific square footage involved.</p>
+<p>At Ulloa Construction, we offer free in-home estimates across Anaheim and all of Orange County. We will walk through the scope with you, talk through your options at different price points, and give you a written estimate. No pressure, no obligation.</p>
+<p>We are based in Anaheim and have completed <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom remodeling projects</a> throughout the city and across Orange County for over 20 years. Call or text us at <a href="tel:+17144871860" style="color:#1e88e5;">(714) 487-1860</a> or <a href="/contact" style="color:#1e88e5;">fill out our online form</a>.</p>
+<p>CSLB Lic. #1144906. Licensed and Insured.</p>
+`,
+  },
+  {
+    slug: "adu-rules-orange-county-2025",
+    title: "ADU Rules in Orange County: What Homeowners Need to Know in 2025",
+    date: "2025-11-01",
+    readTime: "8 min read",
+    excerpt:
+      "California ADU laws changed dramatically over the past few years. Here is what Orange County homeowners need to know about sizes, setbacks, permits, and costs in 2025.",
+    metaDescription:
+      "ADU rules in Orange County 2025: detached vs attached ADUs, OC permit process, setbacks, size limits, cost ranges, and JADU rules. Expert guide from Ulloa Construction (CSLB #1144906).",
+    body: `
+<p>If you own a home in Orange County and have been thinking about building an ADU, 2025 is a good time to act. California's ADU laws have made it easier than ever for homeowners to add a second living unit to their property, and Orange County cities have been adjusting their local rules to comply with state mandates.</p>
+<p>But ADU rules are still more complicated than most homeowners realize before they start calling contractors. This guide covers the most important things you need to know before planning an ADU on your Orange County property.</p>
+
+<h2>What Is an ADU?</h2>
+<p>An ADU, or Accessory Dwelling Unit, is a self-contained living unit on the same lot as a primary single-family or multifamily home. It must have its own entrance, a kitchen or kitchenette, a bathroom, and a sleeping area. An ADU can be detached (a separate structure in your backyard), attached (connected to the primary home), or converted from existing space like a garage.</p>
+<p>California also allows Junior ADUs (JADUs), which are smaller units of up to 500 square feet converted from existing interior space within the primary dwelling. A JADU can share a bathroom with the main home.</p>
+
+<h2>Types of ADUs Allowed in Orange County</h2>
+<p>Under current California law (which preempts local rules in most cases), Orange County homeowners on single-family lots can build:</p>
+<ul>
+  <li>One detached ADU (new construction or conversion of a detached structure like a garage)</li>
+  <li>One attached ADU (an addition to the primary home with a separate entrance)</li>
+  <li>One Junior ADU (JADU) converted from existing interior space, up to 500 square feet</li>
+</ul>
+<p>That means it is possible to have both an ADU and a JADU on the same single-family lot in Orange County, which can significantly increase your rental income potential or multigenerational living options.</p>
+
+<h2>ADU Size Limits in Orange County</h2>
+<p>Size limits for ADUs in California are set by state law and cannot be restricted below these minimums by local agencies:</p>
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;">
+  <thead>
+    <tr>
+      <th style="text-align:left;padding:10px 12px;color:#f5f5f5;border-bottom:1px solid #2a2a2a;">ADU Type</th>
+      <th style="text-align:right;padding:10px 12px;color:#f5f5f5;border-bottom:1px solid #2a2a2a;">Maximum Size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;">Detached ADU (new construction)</td>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;text-align:right;">1,200 sq ft</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;">Attached ADU</td>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;text-align:right;">50% of primary dwelling, max 1,200 sq ft</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;">Garage conversion ADU</td>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;text-align:right;">Size of the existing garage</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 12px;color:#a0a0a0;">Junior ADU (JADU)</td>
+      <td style="padding:10px 12px;color:#a0a0a0;text-align:right;">500 sq ft</td>
+    </tr>
+  </tbody>
+</table>
+<p>Some cities in Orange County allow larger ADUs in certain zoning districts. We review your specific city's ordinance during the planning phase to maximize what you can build.</p>
+
+<h2>ADU Setback Requirements in Orange County</h2>
+<p>One of the biggest changes in recent California ADU law is the standardization of setback requirements. For new detached ADUs, the state requires cities to allow a minimum of 4-foot setbacks from the rear and side property lines. This is much less restrictive than the setbacks that most OC cities previously required for standard accessory structures.</p>
+<p>For garage conversions and attached ADUs, existing setbacks are generally maintained, and no additional setbacks are required if you are converting space that already exists within the setback envelope.</p>
+<p>One-story detached ADUs over 800 square feet may be subject to additional height restrictions in some Orange County cities. We evaluate your specific lot during our initial site review.</p>
+
+<h2>Detached ADU vs Attached ADU: Which Makes More Sense?</h2>
+<p>The right choice depends on your lot, your goals, and your budget.</p>
+<p><strong>Detached ADUs</strong> offer the most privacy for both the primary occupant and the ADU tenant. They feel like a true second home on the property. The tradeoff is cost: building a fully new structure from the ground up requires new foundation work, framing, roofing, and all utility connections. Detached ADUs in Orange County typically cost more than garage conversions or attached ADUs for the same square footage.</p>
+<p><strong>Attached ADUs</strong> share a wall with the primary home, which reduces some construction cost but limits privacy. They are a good option when you want to expand your main home's footprint while creating a separate living unit.</p>
+<p><strong>Garage conversion ADUs</strong> are often the most cost-effective option because the structure already exists. You are converting an existing slab, walls, and roof into living space rather than building from scratch. The garage conversion still needs insulation, drywall, flooring, plumbing, electrical, and HVAC brought up to residential standards. In Anaheim, garage conversions typically run $100,000 to $180,000 depending on the size and finish level.</p>
+
+<h2>The ADU Permit Process in Orange County</h2>
+<p>Every ADU in Orange County requires permits. There are no exceptions. The permit process for an ADU involves several steps:</p>
+<ul>
+  <li>Preparing a full plan set (architectural drawings) that shows the layout, dimensions, and construction details</li>
+  <li>Submitting the plan set to your city's building department for plan check review</li>
+  <li>Responding to plan check comments and resubmitting if corrections are required</li>
+  <li>Paying permit fees and receiving approved permits before construction begins</li>
+  <li>Scheduling and passing all required city inspections during construction</li>
+  <li>Obtaining a final Certificate of Occupancy at project completion</li>
+</ul>
+<p>Plan check times in Orange County cities vary. In Anaheim, the initial plan check for a new detached ADU typically takes 4 to 8 weeks. Some cities like Irvine and Huntington Beach have been running longer. Anaheim has implemented an ADU Express program for certain pre-qualified projects, which can accelerate the process.</p>
+<p>At Ulloa Construction, we coordinate the full permit process for every <a href="/services/adu-construction" style="color:#1e88e5;">ADU construction project</a> we take on in Orange County. We work with architectural designers on plan sets, manage the plan check process, and schedule all required inspections.</p>
+
+<h2>ADU Costs in Orange County in 2025</h2>
+<p>Here is a realistic cost range for ADU construction in Orange County in 2025:</p>
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;">
+  <thead>
+    <tr>
+      <th style="text-align:left;padding:10px 12px;color:#f5f5f5;border-bottom:1px solid #2a2a2a;">ADU Type</th>
+      <th style="text-align:right;padding:10px 12px;color:#f5f5f5;border-bottom:1px solid #2a2a2a;">Typical Cost Range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;">Garage conversion ADU</td>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;text-align:right;">$100,000 to $180,000</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;">Small detached ADU (400 to 600 sq ft)</td>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;text-align:right;">$175,000 to $250,000</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;">Larger detached ADU (800 to 1,200 sq ft)</td>
+      <td style="padding:10px 12px;color:#a0a0a0;border-bottom:1px solid #1a1a1a;text-align:right;">$250,000 to $350,000</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 12px;color:#a0a0a0;">Junior ADU (JADU)</td>
+      <td style="padding:10px 12px;color:#a0a0a0;text-align:right;">$50,000 to $120,000</td>
+    </tr>
+  </tbody>
+</table>
+<p>These ranges reflect current construction costs in Orange County. ADUs in coastal cities like Newport Beach and Laguna Beach typically run on the higher end of these ranges due to local material requirements and higher labor costs.</p>
+
+<h2>Can I Rent Out My ADU in Orange County?</h2>
+<p>Yes. ADUs are legal to rent throughout Orange County and California. Long-term rentals (30 days or more) are generally unrestricted. Short-term rentals may be subject to local ordinances depending on your city. A one-bedroom ADU in Anaheim currently rents for $1,600 to $2,200 per month in the current market, making an ADU a meaningful long-term investment in your property.</p>
+<p>One important note: California's owner-occupancy requirement for ADUs was suspended from 2020 through 2025. As of 2025, some cities have reimplemented owner-occupancy requirements for JADUs (the state requires the owner to occupy either the primary home or the JADU). Review your specific city's current ordinance with your contractor or a local real estate attorney before planning your rental strategy.</p>
+
+<h2>Is an ADU Worth It in Orange County?</h2>
+<p>For most Orange County homeowners, the answer is yes. ADUs provide genuine flexibility: housing for family members, rental income, a private office or studio, or a future option to downsize while renting out the main home. In an Orange County real estate market where moving up is prohibitively expensive, an ADU is often the most cost-effective way to add living space or income without giving up your current home and mortgage.</p>
+<p>If you are thinking about building an ADU in Anaheim or anywhere in Orange County, <a href="/contact" style="color:#1e88e5;">contact Ulloa Construction</a> for a free consultation. We will review your property, walk through what you can build, and give you a realistic picture of cost and timeline.</p>
+<p>Call or text us at <a href="tel:+17144871860" style="color:#1e88e5;">(714) 487-1860</a>. We are based in Anaheim and build ADUs throughout Orange County.</p>
+<p>CSLB Lic. #1144906. Licensed and Insured.</p>
+`,
+  },
+  {
     slug: "adu-cost-orange-county-2026",
     title: "How Much Does an ADU Cost in Orange County in 2026?",
     date: "2026-05-01",

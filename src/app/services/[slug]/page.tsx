@@ -50,7 +50,7 @@ export default async function ServiceSlugPage({ params }: Props) {
 
   const related = getRelatedServices(service.relatedSlugs);
 
-  const jsonLd = {
+  const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
     name: service.name,
@@ -69,13 +69,37 @@ export default async function ServiceSlugPage({ params }: Props) {
     url: `https://ulloa-construction.com/services/${slug}`,
   };
 
+  const faqJsonLd = service.faqs && service.faqs.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: service.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.a,
+          },
+        })),
+      }
+    : null;
+
   return (
     <div className="pt-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd).replace(/</g, "\\u003c") }}
+      />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c") }}
+        />
+      )}
 
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden" aria-labelledby="service-hero-heading">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={service.heroImage} alt={`${service.name} project in Anaheim and Orange County CA by Ulloa Construction`} className="absolute inset-0 w-full h-full object-cover" fetchPriority="high" width={1600} height={900} />
+        <img src={service.heroImage} alt={`${service.name} contractor serving Anaheim and Orange County CA - Ulloa Construction`} className="absolute inset-0 w-full h-full object-cover" fetchPriority="high" width={1600} height={900} />
         <div className="absolute inset-0 hero-overlay" aria-hidden="true" />
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#1565c0]" aria-hidden="true" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
@@ -146,7 +170,38 @@ export default async function ServiceSlugPage({ params }: Props) {
         </div>
       </section>
 
-      <section className="py-16 bg-[#0f0f0f]" aria-labelledby="lead-form-heading">
+      {service.faqs && service.faqs.length > 0 && (
+        <section className="py-16 bg-[#0f0f0f]" aria-labelledby="faq-heading">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 id="faq-heading" className="text-3xl font-black text-[#f5f5f5] mb-3 text-center">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-[#a0a0a0] text-center mb-10">
+              Common questions from Orange County homeowners about {service.name.toLowerCase()}.
+            </p>
+            <div className="space-y-4">
+              {service.faqs.map((faq) => (
+                <details
+                  key={faq.q}
+                  className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl overflow-hidden group"
+                >
+                  <summary className="flex items-center justify-between px-6 py-4 cursor-pointer list-none text-[#f5f5f5] font-semibold hover:text-amber-400 transition-colors">
+                    {faq.q}
+                    <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current flex-shrink-0 ml-3 text-[#1565c0] group-open:rotate-180 transition-transform" aria-hidden="true">
+                      <path d="M7 10l5 5 5-5z" />
+                    </svg>
+                  </summary>
+                  <div className="px-6 pb-5 text-[#a0a0a0] leading-relaxed border-t border-[#2a2a2a] pt-4">
+                    {faq.a}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section className="py-16 bg-[#1a1a1a]" aria-labelledby="lead-form-heading">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="lead-form-heading" className="text-3xl font-black text-[#f5f5f5] mb-3 text-center">
             Get a Free {service.name} Estimate
