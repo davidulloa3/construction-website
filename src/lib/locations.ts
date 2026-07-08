@@ -77,6 +77,7 @@ export const allServiceNames: Record<ServiceSlug, string> = {
   "door-installation": "Door Installation",
   "siding": "Siding Installation & Replacement",
   "new-construction": "New Home Construction",
+  "smart-home-upgrades": "Smart Home Upgrades",
 };
 
 export const locations: LocationData[] = [

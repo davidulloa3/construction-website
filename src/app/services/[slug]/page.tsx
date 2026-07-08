@@ -19,7 +19,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = getService(slug);
   if (!service) return {};
   return {
-    title: `${service.name} in Anaheim CA | Ulloa Construction`,
+    title: service.titleTag
+      ? { absolute: service.titleTag }
+      : `${service.name} in Anaheim CA | Ulloa Construction`,
     description: service.metaDescription,
     alternates: { canonical: `https://ulloa-construction.com/services/${slug}` },
   };
@@ -107,7 +109,13 @@ export default async function ServiceSlugPage({ params }: Props) {
             CSLB Lic. #1144906. Licensed &amp; Insured.
           </p>
           <h1 id="service-hero-heading" className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#f5f5f5] leading-tight mb-6">
-            {service.name} in Anaheim<br /><span className="text-[#1e88e5]">&amp; Orange County</span>
+            {service.h1 ? (
+              service.h1
+            ) : (
+              <>
+                {service.name} in Anaheim<br /><span className="text-[#1e88e5]">&amp; Orange County</span>
+              </>
+            )}
           </h1>
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 max-w-sm mx-auto sm:max-w-none">
             <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-[#1565c0] hover:bg-[#1e88e5] text-white font-bold text-lg px-8 py-4 rounded-lg transition-all hover:scale-105 shadow-lg shadow-[#1565c0]/25">Get a Free Estimate</Link>
@@ -119,6 +127,29 @@ export default async function ServiceSlugPage({ params }: Props) {
       <section className="py-16 bg-[#0f0f0f]" aria-label="Service overview">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-[#a0a0a0] text-lg leading-relaxed">{service.intro}</p>
+          {service.crossLink && (
+            <p className="text-[#a0a0a0] text-lg leading-relaxed mt-4">
+              {service.crossLink.before}
+              <Link href={service.crossLink.href} className="text-[#1e88e5] hover:text-[#1565c0] font-semibold transition-colors">
+                {service.crossLink.label}
+              </Link>
+              {service.crossLink.after}
+            </p>
+          )}
+          {service.body && (
+            <div
+              className="
+                mt-8 space-y-4
+                [&_h2]:text-[#f5f5f5] [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:mt-8 [&_h2]:mb-3
+                [&_p]:text-[#a0a0a0] [&_p]:leading-relaxed
+                [&_ul]:text-[#a0a0a0] [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-2
+                [&_li]:leading-relaxed
+                [&_strong]:text-[#f5f5f5] [&_strong]:font-semibold
+                [&_a]:text-[#1e88e5]
+              "
+              dangerouslySetInnerHTML={{ __html: service.body }}
+            />
+          )}
           <p className="text-amber-500 font-semibold text-sm mt-6">
             Serving all of Orange County, from Anaheim to San Clemente and everywhere in between.
           </p>

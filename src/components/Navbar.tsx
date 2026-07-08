@@ -11,6 +11,7 @@ const serviceLinks = [
   { href: "/services/interior-remodeling", label: "Interior Remodeling" },
   { href: "/services/room-additions", label: "Room Additions" },
   { href: "/services/adu-construction", label: "ADU Construction" },
+  { href: "/services/smart-home-upgrades", label: "Smart Home Upgrades" },
   { href: "/services/flooring", label: "Flooring Installation" },
   { href: "/services/roofing", label: "Roofing" },
   { href: "/services/painting", label: "Painting" },

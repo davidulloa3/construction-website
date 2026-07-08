@@ -65,7 +65,15 @@ export const metadata: Metadata = {
   },
 };
 
-const services = [
+const services: Array<{
+  title: string;
+  slug: string;
+  description: string;
+  details: string[];
+  image: string;
+  href?: string;
+  cta?: string;
+}> = [
   {
     title: "Kitchen Remodeling",
     slug: "kitchen",
@@ -125,6 +133,23 @@ const services = [
       "Architectural planning support",
     ],
     image: "/images/gallery-10.jpg",
+  },
+  {
+    title: "Smart Home Upgrades",
+    slug: "smart-home",
+    description:
+      "Smart lighting, thermostats, security cameras, and home automation installed by a licensed OC contractor. Often the best time to upgrade is during a remodel when the walls are already open, so the wiring is done right the first time.",
+    details: [
+      "Smart lighting & dimmer installation (Lutron, Hue, Kasa)",
+      "Smart thermostats & C-wire upgrades (Nest, Ecobee)",
+      "Security cameras & video doorbells (Ring, Nest, Arlo)",
+      "Whole-home automation hubs & scene control",
+      "Voice control integration (Alexa, Google, Siri)",
+      "Permitted low-voltage & electrical wiring",
+    ],
+    image: "/images/gallery-6.jpg",
+    href: "/services/smart-home-upgrades",
+    cta: "Learn More",
   },
 ];
 
@@ -217,11 +242,15 @@ export default function ServicesPage() {
                   </ul>
 
                   <Link
-                    href="/contact"
+                    href={service.href ?? "/contact"}
                     className="self-start inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-semibold px-6 py-3 rounded-xl transition-colors"
-                    aria-label={`Get a free quote for ${service.title} in Orange County`}
+                    aria-label={
+                      service.href
+                        ? `${service.cta ?? "Learn more"} about ${service.title} in Orange County`
+                        : `Get a free quote for ${service.title} in Orange County`
+                    }
                   >
-                    Get a Free Quote
+                    {service.cta ?? "Get a Free Quote"}
                     <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true">
                       <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
                     </svg>

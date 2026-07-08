@@ -12,7 +12,8 @@ export type ServiceSlug =
   | "room-additions"
   | "adu-construction"
   | "new-construction"
-  | "interior-remodeling";
+  | "interior-remodeling"
+  | "smart-home-upgrades";
 
 export interface ServiceData {
   slug: ServiceSlug;
@@ -26,6 +27,14 @@ export interface ServiceData {
   metaDescription: string;
   schemaDescription: string;
   faqs?: Array<{ q: string; a: string }>;
+  /** Optional override for the exact <title> tag. Used verbatim when set. */
+  titleTag?: string;
+  /** Optional H1 override. Falls back to the "{name} in Anaheim & Orange County" heading. */
+  h1?: string;
+  /** Optional rich HTML body rendered below the intro (for longer-form service pages). */
+  body?: string;
+  /** Optional contextual cross-link rendered after the intro paragraph. */
+  crossLink?: { before: string; href: string; label: string; after: string };
 }
 
 export const services: ServiceData[] = [
@@ -463,6 +472,14 @@ export const services: ServiceData[] = [
       "Built-in shelving, entertainment centers, and custom millwork",
       "Closet system design and installation",
     ],
+    crossLink: {
+      before:
+        "An interior remodel is the ideal time to modernize how your home works, not just how it looks. With the walls already open, it costs far less to wire for ",
+      href: "/services/smart-home-upgrades",
+      label: "smart lighting and home automation",
+      after:
+        " than it does to retrofit later. We can add smart dimmers, scene control, and a whole-home system as part of the same project.",
+    },
     relatedSlugs: ["flooring", "kitchen-remodeling", "painting"],
     metaDescription:
       "Whole-home interior remodeling in Anaheim and Orange County, CA. Open-concept conversions, flooring, trim, lighting. Ulloa Construction CSLB #1144906. Call (714) 487-1860.",
@@ -492,6 +509,83 @@ export const services: ServiceData[] = [
       {
         q: "Can you remodel one room at a time, or does it have to be the whole house?",
         a: "We work at whatever scale makes sense for your budget and goals. Some clients start with a kitchen remodel and come back for bathrooms and flooring the following year. Others prefer a phased whole-home approach under one contract. We are flexible and will help you sequence the work in a way that makes the most sense financially and for your family's daily life.",
+      },
+    ],
+  },
+  {
+    slug: "smart-home-upgrades",
+    name: "Smart Home Upgrades",
+    heroImage: "/images/gallery-7.jpg",
+    beforeImage: "/images/gallery-9.jpg",
+    afterImage: "/images/gallery-7.jpg",
+    titleTag:
+      "Smart Home Upgrades | Orange County Licensed Contractor | Ulloa Construction",
+    h1: "Smart Home Upgrades in Orange County",
+    intro:
+      "A smart home used to mean a few voice speakers and a video doorbell. Today it means lighting, climate, security, and entertainment that all work together as one system, installed cleanly and wired to code. Ulloa Construction installs smart lighting, smart thermostats, security cameras, and whole-home automation for homeowners throughout Anaheim, Irvine, Fullerton, and the greater Orange County area. We handle the electrical side the right way, pull permits when the work requires them, and make the finished install look built-in rather than bolted on. Every project is backed by CSLB License #1144906 and full liability insurance.",
+    crossLink: {
+      before:
+        "Already planning a remodel? The best time to add smart lighting and automation is while the walls are open. See how this fits into a full ",
+      href: "/services/interior-remodeling",
+      label: "interior remodeling project",
+      after: ".",
+    },
+    body: `
+<h2>Smart Lighting</h2>
+<p>Smart lighting is the upgrade our Orange County clients notice every single day, and it is usually the best place to start. We install Lutron Caseta for rock-solid reliability, Philips Hue when you want color and scene control, and Kasa when the budget is tight but you still want the basics done well. The goal is switches and dimmers on the wall that stay smart even when someone flips them, not just bulbs that go dumb the moment the switch is off.</p>
+<p>In many older Anaheim homes the switch box has no neutral wire, which is exactly where a licensed install matters. We add the wiring the smart dimmers need, set up scenes room by room, and leave you with lighting you actually control from the wall, your phone, or your voice.</p>
+<p>We also handle the outdoor side, from smart landscape and pathway lighting to automated porch and security lights on a schedule. Those exterior circuits almost always need proper weatherproof wiring, which is another spot where doing it to code up front saves you headaches down the road.</p>
+
+<h2>Smart Thermostats</h2>
+<p>We install Nest and Ecobee thermostats and match the choice to your HVAC system and your home. Ecobee tends to work better with older Orange County systems and adds remote room sensors for homes where one room is always warmer than the rest. Nest keeps things simple and clean. In our climate the real savings come from smarter cooling, keeping the AC from running in an empty house and pre-cooling before peak electricity rates hit. When an older furnace is missing the C-wire a smart thermostat needs, we add it so the install is done properly, not patched together.</p>
+
+<h2>Security Cameras and Video Doorbells</h2>
+<p>Ring, Nest, and Arlo all make solid cameras and doorbells, and we install both wireless and hardwired setups. Wireless battery cameras are quick, but for serious, always-on coverage a wired install with proper power and mounting wins every time. We handle the doorbell transformer, the wiring, and clean cable runs so nothing is taped to your stucco. Placement is where experience pays off: coverage at the front door and driveway, the back yard or slider, and any side gate, mounted to actually identify a face rather than the top of someone's head.</p>
+
+<h2>Whole-Home Automation</h2>
+<p>Whole-home automation ties your lights, thermostat, cameras, locks, and speakers into a single system instead of five separate apps. We build around one ecosystem, whether that is Lutron, Apple Home, or Samsung SmartThings, so everything talks to everything. From there you get scenes: a single tap or voice command that turns off every light, locks the doors, and arms the cameras as you leave, or wakes the house up in the morning. We can fold in smart locks and garage door control too, so that same "Leaving" scene handles the front door and the garage in one step. We plan it as one system from the start, which is what keeps it simple to live with for years.</p>
+
+<h2>Who This Is For</h2>
+<p>This is built for Orange County homeowners who are already doing a remodel or renovation and want to modernize while the walls are open. That is the single smartest time to wire for smart home features. Running low-voltage and line-voltage wiring, adding neutral wires, and setting up hardwired cameras and switches costs a fraction of what a retrofit costs once the drywall is back up. If you are updating a kitchen, opening a wall, or reworking your interior, adding smart lighting and automation to the same project means one crew, one permit, and one finished result instead of tearing back into a wall you just closed.</p>
+
+<h2>What Sets a Licensed Install Apart From DIY</h2>
+<p>Plenty of smart home gear is genuinely DIY-friendly, and we will tell you honestly when you do not need us. Screw in a smart bulb, plug in a smart plug, or mount a battery camera yourself and save the money. But the moment a project involves opening a wall, adding a circuit, dealing with a missing neutral, adding a doorbell transformer, or touching your panel, that is licensed electrical work. We pull the permits, the work is inspected and code-compliant, and it is all insured under CSLB License #1144906. That protects you if anything ever goes wrong and keeps your home clean when a buyer's inspector starts asking questions at resale. Bad electrical work is a fire risk, and it is not the place to cut corners.</p>
+`,
+    included: [
+      "Smart dimmer and switch installation (Lutron, Kasa, Philips Hue)",
+      "Neutral wire and switch-box wiring for retrofit smart lighting",
+      "Smart thermostat installation and C-wire upgrades (Nest, Ecobee)",
+      "Hardwired and wireless security camera installation and mounting",
+      "Video doorbell wiring and transformer installation (Ring, Nest, Arlo)",
+      "Whole-home automation hub setup and scene programming",
+      "Voice control integration with Alexa, Google Home, and Siri",
+      "Low-voltage and line-voltage wiring during remodels, permitted to code",
+    ],
+    relatedSlugs: ["interior-remodeling", "kitchen-remodeling", "new-construction"],
+    metaDescription:
+      "Smart lighting, thermostats, cameras, and home automation installed by a licensed OC contractor. CSLB #1144906. Serving Anaheim and all of Orange County.",
+    schemaDescription:
+      "Smart home upgrade installation in Anaheim and Orange County, CA, including smart lighting, smart thermostats, security cameras, video doorbells, and whole-home automation by a licensed contractor.",
+    faqs: [
+      {
+        q: "Do smart home upgrades require a permit in Orange County?",
+        a: "It depends on the work. Screwing in smart bulbs, plugging in smart plugs, mounting a battery-powered camera, or swapping a thermostat on a compatible existing system does not require a permit. New electrical work does. If we are adding circuits, running new wiring for hardwired cameras, adding a doorbell transformer, or opening walls to run wiring during a remodel, that is permitted electrical work in Anaheim and throughout Orange County. We pull the permits and schedule the inspections so the work is code-compliant and protects you at resale.",
+      },
+      {
+        q: "Can you add smart lighting to an existing home without rewiring?",
+        a: "In most cases, yes. We can swap standard switches for smart dimmers and add scene control in an existing Orange County home without opening walls. The one wrinkle in older Anaheim homes is a missing neutral wire in the switch box, which some smart dimmers need. We handle that as part of the install, and for options like smart bulbs and plug-in modules, no rewiring is needed at all.",
+      },
+      {
+        q: "What smart home brands do you work with?",
+        a: "We install and support the major reliable brands: Lutron Caseta and Philips Hue for lighting, Nest and Ecobee for thermostats, and Ring, Nest, and Arlo for cameras and video doorbells. For whole-home automation we build around a single ecosystem such as Lutron, Apple Home, or Samsung SmartThings, with voice control through Alexa, Google Home, or Siri. We help you pick brands that work together so you are not stuck juggling apps that do not talk to each other.",
+      },
+      {
+        q: "How much do smart home upgrades cost in Orange County?",
+        a: "Costs vary widely with scope. A few smart switches and a thermostat installed professionally might run a few hundred to a couple thousand dollars. A full setup with smart lighting throughout, hardwired cameras, a video doorbell, and a whole-home automation hub can run several thousand dollars or more, depending on the size of the home and how much new wiring is involved. Adding smart features during an existing remodel is the most cost-effective approach because the walls are already open. We provide a free written estimate for your specific home.",
+      },
+      {
+        q: "Do I need a licensed electrician to install a smart thermostat?",
+        a: "For a straightforward swap on a newer HVAC system that already has a C-wire, many homeowners can install a smart thermostat themselves. The trouble comes with older Orange County systems that lack a C-wire or use two-wire heating-only setups, where a smart thermostat may not power on or may behave erratically. In those cases a licensed contractor should add the C-wire or an adapter and confirm compatibility with your equipment. When in doubt, we are happy to take a look before you buy the wrong unit.",
       },
     ],
   },

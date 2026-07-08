@@ -15,11 +15,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) return {};
+  const metaTitle = post.metaTitle ?? `${post.title} | Ulloa Construction`;
   return {
-    title: `${post.title} | Ulloa Construction`,
+    title: { absolute: metaTitle },
     description: post.metaDescription,
     alternates: {
       canonical: `https://ulloa-construction.com/blog/${slug}`,
+    },
+    openGraph: {
+      type: "article",
+      title: post.ogTitle ?? metaTitle,
+      description: post.ogDescription ?? post.metaDescription,
+      url: `https://ulloa-construction.com/blog/${slug}`,
     },
   };
 }

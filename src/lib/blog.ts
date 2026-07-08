@@ -6,9 +6,69 @@ export interface BlogPost {
   readTime: string;
   metaDescription: string;
   body: string;
+  /** Optional override for the <title> tag. When set, it is used verbatim. */
+  metaTitle?: string;
+  /** Optional og:title override. Falls back to metaTitle, then the post title. */
+  ogTitle?: string;
+  /** Optional og:description override. Falls back to metaDescription. */
+  ogDescription?: string;
 }
 
 const posts: BlogPost[] = [
+  {
+    slug: "smart-home-upgrades-orange-county-2025",
+    title:
+      "Smart Home Upgrades Worth Every Penny for Orange County Homeowners (2025)",
+    date: "2025-07-15",
+    readTime: "8 min read",
+    metaTitle: "Smart Home Upgrades in Orange County | Ulloa Construction",
+    excerpt:
+      "A local OC contractor's honest take on the smart home upgrades actually worth doing in 2025, from smart lighting and thermostats to cameras and whole-home automation.",
+    metaDescription:
+      "From smart lighting and thermostats to security cameras and automated systems, a local contractor's guide to smart home upgrades worth doing in Orange County.",
+    ogTitle: "Smart Home Upgrades in Orange County | Ulloa Construction",
+    ogDescription:
+      "From smart lighting and thermostats to security cameras and automated systems, a local contractor's guide to smart home upgrades worth doing in Orange County.",
+    body: `
+<p>I install this stuff for a living, so I get asked about it on almost every job. A homeowner in Anaheim or Yorba Linda sees a light switch that glows, or a friend shows off a doorbell that talks to their phone, and suddenly they want to know what is worth doing and what is just a gadget that ends up in a drawer.</p>
+<p>Here is the honest version from someone who wires these systems into real Orange County homes every week. Some smart home upgrades genuinely make daily life better and add value when you sell. Others are fun for a month and then forgotten. This is my breakdown of what is worth every penny in 2025, and what a licensed contractor actually handles versus what you can do yourself on a Saturday.</p>
+
+<h2>Smart Lighting: The Best Bang for Your Buck</h2>
+<p>If you only do one thing, do smart lighting. It is the upgrade people notice every single day, and it is the one that makes a house feel modern without a full remodel.</p>
+<p>There are three names worth knowing. Lutron Caseta is the gold standard for reliability. It runs on its own radio signal instead of fighting for space on your wifi, so it just works, year after year. Philips Hue is the go-to if you want color and scene control, especially in living rooms and kids' rooms. Kasa by TP-Link is the budget-friendly option that still does the basics well.</p>
+<p>Here is where the contractor part comes in. If you just want smart bulbs, you screw them in and you are done, no help needed. But most of my Orange County clients want smart dimmer switches on the wall, because you do not want a smart bulb to go dumb the second someone flips the physical switch off. Installing a smart dimmer or switch means working inside the electrical box, and a lot of older Anaheim homes from the 60s and 70s do not have a neutral wire in the switch box. That is the moment you want a licensed electrician, not a YouTube video. Getting it wrong is how people burn out fixtures or trip breakers all night.</p>
+<p>Retrofit versus new install is the other big question. In an existing home, we can usually swap switches and add smart dimmers without opening walls. During a remodel, when the walls are already open, we can run proper wiring, add neutral wires everywhere, and set you up for scene control in every room. That is always the cheapest time to do it right.</p>
+
+<h2>Smart Thermostats: Real Savings in the SoCal Climate</h2>
+<p>Nest and Ecobee are the two I install most. Both learn your schedule, both let you change the temperature from your phone, and both are honestly great products. Ecobee tends to play nicer with older HVAC systems and includes remote room sensors, which helps in those OC homes where the back bedroom is always ten degrees off from the living room. Nest has the cleaner look and the simplest setup.</p>
+<p>People ask if they really save money here. In our climate, yes, but not the way they do in a place with brutal winters. The savings in Orange County come from cooling. A smart thermostat keeps the AC from running all afternoon in an empty house and pre-cools before the expensive peak-rate hours hit. With Southern California electricity rates where they are, that adds up over a summer.</p>
+<p>The catch is compatibility. Newer HVAC systems with a C-wire are a simple swap you can do yourself. Older Anaheim homes, especially ones with two-wire heating-only setups or aging furnaces, sometimes need a C-wire added or an adapter installed. That is a quick job for us, but it is exactly the kind of thing that stops a DIY install cold when someone realizes the wire they need is not there.</p>
+
+<h2>Security Cameras and Video Doorbells</h2>
+<p>This is the category that has exploded. Ring, Nest, and Arlo all make solid cameras and video doorbells, and for a lot of homeowners a wireless battery camera is genuinely all they need. You stick it up, connect it to wifi, and you are watching your porch from your phone in twenty minutes.</p>
+<p>Where I come in is the wired installs. A hardwired video doorbell needs existing doorbell wiring, and if you do not have it, or if the transformer is too weak, that is an electrical job. For serious coverage, wired cameras with proper mounting and a real power run beat battery cameras every time. Batteries die at the worst moment, usually right when you actually needed the footage.</p>
+<p>Placement matters more than the brand. I always put a camera covering the front door and the driveway, one on the back slider or yard, and one on any side gate. Mount them high enough that someone cannot knock them down but low enough to catch a face, not just the top of a head. That is the difference between footage that identifies someone and footage that is useless. The homeowner picks the camera; a contractor handles the wiring, the mounting, and making it look clean instead of like wires taped to your stucco.</p>
+
+<h2>Whole-Home Automation, In Plain English</h2>
+<p>Whole-home automation sounds fancier than it is. At its core, it is a hub that ties your lights, thermostat, cameras, locks, and speakers together so they act as one system instead of five separate apps.</p>
+<p>The hub is the brain. That might be a Samsung SmartThings hub, an Apple Home setup, or a Lutron bridge, depending on which ecosystem you are building around. Once everything talks to the same hub, you get scenes. A "Good Morning" scene raises the bedroom lights, bumps the thermostat, and starts the coffee. A "Leaving" scene shuts every light, locks the doors, and arms the cameras with one tap or one voice command.</p>
+<p>Voice control through Alexa, Google Home, or Siri is the layer on top. It is genuinely useful for hands-full moments in the kitchen and for older family members who find apps frustrating. My advice is to pick one ecosystem and stick with it. The biggest mess I see is homeowners who bought a Google device here, an Apple thing there, and a random off-brand plug, and now nothing talks to anything. Plan it as one system and it stays simple.</p>
+
+<h2>What Requires a Permit in Orange County and What Does Not</h2>
+<p>This trips people up, so let me be clear. Swapping a light bulb, plugging in a smart plug, mounting a battery-powered camera, or replacing a thermostat on an existing compatible system does not require a permit. Those are homeowner-level changes.</p>
+<p>New electrical work does. If we are adding circuits, running new wiring for hardwired cameras, adding a doorbell transformer, or opening walls during a remodel to run low-voltage and line-voltage wiring, that is permitted electrical work in Anaheim and across Orange County. The permit protects you. It means the work is inspected, code-compliant, and will not become a problem when you sell. Any contractor who tells you to skip permits on real electrical work is telling you something important about how they operate.</p>
+
+<h2>Why a Licensed Contractor Beats DIY for the Electrical Side</h2>
+<p>I am all for homeowners doing the easy stuff themselves. Bulbs, plugs, battery cameras, app setup, go for it and save the money. But the second a project involves opening a wall, adding a circuit, dealing with a missing neutral wire, or touching your panel, that is where a licensed contractor earns their keep.</p>
+<p>We are licensed under CSLB #1144906, we pull the permits, and the work is inspected and insured. That matters if something ever goes wrong, and it matters at resale when a buyer's inspector starts asking questions. Bad electrical work is not just a redo, it is a fire risk. It is genuinely not the place to save a few hundred dollars.</p>
+<p>The smartest move most homeowners make is timing. If you are already planning a remodel, that is the moment to wire for everything at once, while the walls are open and the electrician is already on site. You can see all of our <a href="/services" style="color:#1e88e5;">construction and remodeling services</a> and how smart home work fits into a larger project.</p>
+
+<h2>Ready to Upgrade Your Orange County Home?</h2>
+<p>If you are thinking about smart lighting, a new thermostat, a real camera setup, or wiring your whole home to work as one system, we can walk your house, tell you honestly what is worth doing, and give you a written estimate with no pressure.</p>
+<p>We are based in Anaheim and work throughout all of Orange County. <a href="/contact" style="color:#1e88e5;">Contact us for a free estimate</a> or call and text us at <a href="tel:+17144871860" style="color:#1e88e5;">(714) 487-1860</a>.</p>
+<p>CSLB Lic. #1144906. Licensed and Insured.</p>
+`,
+  },
   {
     slug: "bathroom-remodel-cost-anaheim-2025",
     title: "How Much Does a Bathroom Remodel Cost in Anaheim? (2025 Guide)",
