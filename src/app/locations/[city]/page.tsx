@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import ZigzagTimeline from "@/components/ZigzagTimeline";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
-import { getLocation, locationSlugList, allServiceSlugs, allServiceNames } from "@/lib/locations";
+import ZigzagTimeline from "@/components/ZigzagTimeline";
+import { cityServiceSlugs, cityServiceTemplates } from "@/lib/cityServices";
+import {
+  allServiceNames,
+  allServiceSlugs,
+  getLocation,
+  locationSlugList,
+} from "@/lib/locations";
 
 interface Props {
   params: Promise<{ city: string }>;
@@ -20,7 +26,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `General Contractor in ${location.name}, CA | Ulloa Construction`,
     description: `Licensed general contractor serving ${location.name}, CA. Kitchen remodels, bathroom renovations, room additions, and all of Orange County. CSLB #1144906. Call (714) 487-1860.`,
-    alternates: { canonical: `https://ulloa-construction.com/locations/${city}` },
+    alternates: {
+      canonical: `https://ulloa-construction.com/locations/${city}`,
+    },
   };
 }
 
@@ -77,7 +85,10 @@ export default async function LocationPage({ params }: Props) {
           fetchPriority="high"
         />
         <div className="absolute inset-0 hero-overlay" aria-hidden="true" />
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-amber-500" aria-hidden="true" />
+        <div
+          className="absolute bottom-0 left-0 right-0 h-1 bg-amber-500"
+          aria-hidden="true"
+        />
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
           <p className="inline-flex items-center gap-2 text-amber-400 text-sm font-semibold tracking-widest uppercase mb-5 bg-amber-500/10 border border-amber-500/20 px-4 py-1.5 rounded-full">
@@ -112,10 +123,17 @@ export default async function LocationPage({ params }: Props) {
       </section>
 
       {/* ── City Copy ─────────────────────────────────────────── */}
-      <section className="py-16 bg-[#0f0f0f]" aria-label="About our work in this city">
+      <section
+        className="py-16 bg-[#0f0f0f]"
+        aria-label="About our work in this city"
+      >
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          <p className="text-[#a0a0a0] text-lg leading-relaxed">{location.para1}</p>
-          <p className="text-[#a0a0a0] text-lg leading-relaxed">{location.para2}</p>
+          <p className="text-[#a0a0a0] text-lg leading-relaxed">
+            {location.para1}
+          </p>
+          <p className="text-[#a0a0a0] text-lg leading-relaxed">
+            {location.para2}
+          </p>
           {location.serviceCtaHtml && (
             <p
               className="text-[#a0a0a0] text-lg leading-relaxed"
@@ -125,8 +143,54 @@ export default async function LocationPage({ params }: Props) {
         </div>
       </section>
 
+      {/* ── Our Services in This City (featured local pages) ──── */}
+      <section
+        className="py-16 bg-[#0f0f0f]"
+        aria-labelledby="local-services-heading"
+      >
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2
+            id="local-services-heading"
+            className="text-3xl font-black text-[#f5f5f5] mb-3"
+          >
+            Our Services in{" "}
+            <span className="text-[#1565c0]">{location.name}</span>
+          </h2>
+          <p className="text-[#a0a0a0] mb-10">
+            Dedicated {location.name} pages for our most-requested remodeling
+            and home upgrade services.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {cityServiceSlugs.map((slug) => (
+              <Link
+                key={slug}
+                href={`/locations/${location.slug}/${slug}`}
+                className="bg-[#1a1a1a] border border-[#2a2a2a] hover:border-[#1565c0] rounded-xl p-5 group transition-all hover:shadow-[0_0_20px_rgba(21,101,192,0.15)]"
+              >
+                <h3 className="font-bold text-[#f5f5f5] group-hover:text-[#1e88e5] transition-colors mb-1">
+                  {cityServiceTemplates[slug].name} in {location.name}
+                </h3>
+                <p className="text-[#1565c0] text-sm font-semibold flex items-center gap-1">
+                  Learn more
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="w-3.5 h-3.5 fill-current"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
+                  </svg>
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Services in This City ─────────────────────────────── */}
-      <section className="py-16 bg-[#1a1a1a]" aria-labelledby="services-city-heading">
+      <section
+        className="py-16 bg-[#1a1a1a]"
+        aria-labelledby="services-city-heading"
+      >
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2
             id="services-city-heading"
@@ -136,7 +200,8 @@ export default async function LocationPage({ params }: Props) {
             <span className="text-amber-500">{location.name}</span>
           </h2>
           <p className="text-[#a0a0a0] mb-10">
-            All work is performed by our licensed crew. CSLB #1144906, fully insured, and based in Orange County.
+            All work is performed by our licensed crew. CSLB #1144906, fully
+            insured, and based in Orange County.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {allServiceSlugs.map((slug) => (
@@ -150,7 +215,11 @@ export default async function LocationPage({ params }: Props) {
                 </h3>
                 <p className="text-amber-500 text-sm font-semibold flex items-center gap-1">
                   Learn more
-                  <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-current" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="w-3.5 h-3.5 fill-current"
+                    aria-hidden="true"
+                  >
                     <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
                   </svg>
                 </p>
@@ -196,12 +265,20 @@ export default async function LocationPage({ params }: Props) {
                 className="bg-[#1a1a1a] rounded-2xl p-6 border border-[#2a2a2a] text-center"
               >
                 <div className="flex justify-center mb-4">
-                  <svg viewBox="0 0 24 24" className="w-7 h-7 fill-amber-500" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="w-7 h-7 fill-amber-500"
+                    aria-hidden="true"
+                  >
                     <path d={card.path} />
                   </svg>
                 </div>
-                <h3 className="font-bold text-[#f5f5f5] text-lg mb-2">{card.title}</h3>
-                <p className="text-[#a0a0a0] text-sm leading-relaxed">{card.desc}</p>
+                <h3 className="font-bold text-[#f5f5f5] text-lg mb-2">
+                  {card.title}
+                </h3>
+                <p className="text-[#a0a0a0] text-sm leading-relaxed">
+                  {card.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -209,9 +286,15 @@ export default async function LocationPage({ params }: Props) {
       </section>
 
       {/* ── Lead Form ─────────────────────────────────────────── */}
-      <section className="py-16 bg-[#0f0f0f]" aria-labelledby="location-form-heading">
+      <section
+        className="py-16 bg-[#0f0f0f]"
+        aria-labelledby="location-form-heading"
+      >
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="location-form-heading" className="text-3xl font-black text-[#f5f5f5] mb-3 text-center">
+          <h2
+            id="location-form-heading"
+            className="text-3xl font-black text-[#f5f5f5] mb-3 text-center"
+          >
             Get a Free Estimate in {location.name}
           </h2>
           <p className="text-[#a0a0a0] text-center mb-8">
@@ -228,7 +311,8 @@ export default async function LocationPage({ params }: Props) {
             Serving {location.name} &amp; Surrounding OC Communities
           </h2>
           <p className="text-white/80 mb-8 text-lg">
-            Call (714) 487-1860 or fill out the form for a free, no-obligation estimate.
+            Call (714) 487-1860 or fill out the form for a free, no-obligation
+            estimate.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
