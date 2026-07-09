@@ -8,6 +8,7 @@ import {
   allServiceNames,
   allServiceSlugs,
   getLocation,
+  locationSeo,
   locationSlugList,
 } from "@/lib/locations";
 
@@ -23,9 +24,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { city } = await params;
   const location = getLocation(city);
   if (!location) return {};
+  const seo = locationSeo[location.slug];
   return {
-    title: `General Contractor in ${location.name}, CA | Ulloa Construction`,
-    description: `Licensed general contractor serving ${location.name}, CA. Kitchen remodels, bathroom renovations, room additions, and all of Orange County. CSLB #1144906. Call (714) 487-1860.`,
+    // `absolute` bypasses the root layout's "%s | Ulloa Construction - Orange
+    // County Remodeling" template, which would otherwise double-brand and
+    // overrun these already self-contained per-city titles.
+    title: { absolute: seo.title },
+    description: seo.description,
     alternates: {
       canonical: `https://ulloa-construction.com/locations/${city}`,
     },
@@ -134,6 +139,11 @@ export default async function LocationPage({ params }: Props) {
           <p className="text-[#a0a0a0] text-lg leading-relaxed">
             {location.para2}
           </p>
+          {location.localIntro && (
+            <p className="text-[#a0a0a0] text-lg leading-relaxed">
+              {location.localIntro}
+            </p>
+          )}
           {location.serviceCtaHtml && (
             <p
               className="text-[#a0a0a0] text-lg leading-relaxed"
@@ -142,6 +152,76 @@ export default async function LocationPage({ params }: Props) {
           )}
         </div>
       </section>
+
+      {/* ── Recent Work Near You ──────────────────────────────── */}
+      {location.recentWork && location.recentWork.length > 0 && (
+        <section
+          className="py-16 bg-[#1a1a1a]"
+          aria-labelledby="recent-work-heading"
+        >
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2
+              id="recent-work-heading"
+              className="text-3xl font-black text-[#f5f5f5] mb-3"
+            >
+              Recent Work Near You in{" "}
+              <span className="text-amber-500">{location.name}</span>
+            </h2>
+            <p className="text-[#a0a0a0] mb-10">
+              A sampling of the project types we handle most often in{" "}
+              {location.name}. Every home is different, but these give you a
+              sense of the scope.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {location.recentWork.map((project) => {
+                const body = (
+                  <>
+                    <h3 className="font-bold text-[#f5f5f5] text-lg mb-2 group-hover:text-amber-400 transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-[#a0a0a0] text-sm leading-relaxed">
+                      {project.scope}
+                    </p>
+                    {project.serviceSlug && (
+                      <p className="mt-4 text-amber-500 text-sm font-semibold flex items-center gap-1">
+                        See{" "}
+                        {cityServiceTemplates[
+                          project.serviceSlug
+                        ].name.toLowerCase()}{" "}
+                        in {location.name}
+                        <svg
+                          viewBox="0 0 24 24"
+                          className="w-3.5 h-3.5 fill-current"
+                          aria-hidden="true"
+                        >
+                          <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
+                        </svg>
+                      </p>
+                    )}
+                  </>
+                );
+
+                return project.serviceSlug ? (
+                  <Link
+                    key={project.title}
+                    href={`/locations/${location.slug}/${project.serviceSlug}`}
+                    className="bg-[#0f0f0f] border border-[#2a2a2a] hover:border-amber-500 rounded-xl p-6 group transition-all hover:shadow-[0_0_20px_rgba(21,101,192,0.15)]"
+                  >
+                    {body}
+                  </Link>
+                ) : (
+                  <div
+                    key={project.title}
+                    className="bg-[#0f0f0f] border border-[#2a2a2a] rounded-xl p-6"
+                  >
+                    {body}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── Our Services in This City (featured local pages) ──── */}
       <section

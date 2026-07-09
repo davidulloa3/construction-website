@@ -44,6 +44,24 @@ export interface LocationData {
   para2: string;
   callout: string;
   serviceCtaHtml?: string;
+  /**
+   * Optional extra city-specific intro paragraph rendered below para1/para2.
+   * Used to deepen thin pages with unique, non-duplicated local copy.
+   */
+  localIntro?: string;
+  /**
+   * Optional "Recent Work Near You" examples. Project TYPES and general
+   * scope only, never real client details. Each item may link to the
+   * matching city+service landing page.
+   */
+  recentWork?: Array<{
+    title: string;
+    scope: string;
+    serviceSlug?:
+      | "bathroom-remodeling"
+      | "kitchen-remodeling"
+      | "smart-home-upgrades";
+  }>;
 }
 
 export const allServiceSlugs: ServiceSlug[] = [
@@ -80,6 +98,189 @@ export const allServiceNames: Record<ServiceSlug, string> = {
   "smart-home-upgrades": "Smart Home Upgrades",
 };
 
+/**
+ * Per-city SEO title + meta description. Hand-written so each page reads
+ * distinctly (unique phrasing, local detail, at least one service keyword)
+ * rather than sharing one interpolated template, which was getting the pages
+ * flagged as near-duplicate. Keyed by CitySlug so the type checker fails the
+ * build if a city is ever added without its own entry.
+ */
+export const locationSeo: Record<
+  CitySlug,
+  { title: string; description: string }
+> = {
+  anaheim: {
+    title: "Kitchen & Bath Remodeling in Anaheim | Ulloa Construction",
+    description:
+      "Anaheim is our home base. We remodel kitchens and bathrooms and build room additions across the city, from West Anaheim to Anaheim Hills. Licensed, insured, free estimates.",
+  },
+  fullerton: {
+    title: "Fullerton General Contractor for Remodels & ADUs",
+    description:
+      "From Craftsman bungalows near Cherrywood to ADUs in Raymond Hills, Ulloa Construction handles Fullerton kitchen, bath, and whole-home remodels. CSLB #1144906. Free estimates.",
+  },
+  orange: {
+    title: "Remodeling Contractor in Orange, CA | Old Towne & Beyond",
+    description:
+      "Kitchen and bathroom remodels done with care for Orange's historic Old Towne Craftsman and Spanish homes. Ulloa Construction is licensed, insured, and local. Call (714) 487-1860.",
+  },
+  irvine: {
+    title: "Irvine Kitchen & Bathroom Remodeling | Ulloa Construction",
+    description:
+      "Precise, high-end kitchen and bath remodels for Irvine's master-planned homes, with HOA design review handled for you. Licensed general contractor. Free written estimates.",
+  },
+  "huntington-beach": {
+    title: "Huntington Beach Remodeling Built for the Coast",
+    description:
+      "Surf City kitchen and bathroom remodels done with marine-grade materials and real waterproofing. Ulloa Construction knows coastal building. CSLB #1144906. Free estimates.",
+  },
+  "santa-ana": {
+    title: "Santa Ana Home Remodeling | Kitchens, Baths & Interiors",
+    description:
+      "Ulloa Construction remodels Santa Ana's historic Floral Park and Park Santiago homes, following all pre-1978 protocols. Kitchens, baths, interiors. Call (714) 487-1860.",
+  },
+  "mission-viejo": {
+    title: "Mission Viejo Kitchen & Bath Remodeling Contractor",
+    description:
+      "Updating Mission Viejo's lakefront and hillside homes with modern kitchens, bathrooms, and additions. HOA and permits handled for you. Licensed, insured, free estimates.",
+  },
+  "laguna-niguel": {
+    title: "Laguna Niguel Remodeling | Kitchens, Baths, Additions",
+    description:
+      "Quality kitchen and bathroom remodels for Laguna Niguel's hillside neighborhoods like Crown Valley and Bear Brand. HOA submittals handled. CSLB #1144906. Free estimates.",
+  },
+  "san-clemente": {
+    title: "San Clemente Coastal Remodeling & Renovations",
+    description:
+      "Kitchen and bath remodels for San Clemente's cottages and hillside homes, built for the marine environment. Ulloa Construction is licensed and insured. Call (714) 487-1860.",
+  },
+  "dana-point": {
+    title: "Dana Point Remodeling | Coastal Kitchens & Baths",
+    description:
+      "From Monarch Beach to the Lantern District, we remodel Dana Point kitchens and baths with materials made for ocean air. Licensed general contractor. Free estimates.",
+  },
+  "san-juan-capistrano": {
+    title: "San Juan Capistrano Remodeling & ADU Construction",
+    description:
+      "Kitchen, bath, and ADU projects for San Juan Capistrano's historic and equestrian-area homes. Ulloa Construction handles historic-district permits. Call (714) 487-1860.",
+  },
+  "aliso-viejo": {
+    title: "Aliso Viejo Kitchen & Bathroom Remodeling",
+    description:
+      "The 1990s homes around Aliso Viejo Town Center are hitting their first remodel. We refresh kitchens, baths, and interiors, HOA review included. Licensed and insured.",
+  },
+  brea: {
+    title: "Brea Remodeling Contractor | Kitchens, Baths & Interiors",
+    description:
+      "From ranch homes near Brea Olinda to newer builds above Carbon Canyon, Ulloa Construction remodels Brea kitchens, baths, and interiors. CSLB #1144906. Free estimates.",
+  },
+  "buena-park": {
+    title: "Buena Park Home Remodeling | Kitchens & Bathrooms",
+    description:
+      "Buena Park's 1960s and 70s homes shine with updated kitchens and baths. Ulloa Construction handles the remodel and the permits. Licensed, insured. Call (714) 487-1860.",
+  },
+  "costa-mesa": {
+    title: "Costa Mesa Remodeling | Kitchens, Baths & ADUs",
+    description:
+      "From Eastside bungalows to Mesa Verde tract homes, we remodel Costa Mesa kitchens and bathrooms and build ADUs. Ulloa Construction is licensed and insured. Free estimates.",
+  },
+  cypress: {
+    title: "Cypress Kitchen & Bathroom Remodeling Contractor",
+    description:
+      "Cypress's solid 1960s and 70s homes are ideal for modern kitchen and bath remodels. Ulloa Construction handles the full job and permits. CSLB #1144906. Free estimates.",
+  },
+  "fountain-valley": {
+    title: "Fountain Valley Remodeling | Kitchens & Bathrooms",
+    description:
+      "Fountain Valley's well-built ranch homes near Mile Square Park transform with updated kitchens and baths. Ulloa Construction is licensed and insured. Call (714) 487-1860.",
+  },
+  "garden-grove": {
+    title: "Garden Grove Home Remodeling | Kitchens, Baths & Additions",
+    description:
+      "Ulloa Construction remodels kitchens and bathrooms across Garden Grove's diverse neighborhoods, from West Garden Grove to Euclid. Licensed, insured, free estimates.",
+  },
+  "la-habra": {
+    title: "La Habra Remodeling Contractor | Kitchens & Additions",
+    description:
+      "La Habra's bungalows and ranchers get smart kitchen, bath, and room addition remodels. We handle both city and LA County permits near the line. Call (714) 487-1860.",
+  },
+  "la-palma": {
+    title: "La Palma Kitchen & Bathroom Remodeling",
+    description:
+      "La Palma's tidy 1960s and 70s homes are prime for modern kitchen and bath updates. Ulloa Construction brings a licensed crew and full permit handling. Free estimates.",
+  },
+  "laguna-beach": {
+    title: "Laguna Beach Remodeling | Coastal Kitchens & Baths",
+    description:
+      "From Village cottages to cliffside homes, we remodel Laguna Beach kitchens and baths with design-review experience and coastal-grade materials. CSLB #1144906.",
+  },
+  "laguna-hills": {
+    title: "Laguna Hills Kitchen & Bathroom Remodeling Contractor",
+    description:
+      "The 1970s and 80s homes in Nellie Gail and the Woodlands transform with new kitchens and baths. Ulloa Construction handles HOA review. Call (714) 487-1860.",
+  },
+  "laguna-woods": {
+    title: "Laguna Woods Remodeling & Accessibility Upgrades",
+    description:
+      "Inside Laguna Woods Village, we handle kitchen, bath, and accessibility remodels within the HOA process, scheduled around neighbors. Licensed, insured, free estimates.",
+  },
+  "lake-forest": {
+    title: "Lake Forest Remodeling | Kitchens, Baths & ADUs",
+    description:
+      "From older El Toro homes to Baker Ranch, Ulloa Construction remodels Lake Forest kitchens and baths and builds ADUs. Licensed general contractor. Call (714) 487-1860.",
+  },
+  "los-alamitos": {
+    title: "Los Alamitos Kitchen & Bathroom Remodeling",
+    description:
+      "Los Alamitos's mid-century homes are ready for modern kitchens and baths. Ulloa Construction coordinates city and LA County permits near the line. Free estimates.",
+  },
+  "newport-beach": {
+    title: "Newport Beach Remodeling | Luxury Kitchens & Baths",
+    description:
+      "From the Balboa Peninsula to Newport Coast, Ulloa Construction delivers high-end kitchen and bath remodels with coastal-zone and HOA review handled. CSLB #1144906.",
+  },
+  placentia: {
+    title: "Placentia Remodeling Contractor | Kitchens & Interiors",
+    description:
+      "Placentia's older Craftsman and Spanish Colonial homes near Old Placentia get careful kitchen, bath, and interior remodels. Licensed, insured. Call (714) 487-1860.",
+  },
+  "rancho-santa-margarita": {
+    title: "Rancho Santa Margarita Kitchen & Bath Remodeling",
+    description:
+      "RSM's late-80s and 90s homes in Tesoro and Dove Canyon are in their prime remodel window. We update kitchens and baths, HOA review included. Free estimates.",
+  },
+  "seal-beach": {
+    title: "Seal Beach Coastal Remodeling | Kitchens & Baths",
+    description:
+      "Old Town cottages to Surfside homes, we remodel Seal Beach kitchens and baths with corrosion-resistant, marine-grade materials. Licensed, insured. Call (714) 487-1860.",
+  },
+  stanton: {
+    title: "Stanton Kitchen & Bathroom Remodeling Contractor",
+    description:
+      "Stanton's 1950s and 60s homes gain real value with modern kitchen and bath remodels, no move required. Ulloa Construction is licensed and insured. Free estimates.",
+  },
+  tustin: {
+    title: "Tustin Remodeling | Old Tustin to Tustin Ranch",
+    description:
+      "Whether it's a historic Old Tustin home or a Tustin Ranch build, we remodel kitchens and baths and build ADUs. HOA submittals handled. Call (714) 487-1860.",
+  },
+  "villa-park": {
+    title: "Villa Park Luxury Remodeling | Custom Kitchens & Baths",
+    description:
+      "Villa Park's large custom homes call for high-end kitchen and bath remodels and room additions. Ulloa Construction coordinates every trade. CSLB #1144906. Free estimates.",
+  },
+  westminster: {
+    title: "Westminster Home Remodeling | Kitchens & Bathrooms",
+    description:
+      "Westminster's post-war and 70s homes along the Bolsa corridor transform with updated kitchens and baths. Ulloa Construction is licensed and insured. Call (714) 487-1860.",
+  },
+  "yorba-linda": {
+    title: "Yorba Linda Remodeling | Custom Kitchens, Baths & Additions",
+    description:
+      "Yorba Linda's hillside and custom homes get premium kitchen and bath remodels and additions, with one licensed contractor managing it all. CSLB #1144906. Free estimates.",
+  },
+};
+
 export const locations: LocationData[] = [
   {
     slug: "anaheim",
@@ -91,6 +292,28 @@ export const locations: LocationData[] = [
       "Anaheim homes range from post-war ranch houses in West Anaheim to custom hillside builds in the 92807 zip code. We've remodeled across all of them. We understand the seismic zone requirements, the City of Anaheim building department's inspection schedule, and the aesthetic preferences of OC homeowners who want modern, durable results without over-designed gimmicks. Call (714) 487-1860 to talk through your project with the owner directly.",
     callout: "Serving Anaheim, Anaheim Hills, and all surrounding Orange County communities.",
     serviceCtaHtml: `Anaheim homeowners most often reach us for <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom remodeling</a>, and <a href="/services/room-additions" style="color:#1e88e5;">room additions and ADU construction</a>. Every project includes full permit handling and a detailed written estimate before any work begins.`,
+    localIntro:
+      "Anaheim is where Ulloa Construction started, and it is still the city we know best. Our shop and crew are based right here, so when an Anaheim homeowner calls, we can be at the property quickly to take a look, and we already know the local inspectors and how the City of Anaheim permit counter works. That home base advantage shows up in the little things: fewer delays, faster answers, and a crew that is never more than a short drive away if something comes up mid-project. Anaheim's housing is genuinely all over the map, from the older bungalows and postwar ranch homes near the Colony historic district and downtown, to the 1970s and 80s tract neighborhoods in the flats, to the newer custom builds and hillside estates up in Anaheim Hills. We have remodeled in all of them, so we walk in already understanding how your home was put together and what it takes to bring it up to date. Whatever the project, you are hiring a local contractor, not a company driving in from two counties over.",
+    recentWork: [
+      {
+        title: "Kitchen Remodels in the Anaheim Flats",
+        scope:
+          "A common request in the 1970s and 80s tract homes off Lincoln and Ball: opening up a closed-in galley kitchen, replacing the dated cabinets, and adding a quartz-topped island so the kitchen finally connects to the living space.",
+        serviceSlug: "kitchen-remodeling",
+      },
+      {
+        title: "Primary Bath Updates in Anaheim Hills",
+        scope:
+          "Hillside homes often have large but dated primary baths. We convert oversized garden tubs into curbless walk-in showers, reset the tile over proper waterproofing, and swap in modern double vanities.",
+        serviceSlug: "bathroom-remodeling",
+      },
+      {
+        title: "Smart Home Wiring in Older Colony Homes",
+        scope:
+          "The historic homes near downtown rarely have the neutral wires modern smart switches need, so we add them, then install smart lighting, a video doorbell, and cameras that actually run reliably.",
+        serviceSlug: "smart-home-upgrades",
+      },
+    ],
   },
   {
     slug: "fullerton",
@@ -454,6 +677,28 @@ export const locations: LocationData[] = [
       "Yorba Linda projects often involve larger, higher-quality scopes — custom cabinetry, premium tile and stone, and architectural details that reflect the character of these well-appointed homes. Our CSLB-licensed crew (#1144906) provides the full-scope general contracting, trade coordination, and permit management that complex Yorba Linda projects require. We serve Yorba Linda alongside neighboring Anaheim Hills, Placentia, Brea, and Chino Hills as part of our North Orange County coverage.",
     callout: "Serving Yorba Linda and all surrounding North Orange County communities.",
     serviceCtaHtml: `Yorba Linda homeowners most often work with us on <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">luxury bathroom renovations</a>, and <a href="/services/room-additions" style="color:#1e88e5;">room additions and ADU construction</a>. Yorba Linda projects often involve premium materials and multi-trade scopes that benefit from a single licensed general contractor.`,
+    localIntro:
+      "Yorba Linda has earned its nickname as the Land of Gracious Living, and the remodeling projects here tend to reflect that. Lots are larger than almost anywhere else in North Orange County, homes sit higher on the rolling hills with real views to protect, and homeowners generally plan to stay for the long haul rather than flip. That combination pushes projects toward quality over shortcuts: solid custom cabinetry, natural stone, and finishes chosen to last a couple of decades, not a couple of years. The bigger lots also open up options that tighter cities do not, whether that is expanding a kitchen into unused square footage, building out a spa-style primary bath, or wiring a large home for full automation. In the older West Yorba Linda ranchers, we are usually modernizing and opening up floor plans that feel closed off by today's standards. Up in Fairmont, Hidden Hills, and Bryant Ranch, the work leans toward high-end custom scopes that need careful trade coordination and, often, HOA design review. Either way, you get one licensed contractor managing the whole project, from the first walkthrough to the final inspection.",
+    recentWork: [
+      {
+        title: "Kitchen Remodels in West Yorba Linda",
+        scope:
+          "The mid-century ranch homes on the west side usually have kitchens walled off from the rest of the house. We open them up, install custom cabinetry, and set stone counters with an island sized to the larger footprint these homes tend to have.",
+        serviceSlug: "kitchen-remodeling",
+      },
+      {
+        title: "Spa-Style Primary Baths in the Hills",
+        scope:
+          "Hillside homes have the room for it, so these projects often mean a large curbless walk-in shower, a freestanding tub, natural stone, and a double vanity, all built on proper waterproofing.",
+        serviceSlug: "bathroom-remodeling",
+      },
+      {
+        title: "Whole-Home Automation in Fairmont and Bryant Ranch",
+        scope:
+          "On larger custom estates we tie lighting, climate, security cameras, and door locks into one system, adding the circuits and panel capacity a big home needs to run it all reliably.",
+        serviceSlug: "smart-home-upgrades",
+      },
+    ],
   },
 ];
 
