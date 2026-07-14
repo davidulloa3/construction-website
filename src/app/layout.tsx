@@ -8,11 +8,13 @@ import StickyMobileBar from "@/components/StickyMobileBar";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -80,8 +82,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        {/*
+          No Google Fonts preconnects: next/font self-hosts Geist at build time,
+          so the browser never fetches from fonts.googleapis.com / fonts.gstatic.com.
+          Those hints only opened unused connections and were render-blocking noise.
+        */}
         <link rel="icon" href="/favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/favicon.png" />
         {/* Google tag (gtag.js) */}

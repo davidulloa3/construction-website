@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function HeroSection() {
@@ -6,14 +7,21 @@ export default function HeroSection() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       aria-label="Hero - Building Orange County's Future"
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+      {/*
+        Full-bleed LCP hero. `fill` is the correct next/image pattern for an
+        inset-0 cover background (reserves space, no CLS). `preload` is the
+        Next.js 16 replacement for the now-deprecated `priority` prop, and it
+        inserts a <link rel="preload"> in the <head> so the image loads eagerly
+        instead of lazily. next/image serves an optimized AVIF/WebP variant, so
+        the 588 KB source JPEG is transcoded down automatically at request time.
+      */}
+      <Image
         src="/images/hero.jpg"
         alt="Kitchen and bathroom remodeling contractor in Anaheim, Orange County California - Ulloa Construction"
-        className="absolute inset-0 w-full h-full object-cover"
-        fetchPriority="high"
-        width={1600}
-        height={900}
+        fill
+        preload
+        sizes="100vw"
+        className="object-cover"
       />
       <div className="absolute inset-0 hero-overlay" aria-hidden="true" />
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#1565c0]" aria-hidden="true" />

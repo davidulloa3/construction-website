@@ -187,10 +187,10 @@ export default function Navbar() {
         </ul>
 
         {/* CTA + mobile toggle */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4">
           <a
             href="tel:+17144871860"
-            className="hidden sm:flex items-center gap-1.5 text-amber-400 hover:text-amber-400/80 text-sm font-medium transition-colors"
+            className="hidden sm:flex items-center gap-1.5 text-amber-400 hover:text-amber-400/80 text-sm font-medium transition-colors min-h-[44px] px-3 py-2.5 -mr-1"
             aria-label="Call Ulloa Construction at (714) 487-1860"
           >
             <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true">
@@ -200,7 +200,7 @@ export default function Navbar() {
           </a>
           <Link
             href="/contact"
-            className="hidden md:inline-flex items-center bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold px-4 py-2 rounded transition-colors"
+            className="hidden md:inline-flex items-center justify-center bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold px-5 py-2.5 min-h-[44px] rounded transition-colors"
             aria-label="Get a free quote from Ulloa Construction"
           >
             Get a Free Quote
@@ -209,7 +209,7 @@ export default function Navbar() {
           {/* Mobile menu button */}
           <button
             type="button"
-            className="md:hidden text-[#f5f5f5] p-2 rounded hover:bg-white/10 transition-colors"
+            className="md:hidden flex items-center justify-center text-[#f5f5f5] min-h-[44px] min-w-[44px] p-2.5 rounded hover:bg-white/10 transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-expanded={mobileOpen}
             aria-controls="mobile-menu"

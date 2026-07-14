@@ -45,11 +45,17 @@ body {
 }
 
 /* Gradient overlays for hero */
+/*
+  Darkened so the white hero heading clears WCAG AA contrast (>=4.5:1) no
+  matter how light the underlying photo is. The weakest point is the vertical
+  center where the text sits, so the mid-stop is kept at 0.68 opacity: even
+  over a pure-white image that yields ~5:1 for #f5f5f5 text.
+*/
 .hero-overlay {
   background: linear-gradient(
     to bottom,
-    rgba(15, 15, 15, 0.65) 0%,
-    rgba(15, 15, 15, 0.45) 50%,
-    rgba(15, 15, 15, 0.75) 100%
+    rgba(15, 15, 15, 0.82) 0%,
+    rgba(15, 15, 15, 0.68) 50%,
+    rgba(15, 15, 15, 0.88) 100%
   );
 }

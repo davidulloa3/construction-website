@@ -50,30 +50,30 @@ export default function TrustBar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <dl className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
           {stats.map((stat) => (
+            // A <div> directly inside <dl> may only wrap <dt>/<dd> — the icon
+            // now lives inside the <dd>, so no stray elements break the list.
             <div
               key={stat.label}
               className="flex flex-col items-center text-center gap-3"
             >
-              <div
-                className="w-14 h-14 rounded-xl bg-amber-500/10 flex items-center justify-center border border-amber-500/20"
-                aria-hidden="true"
-              >
-                {stat.icon}
-              </div>
-              <div>
-                <dt className="sr-only">{stat.label}</dt>
-                <dd>
-                  <span className="block text-2xl font-black text-[#f5f5f5]">
-                    {stat.value}
-                  </span>
-                  <span className="block text-sm font-semibold text-amber-400 mt-0.5">
-                    {stat.label}
-                  </span>
-                  <span className="block text-xs text-[#a0a0a0] mt-0.5">
-                    {stat.sub}
-                  </span>
-                </dd>
-              </div>
+              <dt className="sr-only">{stat.label}</dt>
+              <dd className="flex flex-col items-center gap-3">
+                <span
+                  className="w-14 h-14 rounded-xl bg-amber-500/10 flex items-center justify-center border border-amber-500/20"
+                  aria-hidden="true"
+                >
+                  {stat.icon}
+                </span>
+                <span className="block text-2xl font-black text-[#f5f5f5]">
+                  {stat.value}
+                </span>
+                <span className="block text-sm font-semibold text-amber-400 mt-0.5">
+                  {stat.label}
+                </span>
+                <span className="block text-xs text-[#a0a0a0] mt-0.5">
+                  {stat.sub}
+                </span>
+              </dd>
             </div>
           ))}
         </dl>
