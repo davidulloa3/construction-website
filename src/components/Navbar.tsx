@@ -31,6 +31,7 @@ const locationLinks = [
   { href: "/locations/dana-point", label: "Dana Point" },
   { href: "/locations/san-juan-capistrano", label: "San Juan Capistrano" },
   { href: "/locations/aliso-viejo", label: "Aliso Viejo" },
+  { href: "/locations", label: "All Service Areas" },
 ];
 
 function DropdownMenu({ items, onClose }: { items: { href: string; label: string }[]; onClose: () => void }) {

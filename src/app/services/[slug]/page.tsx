@@ -3,7 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import ZigzagTimeline from "@/components/ZigzagTimeline";
-import LeadCaptureForm from "@/components/LeadCaptureForm";
+import InlineEstimateForm from "@/components/InlineEstimateForm";
+import { cityServiceSlugs, getCityService } from "@/lib/cityServices";
+import { getLocation, priorityCitySlugs } from "@/lib/locations";
 import { getRelatedServices, getService, serviceSlugList } from "@/lib/services";
 
 interface Props {
@@ -23,7 +25,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? { absolute: service.titleTag }
       : `${service.name} in Anaheim CA | Ulloa Construction`,
     description: service.metaDescription,
-    alternates: { canonical: `https://ulloa-construction.com/services/${slug}` },
+    alternates: {
+      canonical: `https://ulloa-construction.com/services/${service.canonicalSlug ?? slug}`,
+    },
   };
 }
 
@@ -51,6 +55,24 @@ export default async function ServiceSlugPage({ params }: Props) {
   if (!service) notFound();
 
   const related = getRelatedServices(service.relatedSlugs);
+
+  // Cross-link this service to its strongest local city pages. Bathroom,
+  // kitchen, and smart-home have dedicated /locations/[city]/[service] pages;
+  // every other service links to the general /locations/[city] page instead.
+  const hasCityServicePages = (cityServiceSlugs as readonly string[]).includes(
+    slug,
+  );
+  const cityLinks = priorityCitySlugs
+    .map((citySlug) => {
+      const loc = getLocation(citySlug);
+      if (!loc) return null;
+      if (hasCityServicePages) {
+        if (!getCityService(citySlug, slug)) return null;
+        return { name: loc.name, href: `/locations/${citySlug}/${slug}` };
+      }
+      return { name: loc.name, href: `/locations/${citySlug}` };
+    })
+    .filter((c): c is { name: string; href: string } => c !== null);
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -232,15 +254,7 @@ export default async function ServiceSlugPage({ params }: Props) {
         </section>
       )}
 
-      <section className="py-16 bg-[#1a1a1a]" aria-labelledby="lead-form-heading">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="lead-form-heading" className="text-3xl font-black text-[#f5f5f5] mb-3 text-center">
-            Get a Free {service.name} Estimate
-          </h2>
-          <p className="text-[#a0a0a0] text-center mb-8">Fill out the form and we&apos;ll be in touch within 24 hours. No obligation, no pressure.</p>
-          <LeadCaptureForm />
-        </div>
-      </section>
+      <InlineEstimateForm heading="Get a Free Estimate" bg="bg-[#1a1a1a]" />
 
       <section className="py-16 bg-[#1565c0]" aria-label="Call to action">
         <div className="max-w-3xl mx-auto px-4 text-center">
@@ -252,6 +266,43 @@ export default async function ServiceSlugPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {cityLinks.length > 0 && (
+        <section className="py-16 bg-[#1a1a1a]" aria-labelledby="service-cities-heading">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 id="service-cities-heading" className="text-3xl font-black text-[#f5f5f5] mb-3">
+              {service.name} in <span className="text-[#1565c0]">Your Orange County City</span>
+            </h2>
+            <p className="text-[#a0a0a0] mb-10">
+              We provide {service.name.toLowerCase()} throughout Orange County. Explore our most-requested local areas:
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+              {cityLinks.map((city) => (
+                <Link
+                  key={city.href}
+                  href={city.href}
+                  className="block h-full bg-[#0f0f0f] border border-[#2a2a2a] hover:border-[#1565c0] rounded-xl p-5 group transition-all hover:shadow-[0_0_20px_rgba(21,101,192,0.15)]"
+                >
+                  <h3 className="font-bold text-[#f5f5f5] group-hover:text-[#1e88e5] transition-colors mb-1">
+                    {city.name}
+                  </h3>
+                  <p className="text-[#1565c0] text-sm font-semibold flex items-center gap-1">
+                    View area
+                    <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-current" aria-hidden="true">
+                      <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
+                    </svg>
+                  </p>
+                </Link>
+              ))}
+            </div>
+            <p className="mt-8">
+              <Link href="/locations" className="text-[#1e88e5] hover:text-[#1565c0] font-semibold transition-colors">
+                View all 34 Orange County service areas →
+              </Link>
+            </p>
+          </div>
+        </section>
+      )}
 
       <section className="py-16 bg-[#0f0f0f]" aria-labelledby="related-heading">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import LeadCaptureForm from "@/components/LeadCaptureForm";
+import InlineEstimateForm from "@/components/InlineEstimateForm";
 import ZigzagTimeline from "@/components/ZigzagTimeline";
 import { cityServiceSlugs, cityServiceTemplates } from "@/lib/cityServices";
 import {
@@ -149,6 +149,35 @@ export default async function LocationPage({ params }: Props) {
               className="text-[#a0a0a0] text-lg leading-relaxed"
               dangerouslySetInnerHTML={{ __html: location.serviceCtaHtml }}
             />
+          )}
+          {location.localNote && (
+            <p className="text-[#a0a0a0] text-lg leading-relaxed">
+              {location.localNote}
+            </p>
+          )}
+          {location.neighborhoods && location.neighborhoods.length > 0 && (
+            <div className="pt-2">
+              <h2 className="text-xl font-bold text-[#f5f5f5] mb-4">
+                Neighborhoods We Serve in {location.name}
+              </h2>
+              <ul className="flex flex-wrap gap-2.5" role="list">
+                {location.neighborhoods.map((hood) => (
+                  <li
+                    key={hood}
+                    className="inline-flex items-center gap-2 bg-[#1a1a1a] border border-[#2a2a2a] rounded-full px-4 py-2 text-sm text-[#a0a0a0]"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="w-3.5 h-3.5 fill-[#1565c0] flex-shrink-0"
+                      aria-hidden="true"
+                    >
+                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                    </svg>
+                    {hood}
+                  </li>
+                ))}
+              </ul>
+            </div>
           )}
         </div>
       </section>
@@ -365,24 +394,8 @@ export default async function LocationPage({ params }: Props) {
         </div>
       </section>
 
-      {/* ── Lead Form ─────────────────────────────────────────── */}
-      <section
-        className="py-16 bg-[#0f0f0f]"
-        aria-labelledby="location-form-heading"
-      >
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2
-            id="location-form-heading"
-            className="text-3xl font-black text-[#f5f5f5] mb-3 text-center"
-          >
-            Get a Free Estimate in {location.name}
-          </h2>
-          <p className="text-[#a0a0a0] text-center mb-8">
-            Fill out the form and we&apos;ll be in touch within 24 hours.
-          </p>
-          <LeadCaptureForm />
-        </div>
-      </section>
+      {/* ── Inline Estimate Form ──────────────────────────────── */}
+      <InlineEstimateForm heading={`Get a Free Estimate in ${location.name}`} />
 
       {/* ── CTA Banner ────────────────────────────────────────── */}
       <section className="py-16 bg-[#1565c0]" aria-label="Call to action">

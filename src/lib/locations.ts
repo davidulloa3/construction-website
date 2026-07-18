@@ -62,6 +62,18 @@ export interface LocationData {
       | "kitchen-remodeling"
       | "smart-home-upgrades";
   }>;
+  /**
+   * Optional list of real neighborhoods/areas within the city. Rendered as a
+   * "Neighborhoods We Serve" block. Populated for priority cities only; the
+   * template renders fine when this is absent.
+   */
+  neighborhoods?: string[];
+  /**
+   * Optional 1-2 sentence, city-specific local note (permit, HOA, or housing
+   * detail). Rendered as an extra paragraph in the city intro copy. Priority
+   * cities only.
+   */
+  localNote?: string;
 }
 
 export const allServiceSlugs: ServiceSlug[] = [
@@ -281,6 +293,146 @@ export const locationSeo: Record<
   },
 };
 
+/**
+ * Real neighborhoods + a 1-2 sentence local note for priority cities, from the
+ * hand-completed content brief. Keyed by CitySlug and merged onto the base
+ * LocationData in getLocation(). Only the priority cities appear here; every
+ * other city simply has no entry and its page renders without these blocks.
+ *
+ * "Anaheim Hills" from the brief is folded into "anaheim" — it is a district of
+ * the City of Anaheim, not a separate /locations route.
+ */
+export const locationLocalContent: Partial<
+  Record<CitySlug, { neighborhoods: string[]; localNote: string }>
+> = {
+  "newport-beach": {
+    neighborhoods: [
+      "Balboa Island",
+      "Balboa Peninsula",
+      "Corona del Mar",
+      "Newport Coast",
+      "Lido Isle",
+      "Newport Heights",
+    ],
+    localNote:
+      "A lot of Newport Beach remodels are gut renovations of 1950s–70s homes in Balboa and Corona del Mar that keep the original footprint, since the lots are small and the setbacks tight. Near the water, Coastal Commission review can apply, so we build the extra permitting time into the schedule from the start.",
+  },
+  irvine: {
+    neighborhoods: [
+      "Woodbridge",
+      "Turtle Rock",
+      "Northwood",
+      "Northpark",
+      "Oak Creek",
+      "Woodbury",
+      "Quail Hill",
+    ],
+    localNote:
+      "Nearly every home in Irvine sits inside an HOA, often a master association plus a sub-association, so exterior work like windows or additions usually needs architectural committee approval before permits are pulled, not just after.",
+  },
+  "huntington-beach": {
+    neighborhoods: [
+      "Downtown / Main Street",
+      "Huntington Harbour",
+      "Seacliff",
+      "Sunset Beach",
+      "Southeast Huntington Beach",
+    ],
+    localNote:
+      "A big share of Huntington Beach's housing is 1960s–80s single-story ranch homes, exactly the kind of layout that opens up with a kitchen or bath gut. Seacliff and the gated communities near the golf course often add their own architectural guidelines on top of the city's.",
+  },
+  "mission-viejo": {
+    neighborhoods: [
+      "Lake Mission Viejo",
+      "Canyon Crest",
+      "Casta del Sol",
+      "Pacific Hills",
+      "Painted Trails",
+    ],
+    localNote:
+      "Most Mission Viejo homes were built between the late 1970s and mid-1980s, and older HOAs like Casta del Sol and Finisterra are now dealing with aging systems that often trigger a full kitchen or bath remodel. Nearly every property carries LMVA lake membership tied to the deed, and HOA architectural review is standard before exterior work begins.",
+  },
+  "yorba-linda": {
+    neighborhoods: ["East Lake Village", "Bryant Ranch", "Kerry Ranch"],
+    localNote:
+      "Yorba Linda mixes horse-property and acreage lots with planned communities like East Lake Village, built around a private lake mostly from the 1970s through the 90s. The larger lots leave real room for additions, though East Lake and similar HOAs still require architectural approval for exterior changes.",
+  },
+  anaheim: {
+    neighborhoods: [
+      "Anaheim Colony Historic District",
+      "Platinum Triangle",
+      "West Anaheim",
+      "Anaheim Hills",
+      "Peralta Hills",
+      "The Summit",
+      "Viewpointe",
+    ],
+    localNote:
+      "Anaheim's Colony Historic District follows strict preservation guidelines as the city's original 1857 town boundary, so older homes there can need extra sign-off to keep their historic character. Up in Anaheim Hills, many neighborhoods are guard-gated with their own architectural committees, and hillside lots often bring retaining-wall or grading considerations into an addition.",
+  },
+  "laguna-beach": {
+    neighborhoods: [
+      "The Village",
+      "Emerald Bay",
+      "Three Arch Bay",
+      "Top of the World",
+      "Woods Cove",
+    ],
+    localNote:
+      "Much of Laguna's housing dates to the 1930s–50s in the Village and North Laguna, so remodels often mean working around older framing on small lots. Coastal Commission review is common near the bluffs and beach, and private communities like Emerald Bay and Three Arch Bay add their own approval process on top of the city's.",
+  },
+  orange: {
+    neighborhoods: [
+      "Old Towne Orange",
+      "Orange Park Acres",
+      "Santiago Hills",
+      "Serrano Heights",
+    ],
+    localNote:
+      "Old Towne Orange is a historic district with homes from the late 1800s and early 1900s — Craftsman, Spanish Revival, and Victorian — where exterior work often carries added review to preserve the look. Orange Park Acres is the opposite: a rural equestrian community with half-acre-plus lots that is popular for additions and custom work.",
+  },
+  tustin: {
+    neighborhoods: [
+      "Old Town Tustin",
+      "Tustin Ranch",
+      "Tustin Legacy",
+      "North Tustin",
+    ],
+    localNote:
+      "Old Town Tustin's early-1900s to 1950s Craftsman bungalows and California ranch homes usually need updated electrical and plumbing alongside any kitchen or bath remodel. Tustin Ranch is newer — 1990s Mediterranean homes around the golf course — with straightforward HOA review for exterior changes.",
+  },
+  fullerton: {
+    neighborhoods: ["Sunny Hills", "Golden Hill", "Raymond Hills"],
+    localNote:
+      "Golden Hill is Fullerton's most historic neighborhood, full of Craftsman bungalows and Spanish Colonial Revival homes, while Sunny Hills is mostly midcentury and split-level homes built between 1960 and 1990. In the older Golden Hill houses it is worth checking for knob-and-tube wiring or cast-iron plumbing before a remodel starts.",
+  },
+  "costa-mesa": {
+    neighborhoods: ["Eastside", "Mesa Verde", "Westside", "South Coast Metro"],
+    localNote:
+      "Eastside and Mesa Verde are full of post-war ranch and midcentury homes that get full remodels or rebuilds, especially near the Mesa Verde Country Club. The Westside mixes older small-lot homes with newer townhomes and tends to be a more affordable entry point for remodel work.",
+  },
+  "rancho-santa-margarita": {
+    neighborhoods: [
+      "Melinda Heights",
+      "Dove Canyon",
+      "Robinson Ranch",
+      "Plano Trabuco",
+    ],
+    localNote:
+      "Nearly every RSM property falls under SAMLARC, the master HOA, plus a neighborhood sub-association, so most exterior work needs two layers of architectural approval. Melinda Heights and the Plano Trabuco plateau sit on hillside and canyon terrain, so slope and drainage often factor into larger remodels and additions.",
+  },
+  "aliso-viejo": {
+    neighborhoods: ["Aliso Viejo Town Center", "Wood Canyon", "Glenwood"],
+    localNote:
+      "Aliso Viejo is fully built out and virtually every home, condo, or townhome is HOA-governed, with most built from the late 1980s through the 2000s. Condo and townhome HOAs frequently cover exterior maintenance, so any remodel touching the outside of the unit needs HOA sign-off first.",
+  },
+  "villa-park": {
+    neighborhoods: ["Villa Park Orchards", "Villa Park Estates"],
+    localNote:
+      "Villa Park is entirely single-family homes on half-acre-plus lots — no sidewalks or streetlights by design — and most are 30-plus years old. Those larger lots make it a strong market for room additions and ADUs, not just kitchen and bath work.",
+  },
+};
+
 export const locations: LocationData[] = [
   {
     slug: "anaheim",
@@ -380,6 +532,14 @@ export const locations: LocationData[] = [
       "Mission Viejo homes range from late 1960s tract homes to custom builds in the hills, and our crew has the experience to work across the full spectrum. Whether you're updating a primary bathroom with a walk-in shower and new tile or undertaking a whole-home interior remodel, Ulloa Construction provides the licensed general contracting services to handle it all under one contract. We hold CSLB License #1144906, carry full general liability and workers' comp insurance, and serve Mission Viejo and nearby communities including Laguna Hills, Lake Forest, Aliso Viejo, and Rancho Santa Margarita.",
     callout: "Serving Mission Viejo and all surrounding South Orange County communities.",
     serviceCtaHtml: `Mission Viejo homeowners frequently ask us about <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom renovations</a>, and <a href="/services/adu-construction" style="color:#1e88e5;">ADU construction</a>. We manage HOA design review and the City of Mission Viejo permit process as part of every project.`,
+    recentWork: [
+      {
+        title: "Kitchen Remodel on Vicenza Court",
+        scope:
+          "A full kitchen remodel in Mission Viejo where we prepared the HOA architectural review (ARC) submittal package and carried it through approval before starting, the standard first step for work in the city's HOA communities.",
+        serviceSlug: "kitchen-remodeling",
+      },
+    ],
   },
   {
     slug: "laguna-niguel",
@@ -611,6 +771,13 @@ export const locations: LocationData[] = [
       "Rancho Santa Margarita homes built in the late 1980s and early 1990s are entering their prime renovation window — kitchens and baths that are functionally sound but aesthetically dated, and interiors that benefit from updated flooring, lighting, and modern finishes. Our team holds CSLB License #1144906 and is experienced coordinating with Rancho Santa Margarita's HOA design review process. We serve RSM alongside neighboring Mission Viejo, Coto de Caza, Laguna Hills, and Aliso Viejo.",
     callout: "Serving Rancho Santa Margarita and all surrounding South Orange County communities.",
     serviceCtaHtml: `Rancho Santa Margarita homeowners most often contact us for <a href="/services/kitchen-remodeling" style="color:#1e88e5;">kitchen remodeling</a>, <a href="/services/bathroom-remodeling" style="color:#1e88e5;">bathroom renovations</a>, and <a href="/services/interior-remodeling" style="color:#1e88e5;">interior remodeling</a>. RSM's late 80s and early 90s homes are entering their prime renovation window, and we coordinate HOA design review as part of every project.`,
+    recentWork: [
+      {
+        title: "Water Damage Restoration & Remodel in Cetrino",
+        scope:
+          "A water-damage restoration and remodel for a home in the Cetrino neighborhood of Rancho Santa Margarita, repairing the affected areas and rebuilding them back better than before, coordinated through the community's HOA architectural review.",
+      },
+    ],
   },
   {
     slug: "seal-beach",
@@ -703,7 +870,19 @@ export const locations: LocationData[] = [
 ];
 
 export function getLocation(slug: string): LocationData | undefined {
-  return locations.find((l) => l.slug === slug);
+  const base = locations.find((l) => l.slug === slug);
+  if (!base) return undefined;
+  const extra = locationLocalContent[base.slug];
+  return extra ? { ...base, ...extra } : base;
 }
 
 export const locationSlugList: CitySlug[] = locations.map((l) => l.slug);
+
+/**
+ * The priority cities (the ones with hand-written neighborhoods + local notes).
+ * Used to cross-link service pages to their strongest local city pages.
+ * Derived from locationLocalContent so there is one source of truth.
+ */
+export const priorityCitySlugs = Object.keys(
+  locationLocalContent,
+) as CitySlug[];

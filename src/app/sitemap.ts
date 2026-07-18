@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { blogSlugList } from "@/lib/blog";
 import { cityServiceParams } from "@/lib/cityServices";
 import { locationSlugList } from "@/lib/locations";
-import { serviceSlugList } from "@/lib/services";
+import { getService, serviceSlugList } from "@/lib/services";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://ulloa-construction.com";
@@ -12,6 +12,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: baseUrl, lastModified, changeFrequency: "weekly", priority: 1 },
     {
       url: `${baseUrl}/services`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/locations`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.9,
@@ -42,12 +48,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  const servicePages: MetadataRoute.Sitemap = serviceSlugList.map((slug) => ({
-    url: `${baseUrl}/services/${slug}`,
-    lastModified,
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-  }));
+  const servicePages: MetadataRoute.Sitemap = serviceSlugList
+    // Exclude keyword-variant pages that canonicalize to another service, so
+    // the sitemap only advertises canonical URLs.
+    .filter((slug) => !getService(slug)?.canonicalSlug)
+    .map((slug) => ({
+      url: `${baseUrl}/services/${slug}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    }));
 
   const locationPages: MetadataRoute.Sitemap = locationSlugList.map((city) => ({
     url: `${baseUrl}/locations/${city}`,

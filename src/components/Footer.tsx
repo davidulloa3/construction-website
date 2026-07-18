@@ -49,6 +49,7 @@ const allCities: { name: string; slug?: string }[] = [
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
+  { href: "/locations", label: "Service Areas" },
   { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
   { href: "/contact", label: "Contact" },
@@ -203,9 +204,17 @@ export default function Footer() {
       {/* City grid */}
       <div className="border-t border-[#2a2a2a] px-4 sm:px-6 lg:px-8 py-10">
         <div className="max-w-7xl mx-auto">
-          <h3 className="text-[#f5f5f5] font-semibold text-sm uppercase tracking-wider mb-5">
-            Proudly Serving All of Orange County
-          </h3>
+          <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-5">
+            <h3 className="text-[#f5f5f5] font-semibold text-sm uppercase tracking-wider">
+              Proudly Serving All of Orange County
+            </h3>
+            <Link
+              href="/locations"
+              className="text-xs text-amber-400 hover:text-amber-400/80 font-medium transition-colors"
+            >
+              View all service areas →
+            </Link>
+          </div>
           <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2" role="list">
             {allCities.map((city) => (
               <li key={city.name}>

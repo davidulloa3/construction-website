@@ -35,6 +35,12 @@ export interface ServiceData {
   body?: string;
   /** Optional contextual cross-link rendered after the intro paragraph. */
   crossLink?: { before: string; href: string; label: string; after: string };
+  /**
+   * Optional canonical target slug. Set when this page is a near-duplicate
+   * keyword variant of another service: its canonical points at the target and
+   * it is excluded from the sitemap so Google consolidates on the target page.
+   */
+  canonicalSlug?: ServiceSlug;
 }
 
 export const services: ServiceData[] = [
@@ -141,6 +147,9 @@ export const services: ServiceData[] = [
   {
     slug: "bathroom-renovation",
     name: "Bathroom Renovation",
+    // Near-duplicate keyword variant of bathroom-remodeling. Canonical points
+    // there and this slug is dropped from the sitemap to consolidate signal.
+    canonicalSlug: "bathroom-remodeling",
     heroImage: "/images/gallery-3.jpg",
     beforeImage: "/images/5185400809350868211.jpeg",
     afterImage: "/images/431122808612452824.jpeg",
