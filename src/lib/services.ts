@@ -524,8 +524,8 @@ export const services: ServiceData[] = [
   {
     slug: "smart-home-upgrades",
     name: "Smart Home Upgrades",
-    heroImage: "/images/LED_Cabinet_Lighting.png",
-    beforeImage: "/images//home_theatre_before.png",
+    heroImage: "/images/gallery-7.jpg",
+    beforeImage: "/images/gallery-9.jpg",
     afterImage: "/images/gallery-7.jpg",
     titleTag:
       "Smart Home Upgrades | Orange County Licensed Contractor | Ulloa Construction",
