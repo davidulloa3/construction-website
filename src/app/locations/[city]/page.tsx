@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: { absolute: seo.title },
     description: seo.description,
     alternates: {
-      canonical: `https://ulloa-construction.com/locations/${city}`,
+      canonical: `https://www.ulloa-construction.com/locations/${city}`,
     },
   };
 }
@@ -47,7 +47,7 @@ export default async function LocationPage({ params }: Props) {
     "@type": "LocalBusiness",
     name: "Ulloa Construction",
     telephone: "+1-714-487-1860",
-    url: "https://ulloa-construction.com",
+    url: "https://www.ulloa-construction.com",
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "CSLB License",

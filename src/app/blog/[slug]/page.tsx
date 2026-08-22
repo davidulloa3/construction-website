@@ -20,13 +20,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: { absolute: metaTitle },
     description: post.metaDescription,
     alternates: {
-      canonical: `https://ulloa-construction.com/blog/${slug}`,
+      canonical: `https://www.ulloa-construction.com/blog/${slug}`,
     },
     openGraph: {
       type: "article",
       title: post.ogTitle ?? metaTitle,
       description: post.ogDescription ?? post.metaDescription,
-      url: `https://ulloa-construction.com/blog/${slug}`,
+      url: `https://www.ulloa-construction.com/blog/${slug}`,
     },
   };
 }
@@ -45,15 +45,15 @@ export default async function BlogPostPage({ params }: Props) {
     author: {
       "@type": "Organization",
       name: "Ulloa Construction",
-      url: "https://ulloa-construction.com",
+      url: "https://www.ulloa-construction.com",
     },
     publisher: {
       "@type": "Organization",
       name: "Ulloa Construction",
-      url: "https://ulloa-construction.com",
+      url: "https://www.ulloa-construction.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://ulloa-construction.com/icon.png",
+        url: "https://www.ulloa-construction.com/icon.png",
       },
     },
   };

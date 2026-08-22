@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: "https://ulloa-construction.com/sitemap.xml",
+    sitemap: "https://www.ulloa-construction.com/sitemap.xml",
   };
 }

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: { absolute: "Orange County Service Areas | Ulloa Construction" },
   description:
     "Ulloa Construction is a licensed general contractor (CSLB #1144906) serving all 34 cities of Orange County, CA. Find your city for local kitchen, bathroom, and remodeling details.",
-  alternates: { canonical: "https://ulloa-construction.com/locations" },
+  alternates: { canonical: "https://www.ulloa-construction.com/locations" },
 };
 
 /**
@@ -87,7 +87,7 @@ const itemListJsonLd = {
     "@type": "ListItem",
     position: i + 1,
     name: loc.name,
-    url: `https://ulloa-construction.com/locations/${loc.slug}`,
+    url: `https://www.ulloa-construction.com/locations/${loc.slug}`,
   })),
 };
 

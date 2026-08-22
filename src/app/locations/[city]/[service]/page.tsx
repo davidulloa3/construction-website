@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: { absolute: data.template.title(data.city) },
     description: data.template.metaDescription(data.city),
     alternates: {
-      canonical: `https://ulloa-construction.com/locations/${city}/${service}`,
+      canonical: `https://www.ulloa-construction.com/locations/${city}/${service}`,
     },
   };
 }
@@ -54,7 +54,7 @@ export default async function CityServicePage({ params }: Props) {
       containedInPlace: { "@type": "AdministrativeArea", name: county },
     },
     description: template.metaDescription(cityName),
-    url: `https://ulloa-construction.com/locations/${city}/${service}`,
+    url: `https://www.ulloa-construction.com/locations/${city}/${service}`,
   };
 
   const faqJsonLd = {

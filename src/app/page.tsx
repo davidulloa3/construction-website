@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: "Ulloa Construction | Anaheim & Orange County Remodeling Contractor",
   description:
     "Ulloa Construction. Professional Anaheim remodeling contractor. Kitchens, bathrooms, interior remodeling and room additions in Orange County, CA. CSLB Lic. #1144906. Call (714) 487-1860.",
-  alternates: { canonical: "https://ulloa-construction.com" },
+  alternates: { canonical: "https://www.ulloa-construction.com" },
 };
 
 const homeFaqJsonLd = {
@@ -78,15 +78,15 @@ const jsonLd = {
   "@graph": [
     {
       "@type": ["LocalBusiness", "Contractor"],
-      "@id": "https://ulloa-construction.com/#business",
+      "@id": "https://www.ulloa-construction.com/#business",
       name: "Ulloa Construction",
       description:
         "Licensed and insured general contractor serving Anaheim and Orange County, CA. Specializing in kitchen remodeling, bathroom remodeling, interior remodeling, and room additions/ADUs. CSLB Lic. #1144906.",
-      url: "https://ulloa-construction.com",
+      url: "https://www.ulloa-construction.com",
       telephone: "+1-714-487-1860",
       email: "info@ulloa-construction.com",
       priceRange: "$$",
-      image: "https://ulloa-construction.com/images/hero.jpg",
+      image: "https://www.ulloa-construction.com/images/hero.jpg",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Anaheim",
